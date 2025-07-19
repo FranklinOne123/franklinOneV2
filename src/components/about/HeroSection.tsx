@@ -1,25 +1,9 @@
 "use client";
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 import Link from 'next/link';
-import dynamic from 'next/dynamic';
-import { useState, useEffect } from 'react';
-
-// Dynamically import lottie player to avoid SSR issues
-const Lottie = dynamic(() => import('react-lottie-player'), {
-  ssr: false,
-});
 
 const HeroSection = () => {
-  const [animationData, setAnimationData] = useState(null);
-
-  useEffect(() => {
-    // Load the local lottie animation
-    fetch('/Animation-1.json')
-      .then(response => response.json())
-      .then(data => setAnimationData(data))
-      .catch(error => console.error('Error loading animation:', error));
-  }, []);
-
   const highlights: { icon: string; title: string; subtitle: string }[] = [];
 
   return (
@@ -162,21 +146,15 @@ const HeroSection = () => {
                 <div className="absolute bottom-0 left-0 w-20 h-20 border-l-4 border-b-4 border-[var(--color-primary)] opacity-60 rounded-bl-2xl"></div>
                 <div className="absolute bottom-0 right-0 w-20 h-20 border-r-4 border-b-4 border-[var(--color-primary)] opacity-60 rounded-br-2xl"></div>
 
-                {/* Custom Cybersecurity Animation */}
+                {/* Image replacement */}
                 <div className="relative z-10 flex items-center justify-center h-[500px]">
-                  {/* Local Lottie Animation */}
-                  {animationData ? (
-                    <Lottie
-                      loop
-                      animationData={animationData}
-                      play
-                      style={{ width: '100%', height: '100%', maxWidth: '500px' }}
-                    />
-                  ) : (
-                    <div className="flex items-center justify-center w-full h-full">
-                      <div className="w-16 h-16 border-4 border-[var(--color-primary)] border-t-transparent rounded-full animate-spin"></div>
-                    </div>
-                  )}
+                  <Image
+                    src="/images/about.png"
+                    alt="About FranklinOne"
+                    fill
+                    className="object-cover rounded-2xl"
+                    priority
+                  />
                   
                   {/* Overlay content */}
                   <div className="absolute bottom-8 left-0 right-0 text-center">
@@ -186,7 +164,7 @@ const HeroSection = () => {
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.8, delay: 1.5 }}
                     >
-                     </motion.h3>
+                    </motion.h3>
                     <motion.p 
                       className="text-gray-400"
                       initial={{ opacity: 0 }}

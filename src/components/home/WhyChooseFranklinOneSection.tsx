@@ -404,7 +404,7 @@ const WhyChooseFranklinOneSection = () => {
                           whileHover={{ scale: 1.05 }}
                         > 
                           <motion.img 
-                            src="https://i.pinimg.com/736x/b3/be/3a/b3be3a3d7253c5e0d796574cae5a3391.jpg" 
+                            src="/images/prevent-breach.png" 
                             alt="Security Protection"
                             className="max-w-full max-h-full object-contain rounded-lg"
                             initial={{ filter: "brightness(0.8)" }}
@@ -422,7 +422,7 @@ const WhyChooseFranklinOneSection = () => {
                           whileHover={{ scale: 1.05 }}
                         >
                           <motion.img 
-                            src="https://i.pinimg.com/736x/af/d8/f3/afd8f33d32fc367949575dfccf2014c6.jpg" 
+                            src="/images/secure-solution.png" 
                             alt="Strategic Partnerships"
                             className="max-w-full max-h-full object-contain rounded-lg"
                             initial={{ filter: "brightness(0.8)" }}
@@ -440,7 +440,7 @@ const WhyChooseFranklinOneSection = () => {
                           whileHover={{ scale: 1.05 }}
                         >
                           <motion.img 
-                            src="https://i.pinimg.com/736x/40/ab/f8/40abf88d1f9b4ee94b05a677d0224d48.jpg" 
+                            src="/images/world-class.png" 
                             alt="Global Solutions"
                             className="max-w-full max-h-full object-contain rounded-lg"
                             initial={{ filter: "brightness(0.8)" }}

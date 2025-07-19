@@ -347,13 +347,13 @@ const SolutionsClient = () => {
 					<div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
 						{/* Endpoint Security */}
 						<motion.div
-							className="bg-white rounded-xl shadow-lg border-t-4 border-t-blue-600 overflow-hidden hover:shadow-xl transition-all duration-300"
+							className="bg-white rounded-xl shadow-lg border-t-4 border-t-purple-600 overflow-hidden hover:shadow-xl transition-all duration-300"
 							initial={{ opacity: 0, y: 30 }}
 							whileInView={{ opacity: 1, y: 0 }}
 							viewport={{ once: true }}
 							transition={{ duration: 0.6 }}
 						>
-							<div className="bg-gradient-to-r from-blue-600 to-blue-700 p-6 text-white">
+							<div className="bg-gradient-to-r from-purple-600 to-purple-700 p-6 text-white">
 								<div className="flex items-center mb-4">
 									<div className="bg-white/20 p-3 rounded-lg mr-4">
 										<svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
@@ -380,7 +380,7 @@ const SolutionsClient = () => {
 										{detailedSolutions.endpointSecurity.map((solution, index) => (
 											<motion.div
 												key={index}
-												className="bg-blue-50 border border-blue-100 rounded-lg p-4 hover:bg-blue-100 transition-colors cursor-pointer"
+												className="bg-purple-50 border border-purple-100 rounded-lg p-4 hover:bg-purple-100 transition-colors cursor-pointer"
 												initial={{ opacity: 0, x: -20 }}
 												whileInView={{ opacity: 1, x: 0 }}
 												viewport={{ once: true }}
@@ -388,7 +388,7 @@ const SolutionsClient = () => {
 												whileHover={{ scale: 1.02 }}
 											>
 												<div className="flex items-center">
-													<div className="w-2 h-2 bg-blue-600 rounded-full mr-3"></div>
+													<div className="w-2 h-2 bg-purple-600 rounded-full mr-3"></div>
 													<span className="text-gray-800 font-medium text-sm">{solution}</span>
 												</div>
 											</motion.div>
@@ -400,13 +400,13 @@ const SolutionsClient = () => {
 
 						{/* Network Security */}
 						<motion.div
-							className="bg-white rounded-xl shadow-lg border-t-4 border-t-green-600 overflow-hidden hover:shadow-xl transition-all duration-300"
+							className="bg-white rounded-xl shadow-lg border-t-4 border-t-purple-600 overflow-hidden hover:shadow-xl transition-all duration-300"
 							initial={{ opacity: 0, y: 30 }}
 							whileInView={{ opacity: 1, y: 0 }}
 							viewport={{ once: true }}
 							transition={{ duration: 0.6, delay: 0.2 }}
 						>
-							<div className="bg-gradient-to-r from-green-600 to-green-700 p-6 text-white">
+							<div className="bg-gradient-to-r from-purple-600 to-purple-700 p-6 text-white">
 								<div className="flex items-center mb-4">
 									<div className="bg-white/20 p-3 rounded-lg mr-4">
 										<svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
@@ -429,11 +429,11 @@ const SolutionsClient = () => {
 									/>
 								</div>
 								<div className="p-6">
-									<div className="grid grid-cols-1 gap-3 max-h-96 overflow-y-auto">
+									<div className="grid grid-cols-1 gap-3">
 										{detailedSolutions.networkSecurity.map((solution, index) => (
 											<motion.div
 												key={index}
-												className="bg-green-50 border border-green-100 rounded-lg p-4 hover:bg-green-100 transition-colors cursor-pointer"
+												className="bg-purple-50 border border-purple-100 rounded-lg p-4 hover:bg-purple-100 transition-colors cursor-pointer"
 												initial={{ opacity: 0, x: -20 }}
 												whileInView={{ opacity: 1, x: 0 }}
 												viewport={{ once: true }}
@@ -441,7 +441,7 @@ const SolutionsClient = () => {
 												whileHover={{ scale: 1.02 }}
 											>
 												<div className="flex items-center">
-													<div className="w-2 h-2 bg-green-600 rounded-full mr-3"></div>
+													<div className="w-2 h-2 bg-purple-600 rounded-full mr-3"></div>
 													<span className="text-gray-800 font-medium text-sm">{solution}</span>
 												</div>
 											</motion.div>
@@ -500,29 +500,19 @@ const SolutionsClient = () => {
 											</motion.div>
 										))}
 									</div>
-									
-									{/* Additional padding for visual balance
-									<div className="mt-8 p-4 bg-gradient-to-r from-purple-50 to-purple-100 rounded-lg border border-purple-200">
-										<div className="flex items-center justify-center text-purple-600">
-											<svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
-												<path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-											</svg>
-											<span className="text-sm font-medium">Comprehensive Data Protection</span>
-										</div>
-									</div> */}
 								</div>
 							</div>
 						</motion.div>
 
 						{/* Vulnerability Management and Compliance */}
 						<motion.div
-							className="bg-white rounded-xl shadow-lg border-t-4 border-t-orange-600 overflow-hidden hover:shadow-xl transition-all duration-300"
+							className="bg-white rounded-xl shadow-lg border-t-4 border-t-purple-600 overflow-hidden hover:shadow-xl transition-all duration-300"
 							initial={{ opacity: 0, y: 30 }}
 							whileInView={{ opacity: 1, y: 0 }}
 							viewport={{ once: true }}
 							transition={{ duration: 0.6, delay: 0.6 }}
 						>
-							<div className="bg-gradient-to-r from-orange-600 to-orange-700 p-6 text-white">
+							<div className="bg-gradient-to-r from-purple-600 to-purple-700 p-6 text-white">
 								<div className="flex items-center mb-4">
 									<div className="bg-white/20 p-3 rounded-lg mr-4">
 										<svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
@@ -549,7 +539,7 @@ const SolutionsClient = () => {
 										{detailedSolutions.vulnerabilityManagement.map((solution, index) => (
 											<motion.div
 												key={index}
-												className="bg-orange-50 border border-orange-100 rounded-lg p-4 hover:bg-orange-100 transition-colors cursor-pointer"
+												className="bg-purple-50 border border-purple-100 rounded-lg p-4 hover:bg-purple-100 transition-colors cursor-pointer"
 												initial={{ opacity: 0, x: -20 }}
 												whileInView={{ opacity: 1, x: 0 }}
 												viewport={{ once: true }}
@@ -557,7 +547,7 @@ const SolutionsClient = () => {
 												whileHover={{ scale: 1.02 }}
 											>
 												<div className="flex items-center">
-													<div className="w-2 h-2 bg-orange-600 rounded-full mr-3"></div>
+													<div className="w-2 h-2 bg-purple-600 rounded-full mr-3"></div>
 													<span className="text-gray-800 font-medium text-sm">{solution}</span>
 												</div>
 											</motion.div>
@@ -569,13 +559,13 @@ const SolutionsClient = () => {
 
 						{/* Networking Solutions */}
 						<motion.div
-							className="bg-white rounded-xl shadow-lg border-t-4 border-t-teal-600 overflow-hidden hover:shadow-xl transition-all duration-300"
+							className="bg-white rounded-xl shadow-lg border-t-4 border-t-purple-600 overflow-hidden hover:shadow-xl transition-all duration-300"
 							initial={{ opacity: 0, y: 30 }}
 							whileInView={{ opacity: 1, y: 0 }}
 							viewport={{ once: true }}
 							transition={{ duration: 0.6, delay: 0.8 }}
 						>
-							<div className="bg-gradient-to-r from-teal-600 to-teal-700 p-6 text-white">
+							<div className="bg-gradient-to-r from-purple-600 to-purple-700 p-6 text-white">
 								<div className="flex items-center mb-4">
 									<div className="bg-white/20 p-3 rounded-lg mr-4">
 										<svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
@@ -602,7 +592,7 @@ const SolutionsClient = () => {
 										{detailedSolutions.networkingSolutions.map((solution, index) => (
 											<motion.div
 												key={index}
-												className="bg-teal-50 border border-teal-100 rounded-lg p-4 hover:bg-teal-100 transition-colors cursor-pointer"
+												className="bg-purple-50 border border-purple-100 rounded-lg p-4 hover:bg-purple-100 transition-colors cursor-pointer"
 												initial={{ opacity: 0, x: -20 }}
 												whileInView={{ opacity: 1, x: 0 }}
 												viewport={{ once: true }}
@@ -610,7 +600,7 @@ const SolutionsClient = () => {
 												whileHover={{ scale: 1.02 }}
 											>
 												<div className="flex items-center">
-													<div className="w-2 h-2 bg-teal-600 rounded-full mr-3"></div>
+													<div className="w-2 h-2 bg-purple-600 rounded-full mr-3"></div>
 													<span className="text-gray-800 font-medium text-sm">{solution}</span>
 												</div>
 											</motion.div>
@@ -622,13 +612,13 @@ const SolutionsClient = () => {
 
 						{/* IT Operations and Management */}
 						<motion.div
-							className="bg-white rounded-xl shadow-lg border-t-4 border-t-indigo-600 overflow-hidden hover:shadow-xl transition-all duration-300"
+							className="bg-white rounded-xl shadow-lg border-t-4 border-t-purple-600 overflow-hidden hover:shadow-xl transition-all duration-300"
 							initial={{ opacity: 0, y: 30 }}
 							whileInView={{ opacity: 1, y: 0 }}
 							viewport={{ once: true }}
 							transition={{ duration: 0.6, delay: 1.0 }}
 						>
-							<div className="bg-gradient-to-r from-indigo-600 to-indigo-700 p-6 text-white">
+							<div className="bg-gradient-to-r from-purple-600 to-purple-700 p-6 text-white">
 								<div className="flex items-center mb-4">
 									<div className="bg-white/20 p-3 rounded-lg mr-4">
 										<svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
@@ -655,7 +645,7 @@ const SolutionsClient = () => {
 										{detailedSolutions.itOperations.map((solution, index) => (
 											<motion.div
 												key={index}
-												className="bg-indigo-50 border border-indigo-100 rounded-lg p-4 hover:bg-indigo-100 transition-colors cursor-pointer"
+												className="bg-purple-50 border border-purple-100 rounded-lg p-4 hover:bg-purple-100 transition-colors cursor-pointer"
 												initial={{ opacity: 0, x: -20 }}
 												whileInView={{ opacity: 1, x: 0 }}
 												viewport={{ once: true }}
@@ -663,7 +653,7 @@ const SolutionsClient = () => {
 												whileHover={{ scale: 1.02 }}
 											>
 												<div className="flex items-center">
-													<div className="w-2 h-2 bg-indigo-600 rounded-full mr-3"></div>
+													<div className="w-2 h-2 bg-purple-600 rounded-full mr-3"></div>
 													<span className="text-gray-800 font-medium text-sm">{solution}</span>
 												</div>
 											</motion.div>
@@ -675,13 +665,13 @@ const SolutionsClient = () => {
 
 						{/* Physical Security */}
 						<motion.div
-							className="bg-white rounded-xl shadow-lg border-t-4 border-t-red-600 overflow-hidden hover:shadow-xl transition-all duration-300"
+							className="bg-white rounded-xl shadow-lg border-t-4 border-t-purple-600 overflow-hidden hover:shadow-xl transition-all duration-300"
 							initial={{ opacity: 0, y: 30 }}
 							whileInView={{ opacity: 1, y: 0 }}
 							viewport={{ once: true }}
 							transition={{ duration: 0.6, delay: 1.2 }}
 						>
-							<div className="bg-gradient-to-r from-red-600 to-red-700 p-6 text-white">
+							<div className="bg-gradient-to-r from-purple-600 to-purple-700 p-6 text-white">
 								<div className="flex items-center mb-4">
 									<div className="bg-white/20 p-3 rounded-lg mr-4">
 										<svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
@@ -708,7 +698,7 @@ const SolutionsClient = () => {
 										{detailedSolutions.physicalSecurity.map((solution, index) => (
 											<motion.div
 												key={index}
-												className="bg-red-50 border border-red-100 rounded-lg p-4 hover:bg-red-100 transition-colors cursor-pointer"
+												className="bg-purple-50 border border-purple-100 rounded-lg p-4 hover:bg-purple-100 transition-colors cursor-pointer"
 												initial={{ opacity: 0, x: -20 }}
 												whileInView={{ opacity: 1, x: 0 }}
 												viewport={{ once: true }}
@@ -716,7 +706,7 @@ const SolutionsClient = () => {
 												whileHover={{ scale: 1.02 }}
 											>
 												<div className="flex items-center">
-													<div className="w-2 h-2 bg-red-600 rounded-full mr-3"></div>
+													<div className="w-2 h-2 bg-purple-600 rounded-full mr-3"></div>
 													<span className="text-gray-800 font-medium text-sm">{solution}</span>
 												</div>
 											</motion.div>
