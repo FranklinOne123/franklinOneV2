@@ -12,7 +12,7 @@ const detailedSolutions = {
 		'Insider Threat Management'
 	],
 	networkSecurity: [
-		'Next-Gen SIEM',
+		'Web Browser Isolation',
 		'Deception Solution',
 		'Email Security Solution',
 		'Data Loss Prevention (DLP) – Email DLP',
@@ -21,20 +21,20 @@ const detailedSolutions = {
 		'Data Loss Prevention (DLP) – Network DLP',
 		'Cloud Access Security Broker (CASB)',
 		'Security Awareness Training',
-		'Web Takedown Service',
-		'Network Access Control (NAC)',
-		'Virtual Private Network (VPN)'
+		'Web Takedown Service' 
 	],
 	dataSecurity: [
 		'Data Security Platform',
-		'Data Sanitization (Data Erasure)'
+		'Data Sanitization (Data Erasure)',
+		'Web Application Scanning (WAS)',
+		'Cloud Security',
+		'Audit Fix (add below Policy Compliance)'
 	],
 	vulnerabilityManagement: [
 		'Vulnerability Management Detection and Response (VMDR)',
-		'Cybersecurity Asset Management (CAM)',
+		'Cybersecurity Asset Management (CSAM)',
 		'Policy Compliance (PC)',
-		'File Integrity Monitoring (FIM)',
-		'Security Assessment Questionnaire (SAQ)'
+		'File Integrity Monitoring (FIM)' 
 	],
 	networkingSolutions: [
 		'Next-Gen Firewall (NGFW)',
@@ -43,11 +43,8 @@ const detailedSolutions = {
 		'Cloud Traffic Aggregation and Processing'
 	],
 	itOperations: [
-		'IT Service Management',
-		'IT Asset Management',
-		'Endpoint Management',
-		'Mobile Device Management (MDM)',
-		'Patch Management'
+		'Asset Management',
+		'Patch Management' 
 	],
 	physicalSecurity: [
 		'Video Management Software (VMS)',
@@ -61,7 +58,7 @@ const SolutionsClient = () => {
 	return (
 		<div className="min-h-screen">
 			{/* Hero Section */}
-			<section className="relative min-h-[80vh] flex items-center justify-center bg-[#0a0e1a] text-white overflow-hidden">
+			<section className="relative min-h-[90vh] flex items-center justify-center bg-[#0a0e1a] text-white overflow-hidden pb-20">
 				{/* Dark cyber background with overlay */}
 				<div className="absolute inset-0 z-0">
 					<div className="absolute inset-0 bg-gradient-to-b from-[rgba(10,14,26,0.9)] via-[rgba(22,33,62,0.8)] to-[rgba(116,63,119,0.9)] z-10"></div>
@@ -113,12 +110,12 @@ const SolutionsClient = () => {
 					</motion.div>
 				</div>
 				
-				<div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20">
+				<div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-8">
 					<motion.div
 						initial={{ opacity: 0 }}
 						animate={{ opacity: 1 }}
 						transition={{ duration: 1 }}
-						className="text-center mb-20"
+						className="text-center mb-12"
 					>
 						<motion.div 
 							className="inline-block mb-6 px-4 py-1 rounded-full border border-[var(--color-secondary)]/30 bg-white/5 backdrop-blur-sm text-sm font-medium text-[var(--color-secondary)] mt-14"
@@ -160,7 +157,7 @@ const SolutionsClient = () => {
 							initial={{ opacity: 0, y: 20 }}
 							animate={{ opacity: 1, y: 0 }}
 							transition={{ delay: 1 }}
-						>
+						> 
 							<Link href="#solutions" 
 								className="inline-flex items-center px-8 py-4 border border-transparent text-base font-medium rounded-md text-white bg-gradient-to-r from-[var(--color-primary)] to-[var(--color-primary-dark)] hover:from-[var(--color-primary-dark)] hover:to-[var(--color-primary)] shadow-lg hover:shadow-xl transition-all duration-300"
 							>
@@ -179,148 +176,39 @@ const SolutionsClient = () => {
 							</Link>
 						</motion.div>
 						
-						{/* Animated shield badge */}
+						{/* Enhanced feature badges */}
 						<motion.div
-							className="absolute bottom-8 left-1/2 transform -translate-x-1/2 hidden md:flex items-center justify-center gap-6 text-white/70"
+							className="mt-12 hidden md:flex items-center justify-center gap-4 lg:gap-6 text-white/70 flex-wrap max-w-5xl mx-auto px-4"
 							initial={{ opacity: 0 }}
 							animate={{ opacity: 1 }}
 							transition={{ delay: 1.5, duration: 1 }}
 						>
-							<div className="flex items-center gap-2">
-								<svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+							<div className="flex items-center gap-2 py-2">
+								<svg className="w-5 h-5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
 									<path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
 								</svg>
-								<span className="text-sm">ISO 27001 Certified</span>
+								<span className="text-sm">Recognized by Global Standard Bodies</span>
 							</div>
-							<div className="w-1 h-1 rounded-full bg-white/50"></div>
-							<div className="flex items-center gap-2">
-								<svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+							<div className="hidden lg:block w-1 h-1 rounded-full bg-white/50"></div>
+							<div className="flex items-center gap-2 py-2">
+								<svg className="w-5 h-5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+									<path fillRule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clipRule="evenodd"></path>
+								</svg>
+								<span className="text-sm">Scalable - Future-Ready Solutions</span>
+							</div>
+							<div className="hidden lg:block w-1 h-1 rounded-full bg-white/50"></div>
+							<div className="flex items-center gap-2 py-2">
+								<svg className="w-5 h-5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
 									<path fillRule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
 								</svg>
-								<span className="text-sm">CMMC Level 3 Compliant</span>
-							</div>
-							<div className="w-1 h-1 rounded-full bg-white/50"></div>
-							<div className="flex items-center gap-2">
-								<svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-									<path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z"></path>
-								</svg>
-								<span className="text-sm">24/7 Expert Support</span>
+								<span className="text-sm">Providing Most Secured with Advanced Solutions Capability</span>
 							</div>
 						</motion.div>
 					</motion.div>
 				</div>
 			</section>
 
-			{/* Security Badge/Stats Section */}
-			<section className="py-16 bg-gradient-to-b from-[#0a0e1a] to-gray-50 relative overflow-hidden">
-				<div className="absolute inset-0 bg-[url('/dot-pattern.svg')] opacity-[0.03]"></div>
-				
-				{/* Shield accent element */}
-				<div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[var(--color-primary)] via-[var(--color-secondary)] to-transparent"></div>
-				
-				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-					<div className="text-center mb-10">
-						<motion.h2
-							className="text-xl font-medium text-[var(--color-primary)] mb-2"
-							initial={{ opacity: 0, y: -10 }}
-							whileInView={{ opacity: 1, y: 0 }}
-							viewport={{ once: true }}
-							transition={{ duration: 0.5 }}
-						>
-							INDUSTRY-LEADING SECURITY
-						</motion.h2>
-						<motion.div
-							className="w-16 h-1 bg-[var(--color-secondary)] mx-auto mb-2"
-							initial={{ width: 0 }}
-							whileInView={{ width: "4rem" }}
-							viewport={{ once: true }}
-							transition={{ duration: 0.5, delay: 0.2 }}
-						></motion.div>
-					</div>
-					
-					<div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-10">
-						<motion.div 
-							className="relative overflow-hidden rounded-xl bg-white/90 backdrop-blur-sm shadow-md py-8 px-4 flex flex-col items-center text-center border-t-2 border-[var(--color-primary)]"
-							initial={{ opacity: 0, y: 20 }}
-							whileInView={{ opacity: 1, y: 0 }}
-							viewport={{ once: true }}
-							transition={{ duration: 0.5, delay: 0.1 }}
-							whileHover={{ y: -5, boxShadow: "0 10px 25px -5px rgba(0, 0, 0, 0.1)" }}
-						>
-							<div className="absolute top-0 left-0 h-full w-1 bg-gradient-to-b from-[var(--color-primary)] to-transparent opacity-50"></div>
-							<div className="bg-[var(--color-primary)]/10 p-3 rounded-full mb-4">
-								<svg className="w-8 h-8 text-[var(--color-primary)]" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
-									<path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-								</svg>
-							</div>
-							<div className="text-4xl md:text-5xl font-bold text-[var(--color-primary)]">24/7</div>
-							<div className="mt-3 text-sm font-medium text-gray-700">Continuous Security Monitoring</div>
-							<div className="w-12 h-0.5 bg-gray-200 my-3"></div>
-							<div className="text-xs text-gray-500">Real-time threat detection</div>
-						</motion.div>
-						
-						<motion.div 
-							className="relative overflow-hidden rounded-xl bg-white/90 backdrop-blur-sm shadow-md py-8 px-4 flex flex-col items-center text-center border-t-2 border-[var(--color-primary)]"
-							initial={{ opacity: 0, y: 20 }}
-							whileInView={{ opacity: 1, y: 0 }}
-							viewport={{ once: true }}
-							transition={{ duration: 0.5, delay: 0.2 }}
-							whileHover={{ y: -5, boxShadow: "0 10px 25px -5px rgba(0, 0, 0, 0.1)" }}
-						>
-							<div className="absolute top-0 left-0 h-full w-1 bg-gradient-to-b from-[var(--color-primary)] to-transparent opacity-50"></div>
-							<div className="bg-[var(--color-primary)]/10 p-3 rounded-full mb-4">
-								<svg className="w-8 h-8 text-[var(--color-primary)]" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
-									<path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
-								</svg>
-							</div>
-							<div className="text-4xl md:text-5xl font-bold text-[var(--color-primary)]">99.9%</div>
-							<div className="mt-3 text-sm font-medium text-gray-700">Guaranteed Uptime Security</div>
-							<div className="w-12 h-0.5 bg-gray-200 my-3"></div>
-							<div className="text-xs text-gray-500">Enterprise-grade protection</div>
-						</motion.div>
-						
-						<motion.div 
-							className="relative overflow-hidden rounded-xl bg-white/90 backdrop-blur-sm shadow-md py-8 px-4 flex flex-col items-center text-center border-t-2 border-[var(--color-primary)]"
-							initial={{ opacity: 0, y: 20 }}
-							whileInView={{ opacity: 1, y: 0 }}
-							viewport={{ once: true }}
-							transition={{ duration: 0.5, delay: 0.3 }}
-							whileHover={{ y: -5, boxShadow: "0 10px 25px -5px rgba(0, 0, 0, 0.1)" }}
-						>
-							<div className="absolute top-0 left-0 h-full w-1 bg-gradient-to-b from-[var(--color-primary)] to-transparent opacity-50"></div>
-							<div className="bg-[var(--color-primary)]/10 p-3 rounded-full mb-4">
-								<svg className="w-8 h-8 text-[var(--color-primary)]" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
-									<path d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
-								</svg>
-							</div>
-							<div className="text-4xl md:text-5xl font-bold text-[var(--color-primary)]">500+</div>
-							<div className="mt-3 text-sm font-medium text-gray-700">Threats Blocked Daily</div>
-							<div className="w-12 h-0.5 bg-gray-200 my-3"></div>
-							<div className="text-xs text-gray-500">Advanced threat intelligence</div>
-						</motion.div>
-						
-						<motion.div 
-							className="relative overflow-hidden rounded-xl bg-white/90 backdrop-blur-sm shadow-md py-8 px-4 flex flex-col items-center text-center border-t-2 border-[var(--color-primary)]"
-							initial={{ opacity: 0, y: 20 }}
-							whileInView={{ opacity: 1, y: 0 }}
-							viewport={{ once: true }}
-							transition={{ duration: 0.5, delay: 0.4 }}
-							whileHover={{ y: -5, boxShadow: "0 10px 25px -5px rgba(0, 0, 0, 0.1)" }}
-						>
-							<div className="absolute top-0 left-0 h-full w-1 bg-gradient-to-b from-[var(--color-primary)] to-transparent opacity-50"></div>
-							<div className="bg-[var(--color-primary)]/10 p-3 rounded-full mb-4">
-								<svg className="w-8 h-8 text-[var(--color-primary)]" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
-									<path d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905 0 .905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5"></path>
-								</svg>
-							</div>
-							<div className="text-4xl md:text-5xl font-bold text-[var(--color-primary)]">100%</div>
-							<div className="mt-3 text-sm font-medium text-gray-700">Client Satisfaction</div>
-							<div className="w-12 h-0.5 bg-gray-200 my-3"></div>
-							<div className="text-xs text-gray-500">Industry-leading expertise</div>
-						</motion.div>
-					</div>
-				</div>
-			</section>
+			 
 
 			{/* Detailed Solutions Structure Section */}
 			<section className="py-20 bg-gradient-to-b from-white to-gray-50 relative overflow-hidden">
@@ -340,7 +228,7 @@ const SolutionsClient = () => {
 						<h2 className="text-4xl font-bold text-gray-900 mb-4">Complete Security Solutions Portfolio</h2>
 						<div className="w-24 h-1 bg-[var(--color-primary)] mx-auto mb-6"></div>
 						<p className="text-lg text-gray-600 max-w-4xl mx-auto">
-							Our integrated security framework covers all critical areas of cybersecurity, from endpoint protection to network defense and data security, providing comprehensive protection for your organization.
+							We bring together cybersecurity and physical security to give your organization complete protection – defending digital assets while ensuring safety on the ground.
 						</p>
 					</motion.div>
 					

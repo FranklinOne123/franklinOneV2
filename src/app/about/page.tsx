@@ -1,5 +1,6 @@
 import HeroSection from '@/components/about/HeroSection';
 import VisionMissionSection from '@/components/about/VisionMissionSection';
+import GetToKnowUsSection from '@/components/about/GetToKnowUsSection';
 
 export const metadata = {
   title: 'About Us - FranklinOne',
@@ -18,7 +19,10 @@ export default function AboutPage() {
       {/* 3. Vision & Mission - Our Purpose & Direction */}
       <VisionMissionSection />
       
-      {/* 4. Company Story - Our Journey */}
+      {/* 4. Get to Know Us - Our Background & Principles */}
+      <GetToKnowUsSection />
+      
+      {/* 5. Company Story - Our Journey */}
       {/* <CompanyStorySection /> */}
       
       {/* 5. Call to Action - Next Steps */}

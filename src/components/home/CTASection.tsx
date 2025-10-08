@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 const CTASection = () => {
   return (
-    <section className="py-20 bg-gradient-to-br from-[var(--color-primary)] via-purple-900 to-black relative overflow-hidden">
+    <section className="py-20 bg-gradient-to-br from-gray-900 via-[var(--color-primary)]/40 to-gray-950 relative overflow-hidden">
       {/* Cyber security pattern */}
       <div className="absolute inset-0 opacity-10">
         <div 
@@ -88,7 +88,7 @@ const CTASection = () => {
             </span>
             <br />
             <span className="text-white">
-              It&apos;s what we do.
+              The foundation of everything we do.
             </span>
           </motion.h2>
           
@@ -132,31 +132,7 @@ const CTASection = () => {
             </Link>
           </motion.div>
 
-          {/* Security metrics */}
-          <motion.div 
-            className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16 pt-16 border-t border-white/20"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.7 }}
-          >
-            <div className="text-center">
-              <div className="text-3xl font-bold text-white mb-2">24/7</div>
-              <div className="text-sm text-white/70">Security Monitoring</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-white mb-2">99.9%</div>
-              <div className="text-sm text-white/70">Threat Detection</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-white mb-2">&lt;1min</div>
-              <div className="text-sm text-white/70">Response Time</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-white mb-2">100%</div>
-              <div className="text-sm text-white/70">Data Protection</div>
-            </div>
-          </motion.div>
+       
         </div>
       </div>
     </section>

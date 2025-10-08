@@ -1,5 +1,6 @@
 "use client";
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 const VisionMissionSection = () => {
   // Animation variants for better organization
@@ -69,401 +70,453 @@ const VisionMissionSection = () => {
   };
 
   return (
-    <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-indigo-900/30 to-slate-800 overflow-hidden">
-      {/* Animated Background Elements */}
-      <motion.div
-        animate={{
-          rotate: 360,
-          scale: [1, 1.2, 1],
-        }}
-        transition={{
-          rotate: { duration: 50, repeat: Infinity, ease: "linear" },
-          scale: { duration: 8, repeat: Infinity, ease: "easeInOut" }
-        }}
-        className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-purple-500/10 to-blue-500/10 rounded-full blur-3xl"
-      />
-      <motion.div
-        animate={{
-          rotate: -360,
-          scale: [1, 0.8, 1],
-        }}
-        transition={{
-          rotate: { duration: 40, repeat: Infinity, ease: "linear" },
-          scale: { duration: 12, repeat: Infinity, ease: "easeInOut" }
-        }}
-        className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-full blur-3xl"
-      />
+    <section className="relative min-h-screen bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 overflow-hidden py-20">
+      {/* Tech pattern background */}
+      <div className="absolute inset-0 opacity-5">
+        <motion.div 
+          className="absolute inset-0 bg-repeat"
+          style={{
+            backgroundImage: `
+              linear-gradient(rgba(116, 63, 119, 0.4) 1px, transparent 1px),
+              linear-gradient(90deg, rgba(116, 63, 119, 0.4) 1px, transparent 1px)
+            `,
+            backgroundSize: '60px 60px'
+          }}
+          animate={{
+            backgroundPosition: ['0px 0px', '60px 60px']
+          }}
+          transition={{
+            duration: 20,
+            repeat: Infinity,
+            ease: "linear"
+          }}
+        />
+      </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        {/* Section Header */}
+      {/* Enhanced floating particles */}
+      <div className="absolute inset-0">
+        {[...Array(20)].map((_, i) => (
+          <motion.div
+            key={i}
+            className="absolute rounded-full"
+            style={{
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
+              width: Math.random() * 6 + 2,
+              height: Math.random() * 6 + 2,
+              backgroundColor: '#743f77',
+            }}
+            initial={{ opacity: 0, scale: 0 }}
+            animate={{
+              y: [0, -50, 0],
+              opacity: [0, 0.6, 0],
+              scale: [0, 1.2, 0],
+              rotate: [0, 360]
+            }}
+            transition={{
+              duration: 8 + Math.random() * 6,
+              repeat: Infinity,
+              delay: Math.random() * 5,
+              ease: "easeInOut"
+            }}
+          />
+        ))}
+      </div>
+
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Enhanced Section Header */}
         <motion.div
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true }}
-          className="text-center mb-24"
+          viewport={{ once: true, amount: 0.3 }}
+          className="text-center mb-20"
         >
           <motion.div
+            className="inline-flex items-center px-6 py-3 bg-[var(--color-primary)]/20 backdrop-blur-sm rounded-full border border-[var(--color-primary)]/30 mb-8"
             variants={fadeInUp}
-            className="mb-8"
+            whileHover={{ 
+              scale: 1.05,
+              boxShadow: "0 0 25px rgba(116, 63, 119, 0.4)"
+            }}
+            whileTap={{ scale: 0.95 }}
+          >
+            <motion.div 
+              className="w-2 h-2 bg-[var(--color-primary)] rounded-full mr-3"
+              animate={{ 
+                scale: [1, 1.3, 1],
+                opacity: [0.7, 1, 0.7]
+              }}
+              transition={{ 
+                duration: 2, 
+                repeat: Infinity 
+              }}
+            />
+            <span className="text-white text-sm font-medium tracking-wider">FOUNDATION</span>
+          </motion.div>
+
+          <motion.h2 
+            className="text-4xl md:text-5xl font-bold text-white mb-6"
+            variants={fadeInUp}
           >
             <motion.span 
-              className="text-purple-300 font-semibold tracking-wider"
-              whileHover={{ 
-                scale: 1.1,
-                letterSpacing: "0.2em",
-                transition: { duration: 0.3 }
+              className="bg-gradient-to-r from-white via-[var(--color-primary)] to-white bg-clip-text text-transparent"
+              initial={{ backgroundPosition: "0% 50%" }}
+              animate={{ backgroundPosition: "100% 50%" }}
+              transition={{ 
+                duration: 3,
+                repeat: Infinity,
+                repeatType: "reverse"
               }}
+              style={{ backgroundSize: "200% 200%" }}
             >
-              FOUNDATION
+              Our Vision & Mission
             </motion.span>
-          </motion.div>
+          </motion.h2>
+
+          <motion.div 
+            className="w-32 h-1 bg-gradient-to-r from-[var(--color-primary)] to-white mx-auto"
+            initial={{ scaleX: 0 }}
+            whileInView={{ scaleX: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1, delay: 0.5, ease: "easeOut" }}
+            style={{ originX: 0.5 }}
+          />
         </motion.div>
 
-        {/* Main Content - Split Layout */}
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          className="relative"
-        >
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
+        {/* Main Content - Enhanced Layout */}
+        <div className="space-y-20">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Vision Section */}
             <motion.div
-              variants={slideInFromLeft}
-              whileHover={{ scale: 1.02 }}
-              transition={{ type: "spring", stiffness: 300 }}
-              className="relative lg:pr-16"
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              className="relative"
             >
-              {/* Vision indicator */}
+              {/* Enhanced number and line */}
               <motion.div 
-                variants={fadeInUp}
-                className="flex items-center gap-4 mb-8"
+                className="flex items-center mb-6"
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.4 }}
               >
-                <motion.div
+                <motion.div 
+                  className="flex items-center justify-center w-12 h-12 bg-purple-500/20 backdrop-blur-sm rounded-full border border-purple-400/30 mr-4"
                   whileHover={{ 
-                    rotate: 360, 
                     scale: 1.1,
-                    boxShadow: "0 20px 40px rgba(147, 51, 234, 0.4)"
+                    boxShadow: "0 0 15px rgba(147, 51, 234, 0.5)",
+                    borderColor: "rgba(147, 51, 234, 0.8)"
                   }}
-                  animate={pulseAnimation}
-                  transition={{ duration: 0.8 }}
-                  className="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-700 rounded-full flex items-center justify-center shadow-lg shadow-purple-500/25 cursor-pointer"
+                  whileTap={{ scale: 0.95 }}
                 >
                   <motion.svg 
-                    className="w-8 h-8 text-white" 
+                    className="w-6 h-6 text-purple-400" 
                     fill="currentColor" 
                     viewBox="0 0 20 20"
-                    whileHover={{ scale: 1.2 }}
+                    initial={{ scale: 0 }}
+                    whileInView={{ scale: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ type: "spring", stiffness: 200, delay: 0.6 }}
                   >
                     <path d="M10 12a2 2 0 100-4 2 2 0 000 4z"/>
                     <path fillRule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clipRule="evenodd"/>
                   </motion.svg>
                 </motion.div>
-                <motion.div variants={fadeInUp}>
-                  <motion.h2 
-                    className="text-2xl font-bold text-white"
-                    whileHover={{ color: "#c084fc" }}
-                  >
-                    VISION
-                  </motion.h2>
-                                     <p className="text-purple-300 text-sm">
-                     Where We&apos;re Heading
-                   </p>
-                </motion.div>
+                <motion.div 
+                  className="h-px bg-gradient-to-r from-purple-500 to-transparent flex-1"
+                  initial={{ scaleX: 0 }}
+                  whileInView={{ scaleX: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.8, delay: 0.5 }}
+                  style={{ originX: 0 }}
+                />
               </motion.div>
 
-              {/* Vision content */}
-              <div className="space-y-8">
-                <motion.div
-                  variants={fadeInUp}
-                  whileHover={{ scale: 1.02 }}
-                  className="relative"
-                >
-                  <motion.blockquote 
-                    className="text-3xl lg:text-4xl font-bold text-white leading-tight"
-                    whileHover={{ color: "#c084fc" }}
-                    transition={{ duration: 0.3 }}
-                  >
-                    &quot;Truly partner-centric company.&quot;
-                  </motion.blockquote>
-                </motion.div>
-
-                <motion.div
-                  variants={fadeInUp}
-                  className="space-y-4"
-                >
-                  <motion.p 
-                    className="text-lg text-gray-300 leading-relaxed"
-                    whileHover={{ color: "#e2e8f0" }}
-                  >
-                    We envision a future where partnerships transcend traditional boundaries, 
-                    creating ecosystems of mutual growth and innovation.
-                  </motion.p>
-                  
-                  <motion.div 
-                    className="flex flex-wrap gap-3 pt-4"
-                    variants={containerVariants}
-                  >
-                    <motion.span 
-                      className="px-4 py-2 bg-purple-500/20 border border-purple-400/30 rounded-full text-purple-300 text-sm cursor-pointer"
-                      whileHover={{ 
-                        scale: 1.1, 
-                        backgroundColor: "rgba(147, 51, 234, 0.3)",
-                        borderColor: "rgba(196, 181, 253, 0.5)"
-                      }}
-                      variants={fadeInUp}
-                    >
-                      Partnership Excellence
-                    </motion.span>
-                    <motion.span 
-                      className="px-4 py-2 bg-purple-500/20 border border-purple-400/30 rounded-full text-purple-300 text-sm cursor-pointer"
-                      whileHover={{ 
-                        scale: 1.1, 
-                        backgroundColor: "rgba(147, 51, 234, 0.3)",
-                        borderColor: "rgba(196, 181, 253, 0.5)"
-                      }}
-                      variants={fadeInUp}
-                    >
-                      Strategic Growth
-                    </motion.span>
-                  </motion.div>
-                </motion.div>
-              </div>
-
-              {/* Vision decorative elements */}
-              <motion.div
-                initial={{ scale: 0, rotate: -45, opacity: 0 }}
-                whileInView={{ scale: 1, rotate: 0, opacity: 1 }}
+              {/* Vision Title */}
+              <motion.h3 
+                className="text-3xl md:text-4xl font-bold text-white mb-6 leading-tight"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                animate={{
-                  rotate: [0, 360],
-                  scale: [1, 1.1, 1],
-                }}
-                transition={{
-                  duration: 1.2,
-                  delay: 0.5,
-                  rotate: { duration: 20, repeat: Infinity, ease: "linear" },
-                  scale: { duration: 4, repeat: Infinity, ease: "easeInOut" }
-                }}
-                className="absolute -top-8 -right-8 w-32 h-32 border-2 border-purple-400/20 rounded-full"
-              />
+                transition={{ duration: 0.6, delay: 0.7 }}
+              >
+                &quot;Truly partner-centric company.&quot;
+              </motion.h3>
+
+              {/* Vision Description */}
+              <motion.p 
+                className="text-lg text-gray-300 leading-relaxed mb-6"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.9 }}
+              >
+                We envision a future where partnerships transcend traditional boundaries, 
+                creating ecosystems of mutual growth and innovation.
+              </motion.p>
             </motion.div>
 
-            {/* Mission Section */}
+            {/* Vision Image Section */}
             <motion.div
-              variants={slideInFromRight}
-              whileHover={{ scale: 1.02 }}
-              transition={{ type: "spring", stiffness: 300 }}
-              className="relative lg:pl-16 lg:pt-32"
+              initial={{ opacity: 0, scale: 0.8, rotateY: -30 }}
+              whileInView={{ opacity: 1, scale: 1, rotateY: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
             >
-              {/* Mission indicator */}
               <motion.div 
-                variants={fadeInUp}
-                className="flex items-center gap-4 mb-8 justify-end lg:justify-start"
+                className="relative"
+                whileHover={{ scale: 1.02 }}
+                transition={{ duration: 0.3 }}
+              >
+                <div className="h-80 flex items-center justify-center">
+                  <div className="relative w-full h-full flex items-center justify-center">
+                    {/* Vision Image */}
+                    <motion.div 
+                      className="w-full h-full z-10 flex items-center justify-center"
+                      initial={{ opacity: 0, scale: 0.8 }}
+                      whileInView={{ opacity: 1, scale: 1 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.8, delay: 0.2 }}
+                      whileHover={{ scale: 1.05 }}
+                    >
+                      <div className="relative w-full h-full rounded-2xl overflow-hidden">
+                        <div className="absolute inset-0 bg-gradient-to-t from-purple-900/60 via-purple-900/10 to-transparent z-10" />
+                        <Image
+                          src="/images/visionnew.png"
+                          alt="Team collaboration representing our vision"
+                          fill
+                          className="object-cover"
+                        />
+                      </div>
+                    </motion.div>
+
+                    {/* Enhanced animated rings */}
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <motion.div
+                        className="w-32 h-32 border-2 border-purple-500/30 rounded-full"
+                        animate={{ rotate: 360 }}
+                        transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+                        whileHover={{ 
+                          borderColor: "rgba(147, 51, 234, 0.6)",
+                          boxShadow: "0 0 20px rgba(147, 51, 234, 0.3)"
+                        }}
+                      />
+                      <motion.div
+                        className="absolute w-24 h-24 border border-purple-500/20 rounded-full"
+                        animate={{ rotate: -360 }}
+                        transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
+                        whileHover={{ 
+                          borderColor: "rgba(147, 51, 234, 0.4)",
+                          scale: 1.1
+                        }}
+                      />
+                    </div>
+
+                    {/* Enhanced corner accents */}
+                    <motion.div 
+                      className="absolute -top-2 -left-2 w-4 h-4 border-l-2 border-t-2 border-purple-500 opacity-60"
+                      initial={{ scale: 0, rotate: -45 }}
+                      whileInView={{ scale: 1, rotate: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.5, delay: 0.8 }}
+                    />
+                    <motion.div 
+                      className="absolute -top-2 -right-2 w-4 h-4 border-r-2 border-t-2 border-purple-500 opacity-60"
+                      initial={{ scale: 0, rotate: 45 }}
+                      whileInView={{ scale: 1, rotate: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.5, delay: 0.9 }}
+                    />
+                    <motion.div 
+                      className="absolute -bottom-2 -left-2 w-4 h-4 border-l-2 border-b-2 border-purple-500 opacity-60"
+                      initial={{ scale: 0, rotate: 45 }}
+                      whileInView={{ scale: 1, rotate: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.5, delay: 1.0 }}
+                    />
+                    <motion.div 
+                      className="absolute -bottom-2 -right-2 w-4 h-4 border-r-2 border-b-2 border-purple-500 opacity-60"
+                      initial={{ scale: 0, rotate: -45 }}
+                      whileInView={{ scale: 1, rotate: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.5, delay: 1.1 }}
+                    />
+                  </div>
+                </div>
+              </motion.div>
+            </motion.div>
+
+          </div>
+
+          {/* Mission Section - Second Row */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Mission Image Section (Left on desktop) */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8, rotateY: 30 }}
+              whileInView={{ opacity: 1, scale: 1, rotateY: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              className="lg:order-1"
+            >
+              <motion.div 
+                className="relative"
+                whileHover={{ scale: 1.02 }}
+                transition={{ duration: 0.3 }}
+              >
+                <div className="h-80 flex items-center justify-center">
+                  <div className="relative w-full h-full flex items-center justify-center">
+                    {/* Mission Image */}
+                    <motion.div 
+                      className="w-full h-full z-10 flex items-center justify-center"
+                      initial={{ opacity: 0, scale: 0.8 }}
+                      whileInView={{ opacity: 1, scale: 1 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.8, delay: 0.2 }}
+                      whileHover={{ scale: 1.05 }}
+                    >
+                      <div className="relative w-full h-full rounded-2xl overflow-hidden">
+                        <div className="absolute inset-0 bg-gradient-to-t from-blue-900/60 via-blue-900/10 to-transparent z-10" />
+                        <Image
+                          src="/images/missionnew.png"
+                          alt="Cybersecurity solutions representing our mission"
+                          fill
+                          className="object-cover"
+                        />
+                      </div>
+                    </motion.div>
+
+                    {/* Enhanced animated rings */}
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <motion.div
+                        className="w-32 h-32 border-2 border-blue-500/30 rounded-full"
+                        animate={{ rotate: -360 }}
+                        transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+                        whileHover={{ 
+                          borderColor: "rgba(59, 130, 246, 0.6)",
+                          boxShadow: "0 0 20px rgba(59, 130, 246, 0.3)"
+                        }}
+                      />
+                      <motion.div
+                        className="absolute w-24 h-24 border border-blue-500/20 rounded-full"
+                        animate={{ rotate: 360 }}
+                        transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
+                        whileHover={{ 
+                          borderColor: "rgba(59, 130, 246, 0.4)",
+                          scale: 1.1
+                        }}
+                      />
+                    </div>
+
+                    {/* Enhanced corner accents */}
+                    <motion.div 
+                      className="absolute -top-2 -left-2 w-4 h-4 border-l-2 border-t-2 border-blue-500 opacity-60"
+                      initial={{ scale: 0, rotate: -45 }}
+                      whileInView={{ scale: 1, rotate: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.5, delay: 0.8 }}
+                    />
+                    <motion.div 
+                      className="absolute -top-2 -right-2 w-4 h-4 border-r-2 border-t-2 border-blue-500 opacity-60"
+                      initial={{ scale: 0, rotate: 45 }}
+                      whileInView={{ scale: 1, rotate: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.5, delay: 0.9 }}
+                    />
+                    <motion.div 
+                      className="absolute -bottom-2 -left-2 w-4 h-4 border-l-2 border-b-2 border-blue-500 opacity-60"
+                      initial={{ scale: 0, rotate: 45 }}
+                      whileInView={{ scale: 1, rotate: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.5, delay: 1.0 }}
+                    />
+                    <motion.div 
+                      className="absolute -bottom-2 -right-2 w-4 h-4 border-r-2 border-b-2 border-blue-500 opacity-60"
+                      initial={{ scale: 0, rotate: -45 }}
+                      whileInView={{ scale: 1, rotate: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.5, delay: 1.1 }}
+                    />
+                  </div>
+                </div>
+              </motion.div>
+            </motion.div>
+
+            {/* Mission Content (Right on desktop) */}
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              className="relative lg:order-2"
+            >
+              {/* Enhanced number and line */}
+              <motion.div 
+                className="flex items-center mb-6"
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.4 }}
               >
                 <motion.div 
-                  className="order-2 lg:order-1"
-                  variants={fadeInUp}
-                >
-                  <motion.h2 
-                    className="text-2xl font-bold text-white text-right lg:text-left"
-                    whileHover={{ color: "#60a5fa" }}
-                  >
-                    MISSION
-                  </motion.h2>
-                                     <p className="text-blue-300 text-sm text-right lg:text-left">
-                     What We Do
-                   </p>
-                </motion.div>
-                <motion.div
+                  className="flex items-center justify-center w-12 h-12 bg-blue-500/20 backdrop-blur-sm rounded-full border border-blue-400/30 mr-4"
                   whileHover={{ 
-                    rotate: -360, 
                     scale: 1.1,
-                    boxShadow: "0 20px 40px rgba(59, 130, 246, 0.4)"
+                    boxShadow: "0 0 15px rgba(59, 130, 246, 0.5)",
+                    borderColor: "rgba(59, 130, 246, 0.8)"
                   }}
-                  animate={pulseAnimation}
-                  transition={{ duration: 0.8 }}
-                  className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-700 rounded-full flex items-center justify-center shadow-lg shadow-blue-500/25 order-1 lg:order-2 cursor-pointer"
+                  whileTap={{ scale: 0.95 }}
                 >
                   <motion.svg 
-                    className="w-8 h-8 text-white" 
+                    className="w-6 h-6 text-blue-400" 
                     fill="currentColor" 
                     viewBox="0 0 20 20"
-                    whileHover={{ scale: 1.2 }}
+                    initial={{ scale: 0 }}
+                    whileInView={{ scale: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ type: "spring", stiffness: 200, delay: 0.6 }}
                   >
                     <path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"/>
                   </motion.svg>
                 </motion.div>
+                <motion.div 
+                  className="h-px bg-gradient-to-r from-blue-500 to-transparent flex-1"
+                  initial={{ scaleX: 0 }}
+                  whileInView={{ scaleX: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.8, delay: 0.5 }}
+                  style={{ originX: 0 }}
+                />
               </motion.div>
 
-              {/* Mission content */}
-              <div className="space-y-8">
-                <motion.div
-                  variants={fadeInUp}
-                  whileHover={{ scale: 1.02 }}
-                  className="relative"
-                >
-                  <motion.blockquote 
-                    className="text-3xl lg:text-4xl font-bold text-white leading-tight text-right lg:text-left"
-                    whileHover={{ color: "#60a5fa" }}
-                    transition={{ duration: 0.3 }}
-                  >
-                    &quot;Be the extended hand of the manufacturer serving wisely to each-and-every customer.&quot;
-                  </motion.blockquote>
-                </motion.div>
-
-                <motion.div
-                  variants={fadeInUp}
-                  className="space-y-4"
-                >
-                  <motion.p 
-                    className="text-lg text-gray-300 leading-relaxed text-right lg:text-left"
-                    whileHover={{ color: "#e2e8f0" }}
-                  >
-                    We bridge gaps, connect possibilities, and deliver wisdom-driven solutions 
-                    that serve every customer with precision and care.
-                  </motion.p>
-                  
-                  <motion.div 
-                    className="flex flex-wrap gap-3 pt-4 justify-end lg:justify-start"
-                    variants={containerVariants}
-                  >
-                    <motion.span 
-                      className="px-4 py-2 bg-blue-500/20 border border-blue-400/30 rounded-full text-blue-300 text-sm cursor-pointer"
-                      whileHover={{ 
-                        scale: 1.1, 
-                        backgroundColor: "rgba(59, 130, 246, 0.3)",
-                        borderColor: "rgba(147, 197, 253, 0.5)"
-                      }}
-                      variants={fadeInUp}
-                    >
-                      Customer First
-                    </motion.span>
-                    <motion.span 
-                      className="px-4 py-2 bg-blue-500/20 border border-blue-400/30 rounded-full text-blue-300 text-sm cursor-pointer"
-                      whileHover={{ 
-                        scale: 1.1, 
-                        backgroundColor: "rgba(59, 130, 246, 0.3)",
-                        borderColor: "rgba(147, 197, 253, 0.5)"
-                      }}
-                      variants={fadeInUp}
-                    >
-                      Wise Service
-                    </motion.span>
-                    <motion.span 
-                      className="px-4 py-2 bg-blue-500/20 border border-blue-400/30 rounded-full text-blue-300 text-sm cursor-pointer"
-                      whileHover={{ 
-                        scale: 1.1, 
-                        backgroundColor: "rgba(59, 130, 246, 0.3)",
-                        borderColor: "rgba(147, 197, 253, 0.5)"
-                      }}
-                      variants={fadeInUp}
-                    >
-                      Excellence
-                    </motion.span>
-                  </motion.div>
-                </motion.div>
-              </div>
-
-              {/* Mission decorative elements */}
-              <motion.div
-                initial={{ scale: 0, rotate: 45, opacity: 0 }}
-                whileInView={{ scale: 1, rotate: 0, opacity: 1 }}
+              {/* Mission Title */}
+              <motion.h3 
+                className="text-3xl md:text-4xl font-bold text-white mb-6 leading-tight"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                animate={{
-                  rotate: [0, -360],
-                  scale: [1, 1.2, 1],
-                }}
-                transition={{
-                  duration: 1.2,
-                  delay: 0.7,
-                  rotate: { duration: 25, repeat: Infinity, ease: "linear" },
-                  scale: { duration: 6, repeat: Infinity, ease: "easeInOut" }
-                }}
-                className="absolute -bottom-8 -left-8 w-24 h-24 border-2 border-blue-400/20 rounded-lg"
-              />
-            </motion.div>
-          </div>
-        </motion.div>
+                transition={{ duration: 0.6, delay: 0.7 }}
+              >
+                &quot;Be the extended hand of the manufacturer serving wisely to each-and-every customer.&quot;
+              </motion.h3>
 
-        {/* Bottom Impact Statement */}
-        <motion.div
-          initial={{ opacity: 0, y: 100, scale: 0.8 }}
-          whileInView={{ opacity: 1, y: 0, scale: 1 }}
-          viewport={{ once: true }}
-          transition={{ 
-            type: "spring",
-            stiffness: 80,
-            damping: 15,
-            delay: 0.3
-          }}
-          className="text-center mt-32"
-        >
-          <div className="max-w-4xl mx-auto">
-            <motion.h3 
-              className="text-4xl md:text-5xl font-bold text-white mb-8"
-              whileHover={{ scale: 1.05 }}
-              transition={{ type: "spring", stiffness: 300 }}
-            >
-              <motion.span 
-                className="bg-gradient-to-r from-purple-300 via-white to-blue-300 bg-clip-text text-transparent"
-                animate={{
-                  backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"],
-                }}
-                transition={{
-                  duration: 5,
-                  repeat: Infinity,
-                  ease: "easeInOut"
-                }}
+              {/* Mission Description */}
+              <motion.p 
+                className="text-lg text-gray-300 leading-relaxed mb-6"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.9 }}
               >
-                Driving Success Through Strategic Partnership
-              </motion.span>
-            </motion.h3>
-            
-            <motion.div 
-              className="flex items-center justify-center gap-8"
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.5 }}
-            >
-              <motion.div
-                animate={{ 
-                  rotate: 360,
-                  scale: [1, 1.3, 1]
-                }}
-                transition={{ 
-                  rotate: { duration: 20, repeat: Infinity, ease: "linear" },
-                  scale: { duration: 3, repeat: Infinity, ease: "easeInOut" }
-                }}
-                className="w-4 h-4 border-2 border-purple-400/50 rounded-full"
-              />
-              <motion.span 
-                className="text-gray-300 font-medium tracking-wider"
-                whileHover={{ 
-                  scale: 1.1,
-                  color: "#e2e8f0",
-                  letterSpacing: "0.2em"
-                }}
-              >
-                WHERE VISION MEETS MISSION
-              </motion.span>
-              <motion.div
-                animate={{ 
-                  rotate: -360,
-                  scale: [1, 1.5, 1]
-                }}
-                transition={{ 
-                  rotate: { duration: 15, repeat: Infinity, ease: "linear" },
-                  scale: { duration: 4, repeat: Infinity, ease: "easeInOut" }
-                }}
-                className="w-4 h-4 border-2 border-blue-400/50 rounded-full"
-              />
+                We bridge gaps, connect possibilities, and deliver wisdom-driven solutions 
+                that serve every customer with precision and care.
+              </motion.p>
             </motion.div>
           </div>
-        </motion.div>
+        </div>
+ 
       </div>
     </section>
   );

@@ -1,20 +1,54 @@
 "use client";
 import { motion } from 'framer-motion';
-import Image from 'next/image';
 import Link from 'next/link';
 
 const HeroSection = () => {
-  const highlights: { icon: string; title: string; subtitle: string }[] = [];
-
   return (
     <section className="relative min-h-screen flex items-center bg-gradient-to-br from-black via-gray-900 to-gray-800 text-white overflow-hidden">
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center min-h-screen py-20">
-          {/* Content Side */}
+      {/* Animated background grid */}
+      <div className="absolute inset-0 opacity-10">
+        <div 
+          className="absolute inset-0 bg-repeat"
+          style={{
+            backgroundImage: `
+              linear-gradient(rgba(116, 63, 119, 0.5) 1px, transparent 1px),
+              linear-gradient(90deg, rgba(116, 63, 119, 0.5) 1px, transparent 1px)
+            `,
+            backgroundSize: '60px 60px'
+          }}
+        />
+      </div>
+
+      {/* Floating particles */}
+      <div className="absolute inset-0">
+        {[...Array(15)].map((_, i) => (
           <motion.div
-            className="text-center lg:text-left space-y-8"
-            initial={{ opacity: 0, x: -50 }}
-            animate={{ opacity: 1, x: 0 }}
+            key={i}
+            className="absolute w-2 h-2 bg-[var(--color-primary)] rounded-full opacity-30"
+            style={{
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
+            }}
+            animate={{
+              y: [0, -50, 0],
+              opacity: [0.3, 0.6, 0.3],
+            }}
+            transition={{
+              duration: 5 + Math.random() * 5,
+              repeat: Infinity,
+              delay: Math.random() * 3,
+            }}
+          />
+        ))}
+      </div>
+
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+        <div className="flex items-center justify-center min-h-screen py-20">
+          {/* Centered Content */}
+          <motion.div
+            className="text-center max-w-5xl mx-auto space-y-8"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
             {/* Badge */}
@@ -35,51 +69,29 @@ const HeroSection = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              <span className="block mb-4">
-                <span className="bg-gradient-to-r from-white via-[var(--color-primary)] to-white bg-clip-text text-transparent">
-                  About
-                </span>
-              </span>
-              <span className="block text-white">
-                FranklinOne
+              <span className="bg-gradient-to-r from-white via-[var(--color-primary)] to-white bg-clip-text text-transparent">
+                Built on Purpose
               </span>
             </motion.h1>
 
-            {/* Enhanced divider */}
-            <motion.div 
-              className="flex items-center justify-center lg:justify-start"
-              initial={{ opacity: 0, scale: 0 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-            >
-              <div className="w-20 h-1 bg-[var(--color-primary)] rounded-full"></div>
-              <div className="w-8 h-8 bg-[var(--color-primary)]/20 rounded-full flex items-center justify-center mx-4">
-                <div className="w-3 h-3 bg-[var(--color-primary)] rounded-full"></div>
-              </div>
-              <div className="w-20 h-1 bg-gradient-to-r from-[var(--color-primary)] to-white rounded-full"></div>
-            </motion.div>
-            
-            {/* Enhanced description */}
+            {/* Description */}
             <motion.div
               className="space-y-6"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ duration: 0.8, delay: 0.6 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
             >
-              <p className="text-xl md:text-2xl text-white-300 leading-relaxed max-w-2xl mx-auto lg:mx-0">
-                <span className="text-[var(--color-primary)] font-semibold">Truly partner-centric</span> cybersecurity distribution since 2000
-              </p>
-              <p className="text-lg text-white-400 leading-relaxed max-w-2xl mx-auto lg:mx-0">
-                Discover our journey from a visionary startup to regional cybersecurity leadership, our mission to protect digital futures, and the expert team driving innovation in the ever-evolving threat landscape.
+              <p className="text-xl md:text-2xl text-gray-300 leading-relaxed max-w-4xl mx-auto">
+                Discover our journey from a visionary startup to regional cybersecurity leadership, our mission to protect digital futures, and the professional team driving innovation in the ever-evolving threat landscape.
               </p>
             </motion.div>
 
             {/* Call-to-Action Buttons */}
             <motion.div 
-              className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-6"
+              className="flex flex-col sm:flex-row gap-4 justify-center pt-6"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.8 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
             >
               <Link 
                 href="#company-story"
@@ -103,108 +115,8 @@ const HeroSection = () => {
               </Link>
             </motion.div>
 
-            {/* Key Highlights */}
-            <motion.div 
-              className="grid grid-cols-2 lg:grid-cols-4 gap-4 pt-8"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 1 }}
-            >
-              {highlights.map((highlight, index) => (
-                <motion.div
-                  key={index}
-                  className="group relative bg-gradient-to-br from-gray-800/50 to-gray-900/80 backdrop-blur-sm rounded-xl p-4 border border-[var(--color-primary)]/20 hover:border-[var(--color-primary)]/40 transition-all duration-300 text-center"
-                  whileHover={{ scale: 1.05 }}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 1.2 + index * 0.1 }}
-                >
-                  <div className="text-2xl mb-2">{highlight.icon}</div>
-                  <div className="text-sm font-bold text-white">{highlight.title}</div>
-                  <div className="text-xs text-gray-400">{highlight.subtitle}</div>
-                  
-                  {/* Hover effect */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-[var(--color-primary)]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl"></div>
-                </motion.div>
-              ))}
-            </motion.div>
-          </motion.div>
-
-          {/* Custom Cybersecurity Animation Side */}
-          <motion.div
-            className="relative flex items-center justify-center"
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-          >
-            <div className="relative w-full max-w-2xl">
-              {/* Main animation container */}
-              <div className="bg-gradient-to-br from-[var(--color-primary)]/20 via-gray-800/30 to-gray-900/50 backdrop-blur-sm rounded-3xl p-8 border border-[var(--color-primary)]/30 shadow-2xl overflow-hidden relative">
-                {/* Enhanced corner accents */}
-                <div className="absolute top-0 left-0 w-20 h-20 border-l-4 border-t-4 border-[var(--color-primary)] opacity-60 rounded-tl-2xl"></div>
-                <div className="absolute top-0 right-0 w-20 h-20 border-r-4 border-t-4 border-[var(--color-primary)] opacity-60 rounded-tr-2xl"></div>
-                <div className="absolute bottom-0 left-0 w-20 h-20 border-l-4 border-b-4 border-[var(--color-primary)] opacity-60 rounded-bl-2xl"></div>
-                <div className="absolute bottom-0 right-0 w-20 h-20 border-r-4 border-b-4 border-[var(--color-primary)] opacity-60 rounded-br-2xl"></div>
-
-                {/* Image replacement */}
-                <div className="relative z-10 flex items-center justify-center h-[500px]">
-                  <Image
-                    src="/images/about.png"
-                    alt="About FranklinOne"
-                    fill
-                    className="object-cover rounded-2xl"
-                    priority
-                  />
-                  
-                  {/* Overlay content */}
-                  <div className="absolute bottom-8 left-0 right-0 text-center">
-                    <motion.h3 
-                      className="text-2xl font-bold text-white mb-2"
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.8, delay: 1.5 }}
-                    >
-                    </motion.h3>
-                    <motion.p 
-                      className="text-gray-400"
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      transition={{ duration: 0.8, delay: 1.7 }}
-                    >
-                      Leading cybersecurity innovation across Asia-Pacific
-                    </motion.p>
-                  </div>
-                </div>
-              </div>
-
-              {/* Floating accent elements */}
-              <motion.div
-                className="absolute -top-6 -right-6 w-12 h-12 bg-[var(--color-primary)] rounded-full opacity-60 shadow-xl"
-                animate={{ 
-                  scale: [1, 1.2, 1], 
-                  opacity: [0.6, 0.9, 0.6],
-                  rotate: [0, 180, 360]
-                }}
-                transition={{ duration: 4, repeat: Infinity }}
-              />
-              <motion.div
-                className="absolute -bottom-6 -left-6 w-8 h-8 bg-white rounded-full opacity-50 shadow-xl"
-                animate={{ 
-                  scale: [1, 1.4, 1], 
-                  opacity: [0.5, 0.8, 0.5],
-                  rotate: [0, -180, -360]
-                }}
-                transition={{ duration: 5, repeat: Infinity, delay: 1 }}
-              />
-              <motion.div
-                className="absolute top-1/2 -left-4 w-6 h-6 bg-gradient-to-br from-[var(--color-primary)] to-purple-600 rounded-full opacity-70"
-                animate={{ 
-                  x: [0, 10, 0],
-                  scale: [1, 1.3, 1] 
-                }}
-                transition={{ duration: 3, repeat: Infinity, delay: 2 }}
-              />
-            </div>
+            {/* Decorative elements */}
+             
           </motion.div>
         </div>
 

@@ -262,10 +262,10 @@ const VendorsClient = () => {
 					</div>
 				)}
 
-				<div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+				<div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-20">
 					{/* Enhanced Security badge */}
 					<motion.div
-						className="relative inline-flex items-center px-8 py-4 mb-10"
+						className="relative inline-flex items-center px-8 py-4 mb-10 z-30"
 						initial={{ opacity: 0, y: 30, scale: 0.8 }}
 						animate={{ opacity: 1, y: 0, scale: 1 }}
 						transition={{ 
@@ -276,11 +276,11 @@ const VendorsClient = () => {
 						}}
 					>
 						{/* Glowing background */}
-						<div className="absolute inset-0 bg-gradient-to-r from-[var(--color-primary)]/20 via-[var(--color-primary)]/30 to-[var(--color-primary)]/20 backdrop-blur-md rounded-full border border-[var(--color-primary)]/40 shadow-lg"></div>
+						<div className="absolute inset-0 bg-gradient-to-r from-[var(--color-primary)]/20 via-[var(--color-primary)]/30 to-[var(--color-primary)]/20 backdrop-blur-md rounded-full border border-[var(--color-primary)]/40 shadow-lg z-0"></div>
 						
 						{/* Animated border glow - Mobile optimized */}
 						<motion.div
-							className="absolute inset-0 rounded-full border-2 border-[var(--color-primary)]/50"
+							className="absolute inset-0 rounded-full border-2 border-[var(--color-primary)]/50 z-0"
 							animate={!isMobile && !prefersReducedMotion ? {
 								boxShadow: [
 									'0 0 5px rgba(116, 63, 119, 0.3)',
@@ -296,7 +296,7 @@ const VendorsClient = () => {
 						/>
 						
 						{/* Content */}
-						<div className="relative flex items-center">
+						<div className="relative flex items-center z-10">
 							{/* Animated pulse dot - Mobile optimized */}
 							<motion.div 
 								className="w-3 h-3 bg-[var(--color-primary)] rounded-full mr-4"

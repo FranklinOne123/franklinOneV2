@@ -41,7 +41,7 @@ const AboutSection = () => {
             transition={{ duration: 0.5 }}
           >
             <div className="inline-block">
-              <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gray-800">ABOUT FRANKLINONE</h2>
+              <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gray-800">Built on Purpose</h2>
               <div className="h-1 w-24 bg-gradient-to-r from-[#f15a22] to-[#743f77] mx-auto rounded-full mb-6"></div>
             </div>
             <p className="text-xl text-gray-600 max-w-4xl mx-auto">

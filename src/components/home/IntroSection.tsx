@@ -30,7 +30,7 @@ const IntroSection = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.3 }}
           >
-            A leading provider of integrated security, networking solutions and value added services.
+            Our company was established by a team of highly experienced professionals who have excelled in the distribution business for years, deeply understand the core values of being a true distributor
           </motion.p>
         </div>
 

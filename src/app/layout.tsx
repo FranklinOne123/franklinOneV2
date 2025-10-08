@@ -18,7 +18,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "FranklinOne - Security and Network Solutions",
-  description: "A leading provider of integrated security, networking solutions and value added services.",
+  description: "Our company was established by a team of highly experienced professionals who have excelled in the distribution business for years, deeply understand the core values of being a true distributor",
 };
 
 export default function RootLayout({

@@ -169,7 +169,7 @@ const ContactUsClient = () => {
               transition={{ duration: 1, delay: 0.8 }}
             />
             <p className="text-xl md:text-2xl max-w-4xl mx-auto text-gray-300 leading-relaxed">
-              We&apos;re here to help with your security and networking needs. Reach out to our team for expert consultation and advanced cybersecurity solutions.
+              We&apos;re here to help with your security and networking needs. Reach out to our team for professional consultation and advanced cybersecurity solutions.
             </p>
           </motion.div>
 
@@ -435,7 +435,7 @@ const ContactUsClient = () => {
                   transition={{ duration: 0.5, delay: 0.2 }}
                 />
                 <p className="text-gray-300 mb-8 leading-relaxed">
-                  If you have any questions or would like to discuss your security and networking needs, our expert team is here to help. You can reach us through the following secure channels:
+                  If you have any questions or would like to discuss your security and networking needs, our professional team is here to help. You can reach us through the following secure channels:
                 </p>
                 
                 <div className="space-y-6">

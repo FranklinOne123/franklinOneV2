@@ -4,28 +4,16 @@ import { motion } from 'framer-motion';
 const StatsSection = () => {
   const stats = [
     {
-      number: "25+",
-      label: "Years of Excellence",
-      description: "Trusted IT security distribution partner since 2000",
-      icon: "🏆"
+      text: "Established since 2023"
     },
     {
-      number: "9",
-      label: "Countries",
-      description: "Regional presence across Asia-Pacific",
-      icon: "🌐"
+      text: "Regional Coverage"
     },
     {
-      number: "500+",
-      label: "Partners",
-      description: "Trusted by businesses across the region",
-      icon: "🤝"
+      text: "Trusted by all the key resellers and system integrators"
     },
     {
-      number: "100+",
-      label: "Security Solutions",
-      description: "Best-of-breed cybersecurity technologies",
-      icon: "🔒"
+      text: "Brought to the market 100+ security solutions"
     }
   ];
 
@@ -99,36 +87,26 @@ const StatsSection = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.3 }}
           >
-            Our numbers speak to decades of cybersecurity leadership across the region
-          </motion.p>
+Our results reflect years of cybersecurity leadership, delivering measurable impact through the region.          </motion.p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {stats.map((stat, index) => (
             <motion.div
               key={index}
-              className="text-center group"
+              className="text-center group h-full"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
             >
-              <div className="bg-gradient-to-br from-[var(--color-primary)]/20 via-gray-800/50 to-gray-900/80 backdrop-blur-sm rounded-2xl p-6 border border-[var(--color-primary)]/20 group-hover:border-[var(--color-primary)]/40 transition-all duration-500 relative overflow-hidden">
+              <div className="bg-gradient-to-br from-[var(--color-primary)]/20 via-gray-800/50 to-gray-900/80 backdrop-blur-sm rounded-2xl p-8 border border-[var(--color-primary)]/20 group-hover:border-[var(--color-primary)]/40 transition-all duration-500 relative overflow-hidden h-full flex items-center justify-center min-h-[200px]">
                 {/* Corner accents */}
                 <div className="absolute top-0 left-0 w-8 h-8 border-l-2 border-t-2 border-[var(--color-primary)] opacity-40"></div>
                 <div className="absolute bottom-0 right-0 w-8 h-8 border-r-2 border-b-2 border-[var(--color-primary)] opacity-40"></div>
                 
-                <div className="text-2xl mb-4 group-hover:scale-110 transition-transform duration-300">
-                  {stat.icon}
-                </div>
-                <div className="text-4xl md:text-5xl font-bold text-[var(--color-primary)] mb-2 group-hover:text-white transition-colors duration-300">
-                  {stat.number}
-                </div>
-                <div className="text-lg font-semibold text-white mb-2">
-                  {stat.label}
-                </div>
-                <div className="text-sm text-gray-400 leading-relaxed">
-                  {stat.description}
+                <div className="text-xl md:text-2xl font-semibold text-white leading-relaxed">
+                  {stat.text}
                 </div>
               </div>
             </motion.div>

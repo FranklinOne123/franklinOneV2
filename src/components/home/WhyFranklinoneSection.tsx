@@ -29,7 +29,7 @@ const services = [
   {
     icon: CertifiedIcon,
     title: "Certified Engineers",
-    description: "Our team of certified engineers ensures expert implementation of security solutions"
+    description: "Our team of certified engineers ensures professional implementation of security solutions"
   },
   {
     icon: ArchitectureIcon,
