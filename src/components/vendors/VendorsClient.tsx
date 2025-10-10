@@ -8,7 +8,7 @@ const vendors = [
 	// IT, Network, and Security Vendors
 	{
 		name: 'SentinelOne',
-		logo: '/images/sentinelone.png', // You can replace with actual logo path
+		logo: '/images/sentinel-original.png', // You can replace with actual logo path
 		description: 'SentinelOne is a leader in AI-powered cybersecurity, providing autonomous endpoint protection, detection, and response through their Singularity platform. Their advanced threat detection and automated response capabilities help organizations defend against ransomware, malware, and sophisticated cyber attacks.',
 		solutions: ['Endpoint Security', 'XDR Platform', 'AI-Powered Threat Detection', 'Automated Response'],
 		website: 'https://www.sentinelone.com',
@@ -16,7 +16,7 @@ const vendors = [
 	},
 	{
 		name: 'Netskope',
-		logo: '/images/netskope logo.png', // You can replace with actual logo path
+		logo: '/images/netskope-original.png', // You can replace with actual logo path
 		description: 'Netskope is a SASE leader delivering secure access service edge solutions. Their cloud-native platform provides comprehensive security for users, applications, and data across cloud, web, and private applications, enabling secure digital transformation.',
 		solutions: ['SASE', 'Zero Trust Network Access', 'Cloud Security', 'Secure Web Gateway'],
 		website: 'https://www.netskope.com',
@@ -24,7 +24,7 @@ const vendors = [
 	},
 	{
 		name: 'Qualys',
-		logo: '/images/qualy.png', // You can replace with actual logo path
+		logo: '/images/qualys.svg', // You can replace with actual logo path 
 		description: 'Qualys is a leading provider of cloud-based IT, security, and compliance solutions. Their Enterprise TruRisk Platform helps organizations measure, manage, and reduce cyber risk through vulnerability management, asset discovery, and automated remediation.',
 		solutions: ['Vulnerability Management', 'Asset Discovery', 'Compliance Management', 'Cloud Security'],
 		website: 'https://www.qualys.com',
@@ -32,31 +32,31 @@ const vendors = [
 	},
 	{
 		name: 'Varonis',
-		logo: '/images/varonis.jpg', // You can replace with actual logo path
+		logo: '/images/varonis-original.png', // You can replace with actual logo path
 		description: 'Varonis is the #1 Data Security Platform that automatically finds critical data, remediates exposure, and stops threats in the cloud and on-premises. Their platform provides comprehensive data discovery, classification, and protection capabilities.',
 		solutions: ['Data Security', 'Data Discovery & Classification', 'Insider Threat Detection', 'Data Access Governance'],
 		website: 'https://www.varonis.com',
 		category: 'Cybersecurity, Network, and IT Operation'
 	},
-	{
-		name: 'Proofpoint',
-		logo: '/images/proofpoint.jpg', // You can replace with actual logo path
-		description: 'Proofpoint is a leading cybersecurity and compliance company that protects organizations\' greatest assets and biggest risks: their people. Their integrated suite of cloud-based solutions helps companies stop targeted threats and safeguard their data.',
-		solutions: ['Email Security', 'Data Loss Prevention', 'Threat Protection', 'Security Awareness Training'],
-		website: 'https://www.proofpoint.com',
-		category: 'Cybersecurity, Network, and IT Operation'
-	},
-	{
-		name: 'Ivanti',
-		logo: '/images/ivanti.png', // You can replace with actual logo path
-		description: 'Ivanti provides unified IT service management, security, and endpoint management solutions. Their platform helps organizations discover, manage, secure, and service all their IT assets from a single console, improving efficiency and reducing security risks.',
-		solutions: ['IT Service Management', 'Endpoint Management', 'Security Management', 'Asset Discovery'],
-		website: 'https://www.ivanti.com',
-		category: 'Cybersecurity, Network, and IT Operation'
-	},
+	// {
+	// 	name: 'Proofpoint',
+	// 	logo: '/images/proofpoint.png', // You can replace with actual logo path
+	// 	description: 'Proofpoint is a leading cybersecurity and compliance company that protects organizations\' greatest assets and biggest risks: their people. Their integrated suite of cloud-based solutions helps companies stop targeted threats and safeguard their data.',
+	// 	solutions: ['Email Security', 'Data Loss Prevention', 'Threat Protection', 'Security Awareness Training'],
+	// 	website: 'https://www.proofpoint.com',
+	// 	category: 'Cybersecurity, Network, and IT Operation'
+	// },
+	// {
+	// 	name: 'Ivanti',
+	// 	logo: '/images/ivanti.png', // You can replace with actual logo path
+	// 	description: 'Ivanti provides unified IT service management, security, and endpoint management solutions. Their platform helps organizations discover, manage, secure, and service all their IT assets from a single console, improving efficiency and reducing security risks.',
+	// 	solutions: ['IT Service Management', 'Endpoint Management', 'Security Management', 'Asset Discovery'],
+	// 	website: 'https://www.ivanti.com',
+	// 	category: 'Cybersecurity, Network, and IT Operation'
+	// },
 	{
 		name: 'Blancco',
-		logo: '/images/blancco.png', // You can replace with actual logo path
+		logo: '/images/blancco.webp', // You can replace with actual logo path
 		description: 'Blancco is the industry standard for secure data erasure and mobile device diagnostics. Their solutions ensure complete data sanitization and device lifecycle management, helping organizations maintain data privacy and comply with regulations.',
 		solutions: ['Data Erasure', 'Mobile Diagnostics', 'Device Lifecycle Management', 'Compliance Reporting'],
 		website: 'https://www.blancco.com',
@@ -73,20 +73,20 @@ const vendors = [
 	},
 	{
 		name: 'Gallagher',
-		logo: '/images/gall.jpg', // You can replace with actual logo path
+		logo: '/images/gall.png', // You can replace with actual logo path
 		description: 'Gallagher Security is a global leader in perimeter protection, access control, and alarm monitoring solutions. Their integrated security management systems provide comprehensive physical security for critical infrastructure and high-security facilities.',
 		solutions: ['Perimeter Security', 'Access Control', 'Intrusion Detection', 'Command & Control'],
 		website: 'https://www.gallaghersecurity.com',
 		category: 'Physical Security'
-	},
-	{
+	} ,
+		{
 		name: 'Vaxtor',
-		logo: '/vendor-logos/vaxtor-logo.svg', // You can replace with actual logo path
-		description: 'Vaxtor specializes in advanced automatic number plate recognition (ANPR) and video analytics solutions. Their AI-powered systems provide intelligent video surveillance capabilities for traffic monitoring, parking management, and security applications.',
-		solutions: ['ANPR Technology', 'Video Analytics', 'Traffic Monitoring', 'Intelligent Surveillance'],
-		website: 'https://www.vaxtor.com',
+		logo: '/images/gall.png', // You can replace with actual logo path
+		description: 'Gallagher Security is a global leader in perimeter protection, access control, and alarm monitoring solutions. Their integrated security management systems provide comprehensive physical security for critical infrastructure and high-security facilities.',
+		solutions: ['Perimeter Security', 'Access Control', 'Intrusion Detection', 'Command & Control'],
+		website: 'https://www.gallaghersecurity.com',
 		category: 'Physical Security'
-	}
+	} 
 ];
 
 const VendorsClient = () => {
@@ -608,9 +608,7 @@ const VendorsClient = () => {
 							Leading in cybersecurity and physical security space.
 						</p>
 					</motion.div>
-
-					{/* Group vendors by category */}
-					{Object.entries(
+{Object.entries(
 						vendors.reduce((acc, vendor) => {
 							if (!acc[vendor.category]) {
 								acc[vendor.category] = [];
@@ -648,42 +646,76 @@ const VendorsClient = () => {
 								{categoryVendors.map((vendor) => (
 									<motion.div 
 										key={vendor.name}
-										className="group bg-gradient-to-br from-gray-800/50 via-gray-900/80 to-black/90 backdrop-blur-sm rounded-xl overflow-hidden border border-[var(--color-primary)]/20 hover:border-[var(--color-primary)]/40 transition-all duration-500 shadow-xl hover:shadow-2xl flex flex-col relative aspect-square"
+										className="group  overflow-hidden   border-[#c18a41]/0  transition-all duration-500 shadow-xl hover:sha2dow-2xl flex flex-col relative aspect-square"
 										variants={itemVariants}
 										whileHover={{ 
 											scale: 1.05,
 											transition: { duration: 0.3 }
 										}}
 									>
-										{/* Corner accents */}
-										<div className="absolute top-0 left-0 w-4 h-4 border-l-2 border-t-2 border-[var(--color-primary)] opacity-40"></div>
-										<div className="absolute bottom-0 right-0 w-4 h-4 border-r-2 border-b-2 border-[var(--color-primary)] opacity-40"></div>
+										{/* Enhanced corner accents with golden color */}
+										<motion.div 
+											className="absolute top-0 left-0 w-4 h-4 border-l-2 border-t-2 border-[#c18a41] opacity-50"
+											whileHover={{ opacity: 0.9, scale: 1.2 }}
+											transition={{ duration: 0.2 }}
+										></motion.div>
+										<motion.div 
+											className="absolute bottom-0 right-0 w-4 h-4 border-r-2 border-b-2 border-[#c18a41] opacity-50"
+											whileHover={{ opacity: 0.9, scale: 1.2 }}
+											transition={{ duration: 0.2 }}
+										></motion.div>
+										
+										{/* Animated background glow with golden color */}
+										<div className="absolute inset-0 bg-gradient-to-r from-[#c18a41]/10 to-[#c18a41]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-xl pointer-events-none"></div>
 										
 										{/* Vendor logo section */}
 										<div className="p-4 bg-gradient-to-br from-gray-700/30 to-gray-800/50 flex items-center justify-center flex-grow relative">
 											{vendor.logo ? (
-												<Image
-													src={vendor.logo}
-													alt={vendor.name}
-													width={120}
-													height={60}
-													style={{ objectFit: 'contain' }}
-													className="filter brightness-100 group-hover:brightness-110 transition-all duration-300 max-w-full max-h-full"
-												/>
+												<div className="relative group/logo">
+													{/* Glowing background effect */}
+													<div className="absolute inset-0 bg-gradient-to-r from-[#c18a41]/20 to-[#c18a41]/10 rounded-lg opacity-0 group-hover/logo:opacity-100 transition-opacity duration-300 blur-sm"></div>
+													
+													{/* Logo container with enhanced styling */}
+													<div className="relative bg-white/5   rounded-lg p-3 border border-white/10 group-hover/logo:border-[#c18a41]/50 transition-all duration-300" style={{backgroundColor: 'rgb(180 131 184)'}}>
+														<Image
+															src={vendor.logo}
+															alt={vendor.name}
+															width={160}
+															height={57}
+															style={{ objectFit: 'contain', height: '57px' }}
+															className="transition-all duration-500 max-w-full drop-shadow-lg group-hover/logo:scale-110 group-hover/logo:drop-shadow-2xl group-hover/logo:brightness-110 group-hover/logo:filter group-hover/logo:sepia group-hover/logo:brightness-110 group-hover/logo:saturate-150"
+														/>
+														
+														{/* Hover glow effect with golden color */}
+														<div className="absolute inset-0 bg-gradient-to-r from-[#c18a41]/30 to-[#c18a41]/15 rounded-lg opacity-0 group-hover/logo:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
+													</div>
+													
+													{/* Animated corner accents with golden color */}
+													<div className="absolute -top-1 -left-1 w-3 h-3 border-l-2 border-t-2 border-[#c18a41] opacity-0 group-hover/logo:opacity-80 transition-opacity duration-300"></div>
+													<div className="absolute -bottom-1 -right-1 w-3 h-3 border-r-2 border-b-2 border-[#c18a41] opacity-0 group-hover/logo:opacity-80 transition-opacity duration-300"></div>
+												</div>
 											) : (
 												<div className="text-lg font-bold text-white/80 text-center">{vendor.name}</div>
 											)}
 										</div>
 										
-										{/* Vendor name */}
-										<div className="p-3 text-center bg-gradient-to-r from-gray-800/30 to-gray-900/50">
-											<h3 className="text-sm font-semibold text-white group-hover:text-[var(--color-primary)] transition-colors duration-300 line-clamp-2">
+										{/* Vendor name with enhanced styling */}
+										<div className="p-3 text-center bg-gradient-to-r from-gray-800/30 to-gray-900/50 relative overflow-hidden">
+											{/* Animated background stripe with golden color */}
+											<motion.div 
+												className="absolute inset-0 bg-gradient-to-r from-[#c18a41]/20 to-[#c18a41]/10"
+												initial={{ x: '-100%' }}
+												whileHover={{ x: '100%' }}
+												transition={{ duration: 0.6, ease: "easeInOut" }}
+											/>
+											
+											<h3 className="text-sm font-semibold text-white group-hover:text-[#c18a41] transition-colors duration-300 line-clamp-2 relative z-10">
 												{vendor.name}
 											</h3>
+											
+											{/* Subtle glow effect with golden color */}
+											<div className="absolute inset-0 bg-gradient-to-r from-[#c18a41]/10 to-[#c18a41]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
 										</div>
-										
-										{/* Hover glow effect */}
-										<div className="absolute inset-0 bg-gradient-to-r from-[var(--color-primary)]/5 to-[#f15a22]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-xl pointer-events-none"></div>
 									</motion.div>
 								))}
 							</motion.div>

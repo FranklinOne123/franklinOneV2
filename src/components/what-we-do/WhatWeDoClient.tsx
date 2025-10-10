@@ -40,7 +40,7 @@ const services = [
 	{
 		id: 'professional-services',
 		title: 'Professional Services & Support',
-		description: 'Our team delivers professional implementation, configuration, and technical support to ensure long-term success.',
+		description: 'We deliver professional implementation, configuration, and technical support to ensure long-term success.',
 		icon: (
 			<svg className="w-10 h-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 				<path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
@@ -58,7 +58,7 @@ const services = [
 	{
 		id: 'regional-presence',
 		title: 'Regional Presence',
-		description: 'We operate across Southeast Asia, including but not limited to Cambodia, Laos, and Myanmar.',
+		description: 'We operate across CLM, including but not limited to Cambodia, Laos, and Myanmar.',
 		icon: (
 			<svg className="w-10 h-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 				<path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -142,64 +142,314 @@ const WhatWeDoClient = () => {
 			{/* Services Overview Section */}
 			<section id="services" className="relative py-20 bg-gradient-to-b from-[#0a0e1a] via-[#161b2e] to-[#0a0e1a] text-white overflow-hidden">
 				<div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-					<div className="text-center mb-16">
+					<div className="text-center mb-20">
+						{/* Enhanced badge */}
+						<motion.div
+							className="relative inline-flex items-center px-8 py-4 mb-8"
+							initial={{ opacity: 0, scale: 0.8 }}
+							whileInView={{ opacity: 1, scale: 1 }}
+							viewport={{ once: true }}
+							transition={{ duration: 0.8, type: "spring", stiffness: 100 }}
+						>
+							<motion.div 
+								className="absolute inset-0 bg-gradient-to-r from-[var(--color-primary)]/30 via-[#f15a22]/20 to-[var(--color-primary)]/30 backdrop-blur-md rounded-full border border-[var(--color-primary)]/50 shadow-2xl"
+								animate={{
+									boxShadow: [
+										"0 0 20px rgba(116,63,119,0.3)",
+										"0 0 40px rgba(241,90,34,0.5)",
+										"0 0 20px rgba(116,63,119,0.3)"
+									]
+								}}
+								transition={{
+									duration: 3,
+									repeat: Infinity,
+									ease: "easeInOut"
+								}}
+							/>
+							<div className="relative flex items-center">
+								<motion.div 
+									className="w-4 h-4 bg-gradient-to-r from-[var(--color-primary)] to-[#f15a22] rounded-full mr-4"
+									animate={{
+										scale: [1, 1.3, 1],
+										rotate: [0, 180, 360]
+									}}
+									transition={{
+										duration: 2,
+										repeat: Infinity,
+										ease: "easeInOut"
+									}}
+								/>
+								<span className="text-sm font-bold text-white tracking-wider uppercase">
+									OUR CORE SERVICES
+								</span>
+							</div>
+						</motion.div>
+
+						{/* Enhanced title */}
 						<motion.h2 
-							className="text-3xl md:text-4xl font-bold mb-4"
+							className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8"
+							initial={{ opacity: 0, y: 30 }}
+							whileInView={{ opacity: 1, y: 0 }}
+							viewport={{ once: true }}
+							transition={{ duration: 0.8, delay: 0.2 }}
+						>
+							<motion.span 
+								className="bg-gradient-to-r from-white via-[var(--color-primary)] to-[#f15a22] bg-clip-text text-transparent"
+								animate={{
+									backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"]
+								}}
+								transition={{
+									duration: 5,
+									repeat: Infinity,
+									ease: "linear"
+								}}
+								style={{
+									backgroundSize: "200% 200%"
+								}}
+							>
+								WHAT WE DO
+							</motion.span>
+						</motion.h2>
+
+						{/* Enhanced divider */}
+						<motion.div 
+							className="relative mb-10"
+							initial={{ opacity: 0, scaleX: 0 }}
+							whileInView={{ opacity: 1, scaleX: 1 }}
+							viewport={{ once: true }}
+							transition={{ duration: 1, delay: 0.4 }}
+						>
+							<div className="w-32 h-1 bg-gradient-to-r from-[var(--color-primary)] via-[#f15a22] to-[var(--color-primary)] mx-auto rounded-full" />
+							<motion.div
+								className="absolute inset-0 w-32 h-1 bg-gradient-to-r from-[var(--color-primary)] via-[#f15a22] to-[var(--color-primary)] mx-auto rounded-full blur-sm"
+								animate={{
+									opacity: [0.5, 1, 0.5]
+								}}
+								transition={{
+									duration: 2,
+									repeat: Infinity,
+									ease: "easeInOut"
+								}}
+							/>
+						</motion.div>
+
+						{/* Enhanced description */}
+						<motion.p 
+							className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed"
 							initial={{ opacity: 0, y: 20 }}
 							whileInView={{ opacity: 1, y: 0 }}
 							viewport={{ once: true }}
-							transition={{ duration: 0.5 }}
+							transition={{ duration: 0.8, delay: 0.6 }}
 						>
-							<span className="bg-gradient-to-r from-white via-gray-200 to-[var(--color-primary)] bg-clip-text text-transparent">
-								WHAT WE DO
-							</span>
-						</motion.h2>
-						<div className="w-24 h-1 bg-gradient-to-r from-[var(--color-primary)] to-[#f15a22] mx-auto mb-8" />
-						<p className="text-xl text-gray-300 max-w-3xl mx-auto">
-							We provide comprehensive support through professional consulting, proven validation, professional implementation, and regional presence across Southeast Asia.
-						</p>
+							We provide{" "}
+							<motion.span 
+								className="text-[var(--color-primary)] font-semibold"
+								whileHover={{ scale: 1.05 }}
+								transition={{ duration: 0.2 }}
+							>
+								comprehensive support
+							</motion.span>{" "}
+							through professional consulting, proven validation, professional implementation, and regional presence across{" "}
+							<motion.span 
+								className="text-[#f15a22] font-semibold"
+								whileHover={{ scale: 1.05 }}
+								transition={{ duration: 0.2 }}
+							>
+								Southeast Asia
+							</motion.span>.
+						</motion.p>
 					</div>
 
-					<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+					<div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-7xl mx-auto">
 						{services.map((service, index) => (
 							<motion.div
 								key={service.id}
-								initial={{ opacity: 0, y: 30 }}
-								whileInView={{ opacity: 1, y: 0 }}
+								initial={{ opacity: 0, y: 50, scale: 0.9 }}
+								whileInView={{ opacity: 1, y: 0, scale: 1 }}
 								viewport={{ once: true }}
-								transition={{ duration: 0.5, delay: index * 0.1 }}
-								className="relative group"
+								transition={{ 
+									duration: 0.8, 
+									delay: index * 0.2,
+									type: "spring",
+									stiffness: 100,
+									damping: 10
+								}}
+								whileHover={{ 
+									scale: 1.05,
+									rotateY: 5,
+									z: 50
+								}}
+								className="relative group cursor-pointer perspective-1000"
+								style={{ transformStyle: 'preserve-3d' }}
 							>
-								<div className="absolute inset-0 bg-gradient-to-br from-[rgba(116,63,119,0.1)] via-[rgba(22,33,62,0.15)] to-[rgba(241,90,34,0.1)] rounded-2xl border border-[var(--color-primary)]/20 backdrop-blur-sm"></div>
-								
-								<div className="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-[var(--color-primary)]/50 rounded-tl-2xl"></div>
-								<div className="absolute bottom-0 right-0 w-8 h-8 border-b-2 border-r-2 border-[#f15a22]/50 rounded-br-2xl"></div>
+								{/* Animated background glow */}
+								<motion.div
+									className="absolute -inset-1 bg-gradient-to-r from-[var(--color-primary)] via-[#f15a22] to-[var(--color-primary)] rounded-3xl opacity-0 group-hover:opacity-100 blur-xl transition-all duration-500"
+									animate={{
+										background: [
+											"linear-gradient(45deg, var(--color-primary), #f15a22, var(--color-primary))",
+											"linear-gradient(45deg, #f15a22, var(--color-primary), #f15a22)",
+											"linear-gradient(45deg, var(--color-primary), #f15a22, var(--color-primary))"
+										]
+									}}
+									transition={{
+										duration: 3,
+										repeat: Infinity,
+										ease: "easeInOut"
+									}}
+								/>
 
-								<div className="relative p-8 h-full">
-									<div className="w-16 h-16 bg-gradient-to-br from-[var(--color-primary)]/20 to-[#f15a22]/20 text-[var(--color-primary)] rounded-xl flex items-center justify-center mb-6 border border-[var(--color-primary)]/30">
-										{service.icon}
+								{/* Main card */}
+								<div className="relative bg-gradient-to-br from-[rgba(10,14,26,0.95)] via-[rgba(22,33,62,0.90)] to-[rgba(10,14,26,0.95)] rounded-3xl border border-[var(--color-primary)]/30 backdrop-blur-lg overflow-hidden group-hover:border-[var(--color-primary)]/60 transition-all duration-500">
+									
+									{/* Animated corner accents */}
+									<motion.div
+										className="absolute top-0 left-0 w-20 h-20 border-t-4 border-l-4 border-[var(--color-primary)] rounded-tl-3xl opacity-60"
+										animate={{
+											borderColor: ["var(--color-primary)", "#f15a22", "var(--color-primary)"]
+										}}
+										transition={{
+											duration: 2,
+											repeat: Infinity,
+											ease: "easeInOut",
+											delay: index * 0.5
+										}}
+									/>
+									<motion.div
+										className="absolute bottom-0 right-0 w-20 h-20 border-b-4 border-r-4 border-[#f15a22] rounded-br-3xl opacity-60"
+										animate={{
+											borderColor: ["#f15a22", "var(--color-primary)", "#f15a22"]
+										}}
+										transition={{
+											duration: 2,
+											repeat: Infinity,
+											ease: "easeInOut",
+											delay: index * 0.5 + 1
+										}}
+									/>
+
+									{/* Floating particles effect */}
+									<div className="absolute inset-0 overflow-hidden pointer-events-none">
+										{[...Array(6)].map((_, i) => (
+											<motion.div
+												key={i}
+												className="absolute w-1 h-1 bg-[var(--color-primary)] rounded-full opacity-40"
+												style={{
+													left: `${20 + i * 15}%`,
+													top: `${10 + i * 10}%`,
+												}}
+												animate={{
+													y: [-10, -30, -10],
+													opacity: [0.2, 0.8, 0.2],
+													scale: [0.5, 1, 0.5]
+												}}
+												transition={{
+													duration: 3,
+													repeat: Infinity,
+													ease: "easeInOut",
+													delay: i * 0.5
+												}}
+											/>
+										))}
 									</div>
 
-									<h3 className="text-xl font-bold mb-4 text-white group-hover:text-[var(--color-primary)] transition-colors duration-300">
-										{service.title}
-									</h3>
-									<p className="text-gray-300 mb-6 leading-relaxed">
-										{service.description}
-									</p>
-
-									<div style={{ display: 'none' }} className="space-y-2">
-										<h4 className="text-sm font-semibold text-[var(--color-primary)] uppercase tracking-wider mb-3">
-											Key Capabilities
-										</h4>
-										{service.capabilities.map((capability, capIndex) => (
-											<div 
-												key={capIndex}
-												className="flex items-center text-sm text-gray-400"
+									<div className="relative p-10 h-full">
+										{/* Enhanced icon container */}
+										<motion.div
+											className="w-24 h-24 bg-gradient-to-br from-[var(--color-primary)] to-[#f15a22] text-white rounded-2xl flex items-center justify-center mb-8 border-2 border-white/20 shadow-2xl"
+											whileHover={{ 
+												rotate: 360,
+												scale: 1.1
+											}}
+											transition={{ 
+												duration: 0.8,
+												type: "spring",
+												stiffness: 200
+											}}
+											animate={{
+												boxShadow: [
+													"0 0 20px rgba(116,63,119,0.3)",
+													"0 0 40px rgba(241,90,34,0.5)",
+													"0 0 20px rgba(116,63,119,0.3)"
+												]
+											}}
+											style={{
+												animation: `pulse-glow-${index} 2s ease-in-out infinite`
+											}}
+										>
+											<motion.div
+												whileHover={{ scale: 1.2 }}
+												transition={{ duration: 0.3 }}
 											>
-												<div className="w-1.5 h-1.5 bg-[var(--color-primary)] rounded-full mr-3 flex-shrink-0"></div>
-												{capability}
+												{service.icon}
+											</motion.div>
+										</motion.div>
+
+										{/* Enhanced title */}
+										<motion.h3 
+											className="text-2xl md:text-3xl font-bold mb-6 text-white group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-[var(--color-primary)] group-hover:to-[#f15a22] group-hover:bg-clip-text transition-all duration-500"
+											whileHover={{ scale: 1.05 }}
+										>
+											{service.title}
+										</motion.h3>
+
+										{/* Enhanced description */}
+										<motion.p 
+											className="text-gray-300 text-lg leading-relaxed mb-8 group-hover:text-gray-100 transition-colors duration-300"
+											initial={{ opacity: 0.8 }}
+											whileHover={{ opacity: 1 }}
+										>
+											{service.description}
+										</motion.p>
+
+										{/* Key capabilities - now visible */}
+										<motion.div 
+											className="space-y-3"
+											initial={{ opacity: 0, y: 20 }}
+											whileInView={{ opacity: 1, y: 0 }}
+											transition={{ delay: 0.3 + index * 0.1 }}
+										>
+											<h4 className="text-sm font-bold text-[var(--color-primary)] uppercase tracking-wider mb-4 border-b border-[var(--color-primary)]/30 pb-2">
+												Key Capabilities
+											</h4>
+											<div className="grid grid-cols-1 gap-2">
+												{service.capabilities.slice(0, 3).map((capability, capIndex) => (
+													<motion.div 
+														key={capIndex}
+														className="flex items-center text-sm text-gray-400 group-hover:text-gray-300 transition-colors duration-300"
+														initial={{ opacity: 0, x: -20 }}
+														whileInView={{ opacity: 1, x: 0 }}
+														transition={{ 
+															delay: 0.5 + capIndex * 0.1,
+															duration: 0.5
+														}}
+														whileHover={{ x: 10, color: "var(--color-primary)" }}
+													>
+														<motion.div 
+															className="w-2 h-2 bg-gradient-to-r from-[var(--color-primary)] to-[#f15a22] rounded-full mr-3 flex-shrink-0"
+															animate={{
+																scale: [1, 1.2, 1],
+																opacity: [0.7, 1, 0.7]
+															}}
+															transition={{
+																duration: 2,
+																repeat: Infinity,
+																delay: capIndex * 0.3
+															}}
+														/>
+														{capability}
+													</motion.div>
+												))}
 											</div>
-										))}
+										</motion.div>
+
+										{/* Hover effect overlay */}
+										<motion.div
+											className="absolute inset-0 bg-gradient-to-br from-[var(--color-primary)]/5 to-[#f15a22]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl pointer-events-none"
+											whileHover={{
+												background: "radial-gradient(circle at center, rgba(116,63,119,0.1) 0%, rgba(241,90,34,0.1) 100%)"
+											}}
+										/>
 									</div>
 								</div>
 							</motion.div>
