@@ -112,13 +112,13 @@ const ContactUsClient = () => {
               animate={{
                 boxShadow: [
                   '0 0 5px rgba(116, 63, 119, 0.3)',
-                  '0 0 20px rgba(116, 63, 119, 0.6)',
-                  '0 0 5px rgba(116, 63, 119, 0.3)'
+                  '0 0 20px rgba(116, 63, 119, 0.6)'
                 ]
               }}
               transition={{
                 duration: 2,
                 repeat: Infinity,
+                repeatType: "reverse",
                 ease: "easeInOut"
               }}
             />
@@ -649,13 +649,13 @@ Visit our office in-person for consultations and cybersecurity solutions demonst
                 animate={{
                   boxShadow: [
                     '0 0 10px rgba(116, 63, 119, 0.2)',
-                    '0 0 30px rgba(116, 63, 119, 0.4)',
-                    '0 0 10px rgba(116, 63, 119, 0.2)'
+                    '0 0 30px rgba(116, 63, 119, 0.4)'
                   ]
                 }}
                 transition={{
                   duration: 3,
                   repeat: Infinity,
+                  repeatType: "reverse",
                   ease: "easeInOut"
                 }}
               />

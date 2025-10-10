@@ -156,13 +156,13 @@ const WhatWeDoClient = () => {
 								animate={{
 									boxShadow: [
 										"0 0 20px rgba(116,63,119,0.3)",
-										"0 0 40px rgba(241,90,34,0.5)",
-										"0 0 20px rgba(116,63,119,0.3)"
+										"0 0 40px rgba(241,90,34,0.5)"
 									]
 								}}
 								transition={{
 									duration: 3,
 									repeat: Infinity,
+									repeatType: "reverse",
 									ease: "easeInOut"
 								}}
 							/>
@@ -369,8 +369,7 @@ const WhatWeDoClient = () => {
 											animate={{
 												boxShadow: [
 													"0 0 20px rgba(116,63,119,0.3)",
-													"0 0 40px rgba(241,90,34,0.5)",
-													"0 0 20px rgba(116,63,119,0.3)"
+													"0 0 40px rgba(241,90,34,0.5)"
 												]
 											}}
 											style={{
@@ -401,47 +400,6 @@ const WhatWeDoClient = () => {
 										>
 											{service.description}
 										</motion.p>
-
-										{/* Key capabilities - now visible */}
-										<motion.div 
-											className="space-y-3"
-											initial={{ opacity: 0, y: 20 }}
-											whileInView={{ opacity: 1, y: 0 }}
-											transition={{ delay: 0.3 + index * 0.1 }}
-										>
-											<h4 className="text-sm font-bold text-[var(--color-primary)] uppercase tracking-wider mb-4 border-b border-[var(--color-primary)]/30 pb-2">
-												Key Capabilities
-											</h4>
-											<div className="grid grid-cols-1 gap-2">
-												{service.capabilities.slice(0, 3).map((capability, capIndex) => (
-													<motion.div 
-														key={capIndex}
-														className="flex items-center text-sm text-gray-400 group-hover:text-gray-300 transition-colors duration-300"
-														initial={{ opacity: 0, x: -20 }}
-														whileInView={{ opacity: 1, x: 0 }}
-														transition={{ 
-															delay: 0.5 + capIndex * 0.1,
-															duration: 0.5
-														}}
-														whileHover={{ x: 10, color: "var(--color-primary)" }}
-													>
-														<motion.div 
-															className="w-2 h-2 bg-gradient-to-r from-[var(--color-primary)] to-[#f15a22] rounded-full mr-3 flex-shrink-0"
-															animate={{
-																scale: [1, 1.2, 1],
-																opacity: [0.7, 1, 0.7]
-															}}
-															transition={{
-																duration: 2,
-																repeat: Infinity,
-																delay: capIndex * 0.3
-															}}
-														/>
-														{capability}
-													</motion.div>
-												))}
-											</div>
-										</motion.div>
 
 										{/* Hover effect overlay */}
 										<motion.div

@@ -284,13 +284,13 @@ const VendorsClient = () => {
 							animate={!isMobile && !prefersReducedMotion ? {
 								boxShadow: [
 									'0 0 5px rgba(116, 63, 119, 0.3)',
-									'0 0 20px rgba(116, 63, 119, 0.6)',
-									'0 0 5px rgba(116, 63, 119, 0.3)'
+									'0 0 20px rgba(116, 63, 119, 0.6)'
 								]
 							} : {}}
 							transition={!isMobile && !prefersReducedMotion ? {
 								duration: 2,
 								repeat: Infinity,
+								repeatType: "reverse",
 								ease: "easeInOut"
 							} : {}}
 						/>
@@ -449,13 +449,13 @@ const VendorsClient = () => {
 							animate={!isMobile && !prefersReducedMotion ? {
 								textShadow: [
 									'0 0 5px rgba(116, 63, 119, 0.5)',
-									'0 0 10px rgba(116, 63, 119, 0.8)',
-									'0 0 5px rgba(116, 63, 119, 0.5)'
+									'0 0 10px rgba(116, 63, 119, 0.8)'
 								]
 							} : {}}
 							transition={!isMobile && !prefersReducedMotion ? {
 								duration: 3,
 								repeat: Infinity,
+								repeatType: "reverse",
 								ease: "easeInOut"
 							} : {}}
 						>
@@ -517,13 +517,13 @@ const VendorsClient = () => {
 										animate={!isMobile && !prefersReducedMotion ? {
 											textShadow: [
 												`0 0 5px ${stat.color}50`,
-												`0 0 15px ${stat.color}80`,
-												`0 0 5px ${stat.color}50`
+												`0 0 15px ${stat.color}80`
 											]
 										} : {}}
 										transition={!isMobile && !prefersReducedMotion ? {
 											duration: 2,
 											repeat: 2,
+											repeatType: "reverse",
 											ease: "easeInOut",
 											delay: index * 0.3
 										} : {}}
