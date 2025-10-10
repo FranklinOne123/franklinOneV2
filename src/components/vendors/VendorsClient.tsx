@@ -12,7 +12,7 @@ const vendors = [
 		description: 'SentinelOne is a leader in AI-powered cybersecurity, providing autonomous endpoint protection, detection, and response through their Singularity platform. Their advanced threat detection and automated response capabilities help organizations defend against ransomware, malware, and sophisticated cyber attacks.',
 		solutions: ['Endpoint Security', 'XDR Platform', 'AI-Powered Threat Detection', 'Automated Response'],
 		website: 'https://www.sentinelone.com',
-		category: 'IT, Network, and Security'
+		category: 'Cybersecurity, Network, and IT Operation'
 	},
 	{
 		name: 'Netskope',
@@ -20,7 +20,7 @@ const vendors = [
 		description: 'Netskope is a SASE leader delivering secure access service edge solutions. Their cloud-native platform provides comprehensive security for users, applications, and data across cloud, web, and private applications, enabling secure digital transformation.',
 		solutions: ['SASE', 'Zero Trust Network Access', 'Cloud Security', 'Secure Web Gateway'],
 		website: 'https://www.netskope.com',
-		category: 'IT, Network, and Security'
+		category: 'Cybersecurity, Network, and IT Operation'
 	},
 	{
 		name: 'Qualys',
@@ -28,7 +28,7 @@ const vendors = [
 		description: 'Qualys is a leading provider of cloud-based IT, security, and compliance solutions. Their Enterprise TruRisk Platform helps organizations measure, manage, and reduce cyber risk through vulnerability management, asset discovery, and automated remediation.',
 		solutions: ['Vulnerability Management', 'Asset Discovery', 'Compliance Management', 'Cloud Security'],
 		website: 'https://www.qualys.com',
-		category: 'IT, Network, and Security'
+		category: 'Cybersecurity, Network, and IT Operation'
 	},
 	{
 		name: 'Varonis',
@@ -36,7 +36,7 @@ const vendors = [
 		description: 'Varonis is the #1 Data Security Platform that automatically finds critical data, remediates exposure, and stops threats in the cloud and on-premises. Their platform provides comprehensive data discovery, classification, and protection capabilities.',
 		solutions: ['Data Security', 'Data Discovery & Classification', 'Insider Threat Detection', 'Data Access Governance'],
 		website: 'https://www.varonis.com',
-		category: 'IT, Network, and Security'
+		category: 'Cybersecurity, Network, and IT Operation'
 	},
 	{
 		name: 'Proofpoint',
@@ -44,7 +44,7 @@ const vendors = [
 		description: 'Proofpoint is a leading cybersecurity and compliance company that protects organizations\' greatest assets and biggest risks: their people. Their integrated suite of cloud-based solutions helps companies stop targeted threats and safeguard their data.',
 		solutions: ['Email Security', 'Data Loss Prevention', 'Threat Protection', 'Security Awareness Training'],
 		website: 'https://www.proofpoint.com',
-		category: 'IT, Network, and Security'
+		category: 'Cybersecurity, Network, and IT Operation'
 	},
 	{
 		name: 'Ivanti',
@@ -52,7 +52,7 @@ const vendors = [
 		description: 'Ivanti provides unified IT service management, security, and endpoint management solutions. Their platform helps organizations discover, manage, secure, and service all their IT assets from a single console, improving efficiency and reducing security risks.',
 		solutions: ['IT Service Management', 'Endpoint Management', 'Security Management', 'Asset Discovery'],
 		website: 'https://www.ivanti.com',
-		category: 'IT, Network, and Security'
+		category: 'Cybersecurity, Network, and IT Operation'
 	},
 	{
 		name: 'Blancco',
@@ -60,7 +60,7 @@ const vendors = [
 		description: 'Blancco is the industry standard for secure data erasure and mobile device diagnostics. Their solutions ensure complete data sanitization and device lifecycle management, helping organizations maintain data privacy and comply with regulations.',
 		solutions: ['Data Erasure', 'Mobile Diagnostics', 'Device Lifecycle Management', 'Compliance Reporting'],
 		website: 'https://www.blancco.com',
-		category: 'IT, Network, and Security'
+		category: 'Cybersecurity, Network, and IT Operation'
 	},
 	// Physical Security Vendors
 	{
@@ -465,15 +465,16 @@ const VendorsClient = () => {
 
 					{/* Enhanced Security stats */}
 					<motion.div 
-						className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto"
+						className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto"
 						initial={{ opacity: 0, y: 30 }}
 						animate={{ opacity: 1, y: 0 }}
 						transition={{ duration: 0.8, delay: 1 }}
 					>
 						{[
-							{ number: "8+", label: "Technology Partners", color: "var(--color-primary)", delay: 0 },
-							{ number: "100+", label: "Security Solutions", color: "#f15a22", delay: 0.2 },
-							{ number: "25+", label: "Years Experience", color: "var(--color-primary)", delay: 0.4 }
+							{ number: "10+", label: "Partnering with 10+ Technology Partners", color: "var(--color-primary)", delay: 0 },
+							{ number: "✓", label: "Each Holds the Leader Position in the industry", color: "#f15a22", delay: 0.15 },
+							{ number: "✓", label: "Trusted by Enterprise Customers Worldwide", color: "var(--color-primary)", delay: 0.3 },
+							{ number: "24/7", label: "Round the Clock Technical Support", color: "#f15a22", delay: 0.45 }
 						].map((stat, index) => (
 							<motion.div
 								key={index}
@@ -498,44 +499,6 @@ const VendorsClient = () => {
 										background: `radial-gradient(circle, ${stat.color}15 0%, transparent 70%)`
 									}}
 								/>
-								
-								{/* Icon - Mobile optimized */}
-								<motion.div
-									className="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center relative"
-									style={{ 
-										background: `linear-gradient(135deg, ${stat.color}20, ${stat.color}10)`,
-										border: `2px solid ${stat.color}30`
-									}}
-									animate={!isMobile && !prefersReducedMotion ? {
-										boxShadow: [
-											`0 0 5px ${stat.color}30`,
-											`0 0 15px ${stat.color}50`,
-											`0 0 5px ${stat.color}30`
-										]
-									} : {}}
-									transition={!isMobile && !prefersReducedMotion ? {
-										duration: 2,
-										repeat: 3,
-										ease: "easeInOut",
-										delay: index * 0.5
-									} : {}}
-								>
-									{index === 0 && (
-										<svg className="w-8 h-8" style={{ color: stat.color }} fill="currentColor" viewBox="0 0 20 20">
-											<path fillRule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zm1 4a1 1 0 011-1h4a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1V8zm7-1a1 1 0 011 1v6a1 1 0 01-1 1h-1a1 1 0 01-1-1V8a1 1 0 011-1h1z" clipRule="evenodd" />
-										</svg>
-									)}
-									{index === 1 && (
-										<svg className="w-8 h-8" style={{ color: stat.color }} fill="currentColor" viewBox="0 0 20 20">
-											<path fillRule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-										</svg>
-									)}
-									{index === 2 && (
-										<svg className="w-8 h-8" style={{ color: stat.color }} fill="currentColor" viewBox="0 0 20 20">
-											<path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clipRule="evenodd" />
-										</svg>
-									)}
-								</motion.div>
 								
 								{/* Number with counter animation */}
 								<motion.div 
@@ -637,12 +600,12 @@ const VendorsClient = () => {
 					>
 						<h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
 							<span className="bg-gradient-to-r from-white via-[var(--color-primary)] to-white bg-clip-text text-transparent">
-								Technology Partners
+								Market Leaders
 							</span>
 						</h2>
 						<div className="w-24 h-1 bg-[var(--color-primary)] mx-auto mb-8"></div>
 						<p className="text-xl text-gray-300 max-w-3xl mx-auto">
-							Leading security and networking vendors that power our comprehensive solutions
+							Leading in cybersecurity and physical security space.
 						</p>
 					</motion.div>
 

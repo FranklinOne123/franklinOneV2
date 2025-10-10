@@ -268,7 +268,7 @@ const SolutionsClient = () => {
 										{detailedSolutions.endpointSecurity.map((solution, index) => (
 											<motion.div
 												key={index}
-												className="bg-purple-50 border border-purple-100 rounded-lg p-4 hover:bg-purple-100 transition-colors cursor-pointer"
+												className=" border border-purple-100 rounded-lg p-4 hover:bg-purple-100 transition-colors cursor-pointer"
 												initial={{ opacity: 0, x: -20 }}
 												whileInView={{ opacity: 1, x: 0 }}
 												viewport={{ once: true }}
@@ -321,7 +321,7 @@ const SolutionsClient = () => {
 										{detailedSolutions.networkSecurity.map((solution, index) => (
 											<motion.div
 												key={index}
-												className="bg-purple-50 border border-purple-100 rounded-lg p-4 hover:bg-purple-100 transition-colors cursor-pointer"
+												className="border border-purple-100 rounded-lg p-4 hover:bg-purple-100 transition-colors cursor-pointer"
 												initial={{ opacity: 0, x: -20 }}
 												whileInView={{ opacity: 1, x: 0 }}
 												viewport={{ once: true }}
@@ -374,7 +374,7 @@ const SolutionsClient = () => {
 										{detailedSolutions.dataSecurity.map((solution, index) => (
 											<motion.div
 												key={index}
-												className="bg-purple-50 border border-purple-100 rounded-lg p-4 hover:bg-purple-100 transition-colors cursor-pointer"
+												className=" border border-purple-100 rounded-lg p-4 hover:bg-purple-100 transition-colors cursor-pointer"
 												initial={{ opacity: 0, x: -20 }}
 												whileInView={{ opacity: 1, x: 0 }}
 												viewport={{ once: true }}
@@ -427,7 +427,7 @@ const SolutionsClient = () => {
 										{detailedSolutions.vulnerabilityManagement.map((solution, index) => (
 											<motion.div
 												key={index}
-												className="bg-purple-50 border border-purple-100 rounded-lg p-4 hover:bg-purple-100 transition-colors cursor-pointer"
+												className="border border-purple-100 rounded-lg p-4 hover:bg-purple-100 transition-colors cursor-pointer"
 												initial={{ opacity: 0, x: -20 }}
 												whileInView={{ opacity: 1, x: 0 }}
 												viewport={{ once: true }}
@@ -480,7 +480,7 @@ const SolutionsClient = () => {
 										{detailedSolutions.networkingSolutions.map((solution, index) => (
 											<motion.div
 												key={index}
-												className="bg-purple-50 border border-purple-100 rounded-lg p-4 hover:bg-purple-100 transition-colors cursor-pointer"
+												className="border border-purple-100 rounded-lg p-4 hover:bg-purple-100 transition-colors cursor-pointer"
 												initial={{ opacity: 0, x: -20 }}
 												whileInView={{ opacity: 1, x: 0 }}
 												viewport={{ once: true }}
@@ -533,7 +533,7 @@ const SolutionsClient = () => {
 										{detailedSolutions.itOperations.map((solution, index) => (
 											<motion.div
 												key={index}
-												className="bg-purple-50 border border-purple-100 rounded-lg p-4 hover:bg-purple-100 transition-colors cursor-pointer"
+												className="border border-purple-100 rounded-lg p-4 hover:bg-purple-100 transition-colors cursor-pointer"
 												initial={{ opacity: 0, x: -20 }}
 												whileInView={{ opacity: 1, x: 0 }}
 												viewport={{ once: true }}
@@ -586,7 +586,7 @@ const SolutionsClient = () => {
 										{detailedSolutions.physicalSecurity.map((solution, index) => (
 											<motion.div
 												key={index}
-												className="bg-purple-50 border border-purple-100 rounded-lg p-4 hover:bg-purple-100 transition-colors cursor-pointer"
+												className="border border-purple-100 rounded-lg p-4 hover:bg-purple-100 transition-colors cursor-pointer"
 												initial={{ opacity: 0, x: -20 }}
 												whileInView={{ opacity: 1, x: 0 }}
 												viewport={{ once: true }}
