@@ -15,36 +15,6 @@ const VisionMissionSection = () => {
     }
   };
 
-  const slideInFromLeft = {
-    hidden: { opacity: 0, x: -100, scale: 0.8 },
-    visible: {
-      opacity: 1,
-      x: 0,
-      scale: 1,
-      transition: {
-        type: "spring",
-        stiffness: 100,
-        damping: 15,
-        duration: 0.8
-      }
-    }
-  };
-
-  const slideInFromRight = {
-    hidden: { opacity: 0, x: 100, scale: 0.8 },
-    visible: {
-      opacity: 1,
-      x: 0,
-      scale: 1,
-      transition: {
-        type: "spring",
-        stiffness: 100,
-        damping: 15,
-        duration: 0.8
-      }
-    }
-  };
-
   const fadeInUp = {
     hidden: { opacity: 0, y: 60 },
     visible: {
@@ -55,17 +25,6 @@ const VisionMissionSection = () => {
         stiffness: 80,
         damping: 12
       }
-    }
-  };
-
-
-
-  const pulseAnimation = {
-    scale: [1, 1.05, 1],
-    transition: {
-      duration: 2,
-      repeat: Infinity,
-      ease: "easeInOut"
     }
   };
 

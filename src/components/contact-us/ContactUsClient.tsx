@@ -1,6 +1,5 @@
 "use client";
 import { motion } from 'framer-motion';
-import Image from 'next/image';
 import Link from 'next/link';
 
 const ContactUsClient = () => {
@@ -169,7 +168,7 @@ const ContactUsClient = () => {
               transition={{ duration: 1, delay: 0.8 }}
             />
             <p className="text-xl md:text-2xl max-w-4xl mx-auto text-gray-300 leading-relaxed">
-We're here to help with your security and networking needs. Reach out to our team for qualified and reliable consultation and advanced cybersecurity solutions.            </p>
+We&apos;re here to help with your security and networking needs. Reach out to our team for qualified and reliable consultation and advanced cybersecurity solutions.            </p>
           </motion.div>
 
           {/* Enhanced scroll indicator */}
