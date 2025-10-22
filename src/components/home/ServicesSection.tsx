@@ -29,7 +29,7 @@ const services = [
   },
   {
     title: 'Managed Security Services',
-    description: 'Let our experts manage your security operations with 24/7 monitoring, threat hunting, and incident response.',
+    description: 'Let our professionals manage your security operations with 24/7 monitoring, threat hunting, and incident response.',
     icon: '/icons/managed-security.svg',
     color: 'bg-purple-50',
     iconColor: 'text-[#743f77]',

@@ -29,7 +29,7 @@ const services = [
   {
     icon: CertifiedIcon,
     title: "Certified Engineers",
-    description: "Our team of certified engineers ensures professional implementation of security solutions"
+    description: "Our team of certified engineers ensures professionalimplementation of security solutions"
   },
   {
     icon: ArchitectureIcon,
@@ -49,7 +49,7 @@ const services = [
   {
     icon: TrainingIcon,
     title: "Certification and Customized Technical Training",
-    description: "Professional certification courses and customized training programs"
+    description: "professionalcertification courses and customized training programs"
   },
   {
     icon: GrowthIcon,

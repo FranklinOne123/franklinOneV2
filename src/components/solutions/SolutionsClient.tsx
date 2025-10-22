@@ -31,10 +31,10 @@ const detailedSolutions = {
 		'Audit Fix (add below Policy Compliance)'
 	],
 	vulnerabilityManagement: [
-		'Vulnerability Management Detection and Response (VMDR)',
-		'Cybersecurity Asset Management (CSAM)',
-		'Policy Compliance (PC)',
-		'File Integrity Monitoring (FIM)' 
+		'Web Application Scanning (WAS)',
+		'Cloud Security',
+		'Audit Fix (add below Policy Compliance)',
+		'Cybersecurity Asset Management (CSAM)' 
 	],
 	networkingSolutions: [
 		'Next-Gen Firewall (NGFW)',
@@ -178,31 +178,40 @@ const SolutionsClient = () => {
 						
 						{/* Enhanced feature badges */}
 						<motion.div
-							className="mt-12 hidden md:flex items-center justify-center gap-4 lg:gap-6 text-white/70 flex-wrap max-w-5xl mx-auto px-4"
+							className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto px-4"
 							initial={{ opacity: 0 }}
 							animate={{ opacity: 1 }}
 							transition={{ delay: 1.5, duration: 1 }}
 						>
-							<div className="flex items-center gap-2 py-2">
-								<svg className="w-5 h-5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+							<motion.div 
+								className="flex flex-col items-center gap-3 p-6 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hover:border-white/30 transition-all duration-300"
+								whileHover={{ scale: 1.05, y: -5 }}
+							>
+								<svg className="w-10 h-10 text-[var(--color-primary)]" fill="currentColor" viewBox="0 0 20 20">
 									<path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
 								</svg>
-								<span className="text-sm">Recognized by Global Standard Bodies</span>
-							</div>
-							<div className="hidden lg:block w-1 h-1 rounded-full bg-white/50"></div>
-							<div className="flex items-center gap-2 py-2">
-								<svg className="w-5 h-5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+								<span className="text-base font-medium text-white text-center">Recognized by Global Standard Bodies</span>
+							</motion.div>
+							
+							<motion.div 
+								className="flex flex-col items-center gap-3 p-6 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hover:border-white/30 transition-all duration-300"
+								whileHover={{ scale: 1.05, y: -5 }}
+							>
+								<svg className="w-10 h-10 text-[var(--color-primary)]" fill="currentColor" viewBox="0 0 20 20">
 									<path fillRule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clipRule="evenodd"></path>
 								</svg>
-								<span className="text-sm">Scalable - Future-Ready Solutions</span>
-							</div>
-							<div className="hidden lg:block w-1 h-1 rounded-full bg-white/50"></div>
-							<div className="flex items-center gap-2 py-2">
-								<svg className="w-5 h-5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+								<span className="text-base font-medium text-white text-center">Scalable - Future-Ready Solutions</span>
+							</motion.div>
+							
+							<motion.div 
+								className="flex flex-col items-center gap-3 p-6 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hover:border-white/30 transition-all duration-300"
+								whileHover={{ scale: 1.05, y: -5 }}
+							>
+								<svg className="w-10 h-10 text-[var(--color-primary)]" fill="currentColor" viewBox="0 0 20 20">
 									<path fillRule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
 								</svg>
-								<span className="text-sm">Providing Most Secured with Advanced Solutions Capability</span>
-							</div>
+								<span className="text-base font-medium text-white text-center">Providing Most Secured with Advanced Solutions Capability</span>
+							</motion.div>
 						</motion.div>
 					</motion.div>
 				</div>
@@ -235,13 +244,13 @@ const SolutionsClient = () => {
 					<div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
 						{/* Endpoint Security */}
 						<motion.div
-							className="bg-white rounded-xl shadow-lg border-t-4 border-t-purple-600 overflow-hidden hover:shadow-xl transition-all duration-300"
+							className="bg-white rounded-xl shadow-lg border-t-0 border-t-#743f77]/95 overflow-hidden hover:shadow-xl transition-all duration-300"
 							initial={{ opacity: 0, y: 30 }}
 							whileInView={{ opacity: 1, y: 0 }}
 							viewport={{ once: true }}
 							transition={{ duration: 0.6 }}
 						>
-							<div className="bg-gradient-to-r from-purple-600 to-purple-700 p-6 text-white">
+							<div className="bg-gradient-to-r bg-[#743f77]/95 p-6 text-white">
 								<div className="flex items-center mb-4">
 									<div className="bg-white/20 p-3 rounded-lg mr-4">
 										<svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
@@ -276,7 +285,7 @@ const SolutionsClient = () => {
 												whileHover={{ scale: 1.02 }}
 											>
 												<div className="flex items-center">
-													<div className="w-2 h-2 bg-purple-600 rounded-full mr-3"></div>
+													<div className="w-2 h-2 bg-[#743f77]/95 rounded-full mr-3"></div>
 													<span className="text-gray-800 font-medium text-sm">{solution}</span>
 												</div>
 											</motion.div>
@@ -288,13 +297,13 @@ const SolutionsClient = () => {
 
 						{/* Network Security */}
 						<motion.div
-							className="bg-white rounded-xl shadow-lg border-t-4 border-t-purple-600 overflow-hidden hover:shadow-xl transition-all duration-300"
+							className="bg-white rounded-xl shadow-lg border-t-0 border-t-purple-600 overflow-hidden hover:shadow-xl transition-all duration-300"
 							initial={{ opacity: 0, y: 30 }}
 							whileInView={{ opacity: 1, y: 0 }}
 							viewport={{ once: true }}
 							transition={{ duration: 0.6, delay: 0.2 }}
 						>
-							<div className="bg-gradient-to-r from-purple-600 to-purple-700 p-6 text-white">
+							<div className="bg-gradient-to-r bg-[#743f77]/95 p-6 text-white">
 								<div className="flex items-center mb-4">
 									<div className="bg-white/20 p-3 rounded-lg mr-4">
 										<svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
@@ -329,7 +338,7 @@ const SolutionsClient = () => {
 												whileHover={{ scale: 1.02 }}
 											>
 												<div className="flex items-center">
-													<div className="w-2 h-2 bg-purple-600 rounded-full mr-3"></div>
+													<div className="w-2 h-2 bg-[#743f77]/95 rounded-full mr-3"></div>
 													<span className="text-gray-800 font-medium text-sm">{solution}</span>
 												</div>
 											</motion.div>
@@ -341,13 +350,13 @@ const SolutionsClient = () => {
 
 						{/* Data Security */}
 						<motion.div
-							className="bg-white rounded-xl shadow-lg border-t-4 border-t-purple-600 overflow-hidden hover:shadow-xl transition-all duration-300"
+							className="bg-white rounded-xl shadow-lg border-t-0 border-t-purple-600 overflow-hidden hover:shadow-xl transition-all duration-300"
 							initial={{ opacity: 0, y: 30 }}
 							whileInView={{ opacity: 1, y: 0 }}
 							viewport={{ once: true }}
 							transition={{ duration: 0.6, delay: 0.4 }}
 						>
-							<div className="bg-gradient-to-r from-purple-600 to-purple-700 p-6 text-white">
+							<div className="bg-gradient-to-r bg-[#743f77]/95 p-6 text-white">
 								<div className="flex items-center mb-4">
 									<div className="bg-white/20 p-3 rounded-lg mr-4">
 										<svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
@@ -382,7 +391,7 @@ const SolutionsClient = () => {
 												whileHover={{ scale: 1.02 }}
 											>
 												<div className="flex items-center">
-													<div className="w-2 h-2 bg-purple-600 rounded-full mr-3"></div>
+													<div className="w-2 h-2 bg-[#743f77]/95 rounded-full mr-3"></div>
 													<span className="text-gray-800 font-medium text-sm">{solution}</span>
 												</div>
 											</motion.div>
@@ -394,13 +403,13 @@ const SolutionsClient = () => {
 
 						{/* Vulnerability Management and Compliance */}
 						<motion.div
-							className="bg-white rounded-xl shadow-lg border-t-4 border-t-purple-600 overflow-hidden hover:shadow-xl transition-all duration-300"
+							className="bg-white rounded-xl shadow-lg border-t-0 border-t-purple-600 overflow-hidden hover:shadow-xl transition-all duration-300"
 							initial={{ opacity: 0, y: 30 }}
 							whileInView={{ opacity: 1, y: 0 }}
 							viewport={{ once: true }}
 							transition={{ duration: 0.6, delay: 0.6 }}
 						>
-							<div className="bg-gradient-to-r from-purple-600 to-purple-700 p-6 text-white">
+							<div className="bg-gradient-to-r bg-[#743f77]/95 p-6 text-white">
 								<div className="flex items-center mb-4">
 									<div className="bg-white/20 p-3 rounded-lg mr-4">
 										<svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
@@ -435,7 +444,7 @@ const SolutionsClient = () => {
 												whileHover={{ scale: 1.02 }}
 											>
 												<div className="flex items-center">
-													<div className="w-2 h-2 bg-purple-600 rounded-full mr-3"></div>
+													<div className="w-2 h-2 bg-[#743f77]/95 rounded-full mr-3"></div>
 													<span className="text-gray-800 font-medium text-sm">{solution}</span>
 												</div>
 											</motion.div>
@@ -453,7 +462,7 @@ const SolutionsClient = () => {
 							viewport={{ once: true }}
 							transition={{ duration: 0.6, delay: 0.8 }}
 						>
-							<div className="bg-gradient-to-r from-purple-600 to-purple-700 p-6 text-white">
+							<div className="bg-gradient-to-r bg-[#743f77]/95 p-6 text-white">
 								<div className="flex items-center mb-4">
 									<div className="bg-white/20 p-3 rounded-lg mr-4">
 										<svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
@@ -488,7 +497,7 @@ const SolutionsClient = () => {
 												whileHover={{ scale: 1.02 }}
 											>
 												<div className="flex items-center">
-													<div className="w-2 h-2 bg-purple-600 rounded-full mr-3"></div>
+													<div className="w-2 h-2 bg-[#743f77]/95 rounded-full mr-3"></div>
 													<span className="text-gray-800 font-medium text-sm">{solution}</span>
 												</div>
 											</motion.div>
@@ -500,13 +509,13 @@ const SolutionsClient = () => {
 
 						{/* IT Operations and Management */}
 						<motion.div
-							className="bg-white rounded-xl shadow-lg border-t-4 border-t-purple-600 overflow-hidden hover:shadow-xl transition-all duration-300"
+							className="bg-white rounded-xl shadow-lg border-t-0 border-t-purple-600 overflow-hidden hover:shadow-xl transition-all duration-300"
 							initial={{ opacity: 0, y: 30 }}
 							whileInView={{ opacity: 1, y: 0 }}
 							viewport={{ once: true }}
 							transition={{ duration: 0.6, delay: 1.0 }}
 						>
-							<div className="bg-gradient-to-r from-purple-600 to-purple-700 p-6 text-white">
+							<div className="bg-gradient-to-r from-[#743f77]/95 to-[#743f77]/95 p-6 text-white">
 								<div className="flex items-center mb-4">
 									<div className="bg-white/20 p-3 rounded-lg mr-4">
 										<svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
@@ -541,7 +550,7 @@ const SolutionsClient = () => {
 												whileHover={{ scale: 1.02 }}
 											>
 												<div className="flex items-center">
-													<div className="w-2 h-2 bg-purple-600 rounded-full mr-3"></div>
+													<div className="w-2 h-2 bg-[#743f77]/95 rounded-full mr-3"></div>
 													<span className="text-gray-800 font-medium text-sm">{solution}</span>
 												</div>
 											</motion.div>
@@ -553,13 +562,13 @@ const SolutionsClient = () => {
 
 						{/* Physical Security */}
 						<motion.div
-							className="bg-white rounded-xl shadow-lg border-t-4 border-t-purple-600 overflow-hidden hover:shadow-xl transition-all duration-300"
+							className="bg-white rounded-xl shadow-lg border-t-0 border-t-purple-600 overflow-hidden hover:shadow-xl transition-all duration-300"
 							initial={{ opacity: 0, y: 30 }}
 							whileInView={{ opacity: 1, y: 0 }}
 							viewport={{ once: true }}
 							transition={{ duration: 0.6, delay: 1.2 }}
 						>
-							<div className="bg-gradient-to-r from-purple-600 to-purple-700 p-6 text-white">
+							<div className="bg-gradient-to-r bg-[#743f77]/95 p-6 text-white">
 								<div className="flex items-center mb-4">
 									<div className="bg-white/20 p-3 rounded-lg mr-4">
 										<svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
@@ -594,7 +603,7 @@ const SolutionsClient = () => {
 												whileHover={{ scale: 1.02 }}
 											>
 												<div className="flex items-center">
-													<div className="w-2 h-2 bg-purple-600 rounded-full mr-3"></div>
+													<div className="w-2 h-2 bg-[#743f77]/95 rounded-full mr-3"></div>
 													<span className="text-gray-800 font-medium text-sm">{solution}</span>
 												</div>
 											</motion.div>
@@ -605,7 +614,7 @@ const SolutionsClient = () => {
 						</motion.div>
 					</div>
 
-					{/* Bottom CTA for detailed solutions */}
+					{/* Bottom CTA for detailed solutions
 					<motion.div
 						className="mt-16 text-center"
 						initial={{ opacity: 0, y: 20 }}
@@ -618,7 +627,7 @@ const SolutionsClient = () => {
 								Need a Custom Security Solution?
 							</h3>
 							<p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-								Our security experts can design a tailored solution that combines multiple security domains to meet your specific business requirements and compliance needs.
+								Our security professionals can design a tailored solution that combines multiple security domains to meet your specific business requirements and compliance needs.
 							</p>
 							<Link 
 								href="/contact-us"
@@ -627,10 +636,10 @@ const SolutionsClient = () => {
 								<svg className="w-5 h-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 									<path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
 								</svg>
-								Consult Our Security Experts
+								Consult Our Security professionals
 							</Link>
 						</div>
-					</motion.div>
+					</motion.div> */}
 				</div>
 			</section>
 
@@ -680,7 +689,7 @@ const SolutionsClient = () => {
 						viewport={{ once: true }}
 						transition={{ duration: 0.5, delay: 0.2 }}
 					>
-						Contact our team of security experts to discuss how we can help you address your specific security and networking challenges with our enterprise-grade solutions.
+						Contact our team of security professionals to discuss how we can help you address your specific security and networking challenges with our enterprise-grade solutions.
 					</motion.p>
 					
 					<motion.div
@@ -696,7 +705,7 @@ const SolutionsClient = () => {
 							</svg>
 							Schedule a Consultation
 						</Link>
-						<Link href="/contact-us#form" className="bg-[var(--color-secondary)] hover:bg-[var(--color-secondary-dark)] text-white font-bold py-4 px-8 rounded-md text-lg transition duration-300 shadow-lg hover:shadow-xl ease-in-out flex items-center justify-center">
+						<Link href="/contact-us#form" className="bg-gradient-to-r from-[var(--color-primary)] to-[#f15a22] hover:from-[#f15a22] hover:to-[var(--color-primary)] text-white font-bold py-4 px-8 rounded-md text-lg transition-all duration-300 shadow-lg hover:shadow-xl ease-in-out flex items-center justify-center">
 							<svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
 								<path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
 							</svg>

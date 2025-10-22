@@ -216,7 +216,7 @@ const HeroSection = () => {
                   transition={{ duration: 0.7, delay: 0.1 }}
                 >
                   <div className="w-2 h-2 bg-[var(--color-primary)] rounded-full mr-3 animate-pulse"></div>
-                  <span className="text-white text-sm font-medium">CYBERSECURITY EXPERTS</span>
+                  <span className="text-white text-sm font-medium">CYBERSECURITY professionals</span>
                 </motion.div>
 
                 <motion.h1 

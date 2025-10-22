@@ -4,16 +4,28 @@ import { motion } from 'framer-motion';
 const StatsSection = () => {
   const stats = [
     {
-      text: "Established since 2023"
+      text: "Established since 2023",
+      gradient: "from-purple-600/30 via-purple-500/20 to-pink-600/30",
+      borderColor: "border-purple-400/40 group-hover:border-purple-300/60",
+      accentColor: "border-purple-400"
     },
     {
-      text: "Regional Coverage"
+      text: "Regional Coverage",
+      gradient: "from-purple-600/30 via-purple-500/20 to-pink-600/30",
+      borderColor: "border-purple-400/40 group-hover:border-purple-300/60",
+      accentColor: "border-purple-400"
     },
     {
-      text: "Trusted by all the key resellers and system integrators"
+      text: "Trusted by all the key resellers and system integrators",
+      gradient: "from-purple-600/30 via-purple-500/20 to-pink-600/30",
+      borderColor: "border-purple-400/40 group-hover:border-purple-300/60",
+      accentColor: "border-purple-400"
     },
     {
-      text: "Brought to the market 100+ security solutions"
+      text: "Brought to the market 100+ security solutions",
+      gradient: "from-purple-600/30 via-purple-500/20 to-pink-600/30",
+      borderColor: "border-purple-400/40 group-hover:border-purple-300/60",
+      accentColor: "border-purple-400"
     }
   ];
 
@@ -100,12 +112,15 @@ Our results reflect years of cybersecurity leadership, delivering measurable imp
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
             >
-              <div className="bg-gradient-to-br from-[var(--color-primary)]/20 via-gray-800/50 to-gray-900/80 backdrop-blur-sm rounded-2xl p-8 border border-[var(--color-primary)]/20 group-hover:border-[var(--color-primary)]/40 transition-all duration-500 relative overflow-hidden h-full flex items-center justify-center min-h-[200px]">
+              <div className={`bg-gradient-to-br ${stat.gradient} backdrop-blur-sm rounded-2xl p-8 border ${stat.borderColor} transition-all duration-500 relative overflow-hidden h-full flex items-center justify-center min-h-[200px] shadow-lg group-hover:shadow-2xl`}>
                 {/* Corner accents */}
-                <div className="absolute top-0 left-0 w-8 h-8 border-l-2 border-t-2 border-[var(--color-primary)] opacity-40"></div>
-                <div className="absolute bottom-0 right-0 w-8 h-8 border-r-2 border-b-2 border-[var(--color-primary)] opacity-40"></div>
+                <div className={`absolute top-0 left-0 w-8 h-8 border-l-2 border-t-2 ${stat.accentColor} opacity-60 group-hover:opacity-100 transition-opacity duration-300`}></div>
+                <div className={`absolute bottom-0 right-0 w-8 h-8 border-r-2 border-b-2 ${stat.accentColor} opacity-60 group-hover:opacity-100 transition-opacity duration-300`}></div>
                 
-                <div className="text-xl md:text-2xl font-semibold text-white leading-relaxed">
+                {/* Glow effect on hover */}
+                <div className={`absolute inset-0 bg-gradient-to-br ${stat.gradient} opacity-0 group-hover:opacity-50 transition-opacity duration-500 blur-xl`}></div>
+                
+                <div className="text-xl md:text-2xl font-semibold text-white leading-relaxed relative z-10">
                   {stat.text}
                 </div>
               </div>

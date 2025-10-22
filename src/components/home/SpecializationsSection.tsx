@@ -5,31 +5,45 @@ const SpecializationsSection = () => {
   const specializations = [
     {
       title: "Device and User Protection",
-      icon: "🔒"
+      gradient: "from-purple-600/30 via-purple-500/20 to-pink-600/30",
+      borderColor: "border-purple-400/40 group-hover:border-purple-300/60",
+      accentColor: "border-purple-400"
     },
     {
       title: "Infrastructure Protection",
-      icon: "🏢"
+      gradient: "from-purple-600/30 via-purple-500/20 to-pink-600/30",
+      borderColor: "border-purple-400/40 group-hover:border-purple-300/60",
+      accentColor: "border-purple-400"
     },
     {
       title: "Information Protection",
-      icon: "📁"
+      gradient: "from-purple-600/30 via-purple-500/20 to-pink-600/30",
+      borderColor: "border-purple-400/40 group-hover:border-purple-300/60",
+      accentColor: "border-purple-400"
     },
     {
       title: "Risk Assessment and Compliance",
-      icon: "✅"
+      gradient: "from-purple-600/30 via-purple-500/20 to-pink-600/30",
+      borderColor: "border-purple-400/40 group-hover:border-purple-300/60",
+      accentColor: "border-purple-400"
     },
     {
       title: "Network and Connectivity",
-      icon: "🌐"
+      gradient: "from-purple-600/30 via-purple-500/20 to-pink-600/30",
+      borderColor: "border-purple-400/40 group-hover:border-purple-300/60",
+      accentColor: "border-purple-400"
     },
     {
       title: "System Management",
-      icon: "⚙️"
+      gradient: "from-purple-600/30 via-purple-500/20 to-pink-600/30",
+      borderColor: "border-purple-400/40 group-hover:border-purple-300/60",
+      accentColor: "border-purple-400"
     },
     {
       title: "Physical Security",
-      icon: "🛡️"
+      gradient: "from-purple-600/30 via-purple-500/20 to-pink-600/30",
+      borderColor: "border-purple-400/40 group-hover:border-purple-300/60",
+      accentColor: "border-purple-400"
     }
   ];
 
@@ -122,16 +136,16 @@ const SpecializationsSection = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
             >
-              <div className="bg-gradient-to-br from-[var(--color-primary)]/20 via-gray-800/50 to-gray-900/80 backdrop-blur-sm rounded-2xl p-6 border border-[var(--color-primary)]/20 group-hover:border-[var(--color-primary)]/40 transition-all duration-500 h-full relative overflow-hidden flex flex-col items-center justify-center text-center min-h-[180px]">
+              <div className={`bg-gradient-to-br ${spec.gradient} backdrop-blur-sm rounded-2xl p-6 border ${spec.borderColor} transition-all duration-500 h-full relative overflow-hidden flex flex-col items-center justify-center text-center min-h-[180px] shadow-lg group-hover:shadow-2xl`}>
                 {/* Corner decorations */}
-                <div className="absolute top-0 left-0 w-6 h-6 border-l-2 border-t-2 border-[var(--color-primary)] opacity-60"></div>
-                <div className="absolute bottom-0 right-0 w-6 h-6 border-r-2 border-b-2 border-[var(--color-primary)] opacity-60"></div>
+                <div className={`absolute top-0 left-0 w-6 h-6 border-l-2 border-t-2 ${spec.accentColor} opacity-60 group-hover:opacity-100 transition-opacity duration-300`}></div>
+                <div className={`absolute bottom-0 right-0 w-6 h-6 border-r-2 border-b-2 ${spec.accentColor} opacity-60 group-hover:opacity-100 transition-opacity duration-300`}></div>
+                
+                {/* Glow effect on hover */}
+                <div className={`absolute inset-0 bg-gradient-to-br ${spec.gradient} opacity-0 group-hover:opacity-50 transition-opacity duration-500 blur-xl`}></div>
                 
                 <div className="relative z-10">
-                  <div className="text-5xl mb-4 group-hover:scale-110 transition-transform duration-300">
-                    {spec.icon}
-                  </div>
-                  <h3 className="text-lg font-bold text-white group-hover:text-[var(--color-primary)] transition-colors duration-300">
+                  <h3 className="text-lg font-bold text-white transition-colors duration-300">
                     {spec.title}
                   </h3>
                 </div>

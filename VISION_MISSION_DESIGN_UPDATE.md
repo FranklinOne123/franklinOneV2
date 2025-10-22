@@ -79,7 +79,7 @@ The section now matches the visual language of:
 - Badge-style headers
 - Consistent hover interactions
 - Smooth spring animations
-- Professional glassmorphism effects
+- professionalglassmorphism effects
 
 ## Images Required
 - `/images/team-hands.jpg` - For Vision section

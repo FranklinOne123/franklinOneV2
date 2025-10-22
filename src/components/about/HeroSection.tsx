@@ -82,7 +82,7 @@ const HeroSection = () => {
               transition={{ duration: 0.8, delay: 0.4 }}
             >
               <p className="text-xl md:text-2xl text-gray-300 leading-relaxed max-w-4xl mx-auto">
-                Discover our journey from a visionary startup to regional cybersecurity leadership, our mission to protect digital futures, and the professional team driving innovation in the ever-evolving threat landscape.
+                Discover our journey from a visionary startup to regional cybersecurity leadership, our mission to protect digital futures, and the professionalteam driving innovation in the ever-evolving threat landscape.
               </p>
             </motion.div>
 

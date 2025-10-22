@@ -89,7 +89,7 @@ const allNewsItems = [
   {
     id: 'franklinone-education-initiative',
     date: "28 Mar 2024",
-    title: "FranklinOne Launches Education Initiative for Cybersecurity Professionals",
+    title: "FranklinOne Launches Education Initiative for Cybersecurity professionals",
     excerpt: "The new program aims to address the skills gap in the cybersecurity industry through comprehensive training and certification...",
     category: "Education",
     featured: false,

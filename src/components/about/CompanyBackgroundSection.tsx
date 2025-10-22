@@ -93,7 +93,7 @@ const CompanyBackgroundSection = () => {
                           <path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd"/>
                         </svg>
                       </div>
-                      <p className="text-white text-sm">Our Professional Team</p>
+                      <p className="text-white text-sm">Our professionalTeam</p>
                       <p className="text-gray-400 text-xs mt-1">Excellence in Cybersecurity Distribution</p>
                     </div>
                   </div>

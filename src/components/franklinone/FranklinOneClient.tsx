@@ -206,7 +206,7 @@ const FranklinOneClient = () => {
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-4">Implement</h3>
               <p className="text-gray-600">
-                We provide professional implementation, integration, and ongoing support to ensure your solutions deliver long-term value.
+                We provide professionalimplementation, integration, and ongoing support to ensure your solutions deliver long-term value.
               </p>
             </motion.div>
           </div>
