@@ -26,30 +26,17 @@ const GetToKnowUsSection = () => {
     }
   };
 
-  const contentBlocks = [
-    {
-      title: "Our Foundation & Expertise",
-      text: "Our company was established by a team of highly experienced professionals who have excelled in the distribution business for years, deeply understanding the core values of being a true distributor. We have built a dedicated team to provide comprehensive support, including solution consultation and after-sales service, ensuring that our customers receive the best possible experience. Our goal is to work closely with our resellers to deliver exceptional products with friendly, reliable service to end clients.",
-      icon: (
-        <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
-          <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z"/>
-        </svg>
-      ),
-      gradient: "from-purple-500 to-purple-700",
-      highlights: ["Experienced Team", "Comprehensive Support", "Partner-Focused"]
-    },
-    {
-      title: "Our Principles & Vision",
-      text: "Committed to unquestionable business principles, we strictly conduct our transactions through resellers and never engage directly with end customers. We firmly believe in the partner ecosystem and strive to be a role model in the country and the region. Our shareholders comprise individuals with a strong financial background who share a unified vision— building a long-lasting organization that generates sustainable benefits for all stakeholders.",
-      icon: (
-        <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
-          <path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"/>
-        </svg>
-      ),
-      gradient: "from-blue-500 to-blue-700",
-      highlights: ["Business Integrity", "Partner Ecosystem", "Sustainable Growth"]
-    }
-  ];
+  const contentBlock = {
+    title: "Get to Know Us",
+    text: "Our company was established by a team of highly experienced professionals who have excelled in the distribution business for years, deeply understanding the core values of being a true distributor. We have built a dedicated team to provide comprehensive support, including solution consultation and after-sales service, ensuring that our customers receive the best possible experience. Our goal is to work closely with our resellers to deliver exceptional products with friendly, reliable service to end clients.\n\nCommitted to unquestionable business principles, we strictly conduct our transactions through resellers and never engage directly with end customers. We firmly believe in the partner ecosystem and strive to be a role model in the country and the region. Our shareholders comprise individuals with a strong financial background who share a unified vision— building a long-lasting organization that generates sustainable benefits for all stakeholders.",
+    icon: (
+      <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
+        <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z"/>
+      </svg>
+    ),
+    gradient: "from-purple-500 to-purple-700",
+    highlights: ["Experienced Team", "Comprehensive Support", "Partner-Focused", "Business Integrity", "Partner Ecosystem", "Sustainable Growth"]
+  };
 
   return (
     <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-gray-900 to-slate-800 overflow-hidden">
@@ -118,88 +105,108 @@ const GetToKnowUsSection = () => {
           </motion.p>
         </motion.div>
 
-        {/* Content Blocks */}
+        {/* Content Block */}
         <motion.div
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12"
+          className="max-w-4xl mx-auto"
         >
-          {contentBlocks.map((block, index) => (
-            <motion.div
-              key={index}
-              variants={fadeInUp}
-              whileHover={{ 
-                scale: 1.02,
-                y: -8,
-                transition: { type: "spring", stiffness: 300 }
-              }}
-              className="group relative"
-            >
-              {/* Card */}
-              <div className="relative h-full bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-2xl p-10 border border-gray-700/50 hover:border-purple-500/30 transition-all duration-500 shadow-xl">
-                {/* Icon */}
+          <motion.div
+            variants={fadeInUp}
+            whileHover={{ 
+              scale: 1.03,
+              y: -12,
+              rotateY: 2,
+              transition: { type: "spring", stiffness: 400, damping: 15 }
+            }}
+            className="group relative"
+          >
+            {/* Glassmorphism Card with Enhanced Styling */}
+            <div className="relative h-full bg-gradient-to-br from-white/10 via-purple-500/5 to-pink-500/10 backdrop-blur-xl rounded-3xl p-12 border border-gradient-to-r border-purple-500/20 hover:border-purple-400/40 transition-all duration-700 shadow-2xl hover:shadow-purple-500/25">
+              
+              {/* Animated Border Glow */}
+              <motion.div
+                className="absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700"
+                style={{
+                  background: `conic-gradient(from 0deg, rgba(168, 85, 247, 0.4), rgba(236, 72, 153, 0.4), rgba(99, 102, 241, 0.4), rgba(168, 85, 247, 0.4))`,
+                  padding: '2px',
+                  WebkitMask: 'linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)',
+                  WebkitMaskComposite: 'subtract'
+                }}
+              />
+
+
+
+              {/* Stylized Content with Better Typography */}
+              <div className="text-gray-200 leading-relaxed text-lg mb-10 space-y-6">
+                {contentBlock.text.split('\n\n').map((paragraph, idx) => (
+                  <motion.p 
+                    key={idx}
+                    className="relative pl-6 border-l-2 border-gradient-to-b from-purple-500 to-transparent"
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: idx * 0.3, duration: 0.6 }}
+                  >
+                    <span className="absolute left-0 top-2 w-2 h-2 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full transform -translate-x-1/2"></span>
+                    {paragraph}
+                  </motion.p>
+                ))}
+              </div>
+
+              {/* Multiple Decorative Elements */}
+              <motion.div
+                className="absolute top-0 right-0 w-32 h-32 opacity-0 group-hover:opacity-100 transition-opacity duration-700"
+                initial={{ scale: 0, rotate: -45 }}
+                whileInView={{ scale: 1, rotate: 0 }}
+                viewport={{ once: true }}
+              >
+                <div className="w-full h-full rounded-bl-full bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm"></div>
+              </motion.div>
+
+              <motion.div
+                className="absolute bottom-0 left-0 w-24 h-24 opacity-0 group-hover:opacity-100 transition-opacity duration-700"
+                initial={{ scale: 0, rotate: 45 }}
+                whileInView={{ scale: 1, rotate: 0 }}
+                viewport={{ once: true }}
+              >
+                <div className="w-full h-full rounded-tr-full bg-gradient-to-tl from-pink-600/20 to-purple-600/20 backdrop-blur-sm"></div>
+              </motion.div>
+
+              {/* Enhanced Hover Glow Effect */}
+              <motion.div
+                className="absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700"
+                style={{
+                  background: `radial-gradient(circle at 50% 50%, rgba(168, 85, 247, 0.15), rgba(236, 72, 153, 0.1), transparent 70%)`
+                }}
+              />
+
+              {/* Floating Particles Effect */}
+              {[...Array(6)].map((_, i) => (
                 <motion.div
-                  className={`inline-flex items-center justify-center w-16 h-16 rounded-xl bg-gradient-to-br ${block.gradient} mb-6 shadow-lg`}
-                  whileHover={{ 
-                    rotate: 360,
-                    scale: 1.1,
-                    transition: { duration: 0.6 }
-                  }}
-                >
-                  <div className="text-white">
-                    {block.icon}
-                  </div>
-                </motion.div>
-
-                {/* Title */}
-                <h3 className="text-2xl font-bold text-white mb-4">
-                  {block.title}
-                </h3>
-
-                {/* Content */}
-                <p className="text-gray-300 leading-relaxed text-base mb-6">
-                  {block.text}
-                </p>
-
-                {/* Highlights */}
-                <div className="flex flex-wrap gap-2">
-                  {block.highlights.map((highlight, idx) => (
-                    <motion.span
-                      key={idx}
-                      className={`px-3 py-1.5 bg-gradient-to-r ${block.gradient} bg-opacity-20 border border-white/10 rounded-full text-xs text-white font-medium`}
-                      initial={{ opacity: 0, scale: 0.8 }}
-                      whileInView={{ opacity: 1, scale: 1 }}
-                      viewport={{ once: true }}
-                      transition={{ delay: idx * 0.1 }}
-                      whileHover={{ scale: 1.1, y: -2 }}
-                    >
-                      {highlight}
-                    </motion.span>
-                  ))}
-                </div>
-
-                {/* Decorative corner accent */}
-                <motion.div
-                  className="absolute top-0 right-0 w-24 h-24 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-                  initial={{ scale: 0, rotate: -45 }}
-                  whileInView={{ scale: 1, rotate: 0 }}
-                  viewport={{ once: true }}
-                >
-                  <div className={`w-full h-full rounded-bl-full bg-gradient-to-br ${block.gradient} opacity-10`}></div>
-                </motion.div>
-
-                {/* Hover glow effect */}
-                <motion.div
-                  className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                  key={i}
+                  className="absolute w-1 h-1 bg-purple-400 rounded-full opacity-0 group-hover:opacity-60"
                   style={{
-                    background: `radial-gradient(circle at 50% 50%, rgba(147, 51, 234, 0.1), transparent 70%)`
+                    left: `${20 + i * 15}%`,
+                    top: `${30 + (i % 2) * 40}%`,
+                  }}
+                  animate={{
+                    y: [-10, -30, -10],
+                    opacity: [0, 0.6, 0],
+                    scale: [0.5, 1, 0.5]
+                  }}
+                  transition={{
+                    duration: 2 + i * 0.5,
+                    repeat: Infinity,
+                    delay: i * 0.3,
+                    ease: "easeInOut"
                   }}
                 />
-              </div>
-            </motion.div>
-          ))}
+              ))}
+            </div>
+          </motion.div>
         </motion.div>
 
         {/* Bottom Call to Action */}

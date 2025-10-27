@@ -81,7 +81,7 @@ const vendors = [
 	} ,
 		{
 		name: 'Vaxtor',
-		logo: '/images/gall.png', // You can replace with actual logo path
+		logo: '/images/logo-vaxtor-blue.svg', // You can replace with actual logo path
 		description: 'Gallagher Security is a global leader in perimeter protection, access control, and alarm monitoring solutions. Their integrated security management systems provide comprehensive physical security for critical infrastructure and high-security facilities.',
 		solutions: ['Perimeter Security', 'Access Control', 'Intrusion Detection', 'Command & Control'],
 		website: 'https://www.gallaghersecurity.com',
@@ -1024,7 +1024,7 @@ const VendorsClient = () => {
 						</motion.div>
 
 						{/* Additional security features */}
-						<motion.div 
+						{/* <motion.div 
 							className="flex flex-wrap justify-center gap-8 mt-12 pt-8 border-t border-white/20"
 							initial={{ opacity: 0 }}
 							whileInView={{ opacity: 1 }}
@@ -1049,7 +1049,7 @@ const VendorsClient = () => {
 								</svg>
 								<span className="text-sm">24/7 Support</span>
 							</div>
-						</motion.div>
+						</motion.div> */}
 					</div>
 				</div>
 			</section>
