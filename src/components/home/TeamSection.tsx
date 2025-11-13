@@ -78,7 +78,7 @@ const TeamSection = () => {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="text-lg text-gray-300 leading-relaxed"
             >
-              Our experienced team of cybersecurity professionals works collaboratively to deliver innovative solutions and exceptional results. We believe in the power of teamwork, transparent communication, and data-driven decision making to help your business thrive in today's digital landscape.
+              Our experienced team of cybersecurity professionals works collaboratively to deliver innovative solutions and exceptional results. We believe in the power of teamwork, transparent communication, and data-driven decision making to help your business thrive in today&apos;s digital landscape.
             </motion.p>
 
             {/* Key Points */}
