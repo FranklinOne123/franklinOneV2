@@ -9,32 +9,34 @@ const detailedSolutions = {
 		'Mobile Threat Defense (MTD)',
 		'AD Assessment',
 		'AD Protection',
-		'Insider Threat Management'
+		'Insider Threat Management (ITM)'
 	],
 	networkSecurity: [
-		'Web Browser Isolation',
-		'Deception Solution',
-		'Email Security Solution',
-		'Data Loss Prevention (DLP) – Email DLP',
 		'Secure Web Gateway (SWG)',
 		'Zero Trust Network Access (ZTNA)',
-		'Data Loss Prevention (DLP) – Network DLP',
+		'Remote Browser Isolation (RBI)',
 		'Cloud Access Security Broker (CASB)',
+		'Deception Solution',
+		'Next-Gen SIEM',
+		'Email Security Solution',
 		'Security Awareness Training',
-		'Web Takedown Service' 
+		'Web Takedown Service'
 	],
 	dataSecurity: [
+		'Data Loss Prevention (DLP) – Endpoint DLP',
+		'Data Loss Prevention (DLP) – Network DLP',
+		'Data Loss Prevention (DLP) – Email DLP',
 		'Data Security Platform',
-		'Data Sanitization (Data Erasure)',
-		'Web Application Scanning (WAS)',
-		'Cloud Security',
-		'Audit Fix (add below Policy Compliance)'
+		'Database Activity Monitoring (DAM)',
+		'Data Sanitization (Data Erasure)'
 	],
 	vulnerabilityManagement: [
+		'Vulnerability Management Detection and Response (VMDR)',
 		'Web Application Scanning (WAS)',
-		'Cloud Security',
-		'Audit Fix (add below Policy Compliance)',
-		'Cybersecurity Asset Management (CSAM)' 
+		'Cloud & Container Security',
+		'File Integrity Monitoring (FIM)' ,
+		'Policy Compliance',
+		'Audit Fix'
 	],
 	networkingSolutions: [
 		'Next-Gen Firewall (NGFW)',
@@ -43,7 +45,7 @@ const detailedSolutions = {
 		'Cloud Traffic Aggregation and Processing'
 	],
 	itOperations: [
-		'Asset Management',
+		'CyberSecurity Asset Management (CSAM)',
 		'Patch Management' 
 	],
 	physicalSecurity: [
@@ -159,7 +161,7 @@ const SolutionsClient = () => {
 							transition={{ delay: 1 }}
 						> 
 							<Link href="#solutions" 
-								className="inline-flex items-center px-8 py-4 border border-transparent text-base font-medium rounded-md text-white bg-gradient-to-r from-[var(--color-primary)] to-[var(--color-primary-dark)] hover:from-[var(--color-primary-dark)] hover:to-[var(--color-primary)] shadow-lg hover:shadow-xl transition-all duration-300"
+								className="inline-flex items-center px-8 py-4 border border-transparent text-base font-medium rounded-md text-white bg-gradient-to-r    shadow-lg hover:shadow-xl transition-all duration-300  bg-gradient-to-r to-[var(--color-primary)] from-[#f15a22]"
 							>
 								<svg className="w-5 h-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 									<path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
@@ -220,7 +222,7 @@ const SolutionsClient = () => {
 			 
 
 			{/* Detailed Solutions Structure Section */}
-			<section className="py-20 bg-gradient-to-b from-white to-gray-50 relative overflow-hidden">
+			<section className="py-20 bg-gradient-to-b from-white to-[#743f77] relative overflow-hidden">
 				<div className="absolute inset-0 bg-[url('/dot-pattern.svg')] opacity-[0.02]"></div>
 				
 				<div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -250,7 +252,7 @@ const SolutionsClient = () => {
 							viewport={{ once: true }}
 							transition={{ duration: 0.6 }}
 						>
-							<div className="bg-gradient-to-r bg-[#743f77]/95 p-6 text-white">
+							<div className="bg-gradient-to-r bg-[#743f77]/95 p-6 text-white bg-gradient-to-r from-[var(--color-primary)] to-[#f15a22]">
 								<div className="flex items-center mb-4">
 									<div className="bg-white/20 p-3 rounded-lg mr-4">
 										<svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
@@ -303,7 +305,7 @@ const SolutionsClient = () => {
 							viewport={{ once: true }}
 							transition={{ duration: 0.6, delay: 0.2 }}
 						>
-							<div className="bg-gradient-to-r bg-[#743f77]/95 p-6 text-white">
+							<div className="bg-gradient-to-r bg-[#743f77]/95 p-6 text-white bg-gradient-to-r from-[var(--color-primary)] to-[#f15a22]">
 								<div className="flex items-center mb-4">
 									<div className="bg-white/20 p-3 rounded-lg mr-4">
 										<svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
@@ -356,7 +358,7 @@ const SolutionsClient = () => {
 							viewport={{ once: true }}
 							transition={{ duration: 0.6, delay: 0.4 }}
 						>
-							<div className="bg-gradient-to-r bg-[#743f77]/95 p-6 text-white">
+							<div className="bg-gradient-to-r bg-[#743f77]/95 p-6 text-white bg-gradient-to-r from-[var(--color-primary)] to-[#f15a22]">
 								<div className="flex items-center mb-4">
 									<div className="bg-white/20 p-3 rounded-lg mr-4">
 										<svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
@@ -409,7 +411,7 @@ const SolutionsClient = () => {
 							viewport={{ once: true }}
 							transition={{ duration: 0.6, delay: 0.6 }}
 						>
-							<div className="bg-gradient-to-r bg-[#743f77]/95 p-6 text-white">
+							<div className="bg-gradient-to-r bg-[#743f77]/95 p-6 text-white bg-gradient-to-r from-[var(--color-primary)] to-[#f15a22]">
 								<div className="flex items-center mb-4">
 									<div className="bg-white/20 p-3 rounded-lg mr-4">
 										<svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
@@ -456,13 +458,13 @@ const SolutionsClient = () => {
 
 						{/* Networking Solutions */}
 						<motion.div
-							className="bg-white rounded-xl shadow-lg border-t-4 border-t-purple-600 overflow-hidden hover:shadow-xl transition-all duration-300"
+							className="bg-white rounded-xl shadow-lg border-t-0 border-t-purple-600 overflow-hidden hover:shadow-xl transition-all duration-300"
 							initial={{ opacity: 0, y: 30 }}
 							whileInView={{ opacity: 1, y: 0 }}
 							viewport={{ once: true }}
 							transition={{ duration: 0.6, delay: 0.8 }}
 						>
-							<div className="bg-gradient-to-r bg-[#743f77]/95 p-6 text-white">
+							<div className="bg-gradient-to-r bg-[#743f77]/95 p-6 text-white bg-gradient-to-r from-[var(--color-primary)] to-[#f15a22]">
 								<div className="flex items-center mb-4">
 									<div className="bg-white/20 p-3 rounded-lg mr-4">
 										<svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
@@ -515,7 +517,7 @@ const SolutionsClient = () => {
 							viewport={{ once: true }}
 							transition={{ duration: 0.6, delay: 1.0 }}
 						>
-							<div className="bg-gradient-to-r from-[#743f77]/95 to-[#743f77]/95 p-6 text-white">
+							<div className="bg-gradient-to-r from-[#743f77]/95 to-[#743f77]/95 p-6 text-white bg-gradient-to-r from-[var(--color-primary)] to-[#f15a22]">
 								<div className="flex items-center mb-4">
 									<div className="bg-white/20 p-3 rounded-lg mr-4">
 										<svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
@@ -568,7 +570,7 @@ const SolutionsClient = () => {
 							viewport={{ once: true }}
 							transition={{ duration: 0.6, delay: 1.2 }}
 						>
-							<div className="bg-gradient-to-r bg-[#743f77]/95 p-6 text-white">
+							<div className="bg-gradient-to-r bg-[#743f77]/95 p-6 text-white bg-gradient-to-r from-[var(--color-primary)] to-[#f15a22]">
 								<div className="flex items-center mb-4">
 									<div className="bg-white/20 p-3 rounded-lg mr-4">
 										<svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">

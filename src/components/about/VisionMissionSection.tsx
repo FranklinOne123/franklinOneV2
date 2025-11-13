@@ -119,7 +119,7 @@ const VisionMissionSection = () => {
             variants={fadeInUp}
           >
             <motion.span 
-              className="bg-gradient-to-r from-white via-[var(--color-primary)] to-white bg-clip-text text-transparent"
+              className="bg-gradient-to-r from-white via-[var(--color-primary)] to-[#f15a22] bg-clip-text text-transparent"
               initial={{ backgroundPosition: "0% 50%" }}
               animate={{ backgroundPosition: "100% 50%" }}
               transition={{ 

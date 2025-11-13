@@ -28,7 +28,12 @@ const GetToKnowUsSection = () => {
 
   const contentBlock = {
     title: "Get to Know Us",
-    text: "Our company was established by a team of highly experienced professionals who have excelled in the distribution business for years, deeply understanding the core values of being a true distributor. We have built a dedicated team to provide comprehensive support, including solution consultation and after-sales service, ensuring that our customers receive the best possible experience. Our goal is to work closely with our resellers to deliver exceptional products with friendly, reliable service to end clients.\n\nCommitted to unquestionable business principles, we strictly conduct our transactions through resellers and never engage directly with end customers. We firmly believe in the partner ecosystem and strive to be a role model in the country and the region. Our shareholders comprise individuals with a strong financial background who share a unified vision— building a long-lasting organization that generates sustainable benefits for all stakeholders.",
+    text: [
+      "Our company was established by a team of highly experienced professionals who have excelled in the distribution business for years, deeply understanding the core values of being a true distributor.",
+      "We have built a dedicated team to provide comprehensive support, including solution consultation and after-sales service, ensuring that our customers receive the best possible experience. Our goal is to work closely with our resellers to deliver exceptional products with friendly, reliable service to end clients.",
+      "Committed to unquestionable business principles, we strictly conduct our transactions through resellers and never engage directly with end customers. We firmly believe in the partner ecosystem and strive to be a role model in the country and the region.",
+      "Our shareholders comprise individuals with a strong financial background who share a unified vision— building a long-lasting organization that generates sustainable benefits for all stakeholders."
+    ].join('\n\n'),
     icon: (
       <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
         <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z"/>
@@ -123,6 +128,84 @@ const GetToKnowUsSection = () => {
             }}
             className="group relative"
           >
+            {/* Highly Eye-Catching Animated Border & Text Effect */}
+            
+            {/* Rotating Gradient Border Animation */}
+            <motion.div
+              className="absolute -inset-0.5 rounded-3xl pointer-events-none"
+              animate={{
+                background: [
+                  'conic-gradient(from 0deg, #a855f7, #a855f7, #a855f7, #a855f7)',
+                 
+                ]
+              }}
+              transition={{
+                duration: 4,
+                repeat: Infinity,
+                ease: 'linear'
+              }}
+              style={{
+                opacity: 0.6,
+                filter: 'blur(1px)'
+              }}
+            />
+
+            {/* Animated "Important" Label with Pulse */}
+            <motion.div
+              className="absolute -top-6 left-8 hidden md:block pointer-events-none"
+              initial={{ opacity: 0, y: -20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+            >
+              <motion.div
+                className="px-4 py-2 rounded-full bg-gradient-to-r from-orange-500 via-pink-500 to-purple-600 text-white font-bold text-sm shadow-lg"
+                animate={{
+                  scale: [1, 1.08, 1],
+                  boxShadow: [
+                    '0 0 10px rgba(245, 90, 34, 0.4)',
+                    '0 0 25px rgba(236, 72, 153, 0.6)',
+                    '0 0 10px rgba(245, 90, 34, 0.4)'
+                  ]
+                }}
+                transition={{
+                  duration: 1.5,
+                  repeat: Infinity,
+                  ease: 'easeInOut'
+                }}
+              >
+                ⭐ 
+              </motion.div>
+            </motion.div>
+
+            {/* Floating Animated Particles Around the Card */}
+            {[...Array(8)].map((_, i) => (
+              <motion.div
+                key={i}
+                className="absolute w-2 h-2 rounded-full pointer-events-none hidden md:block"
+                style={{
+                  left: `${Math.cos((i / 8) * Math.PI * 2) * 200 + 50}%`,
+                  top: `${Math.sin((i / 8) * Math.PI * 2) * 150 + 50}%`,
+                  background: i % 2 === 0 ? 'rgba(236, 72, 153, 0.6)' : 'rgba(245, 90, 34, 0.6)'
+                }}
+                animate={{
+                  opacity: [0.2, 0.8, 0.2],
+                  scale: [0.8, 1.2, 0.8],
+                  x: [0, Math.cos((i / 8) * Math.PI * 2) * 30, 0],
+                  y: [0, Math.sin((i / 8) * Math.PI * 2) * 30, 0]
+                }}
+                transition={{
+                  duration: 3 + (i % 3) * 0.5,
+                  repeat: Infinity,
+                  delay: i * 0.15,
+                  ease: 'easeInOut'
+                }}
+                aria-hidden="true"
+              />
+            ))}
+
+            {/* Shimmer Effect Overlay */}
+            
             {/* Glassmorphism Card with Enhanced Styling */}
             <div className="relative h-full bg-gradient-to-br from-white/10 via-purple-500/5 to-pink-500/10 backdrop-blur-xl rounded-3xl p-12 border border-gradient-to-r border-purple-500/20 hover:border-purple-400/40 transition-all duration-700 shadow-2xl hover:shadow-purple-500/25">
               
@@ -150,7 +233,7 @@ const GetToKnowUsSection = () => {
                     viewport={{ once: true }}
                     transition={{ delay: idx * 0.3, duration: 0.6 }}
                   >
-                    <span className="absolute left-0 top-2 w-2 h-2 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full transform -translate-x-1/2"></span>
+                    <span className=""></span>
                     {paragraph}
                   </motion.p>
                 ))}

@@ -676,7 +676,7 @@ const VendorsClient = () => {
 													<div className="absolute inset-0 bg-gradient-to-r from-[#c18a41]/20 to-[#c18a41]/10 rounded-lg opacity-0 group-hover/logo:opacity-100 transition-opacity duration-300 blur-sm"></div>
 													
 													{/* Logo container with enhanced styling */}
-													<div className="relative bg-white/5   rounded-lg p-3 border border-white/10 group-hover/logo:border-[#c18a41]/50 transition-all duration-300" style={{backgroundColor: 'rgb(180 131 184)'}}>
+													<div className="relative bg-white/5   rounded-lg p-3 border border-white/10 group-hover/logo:border-[#c18a41]/50 transition-all duration-300 bg-gradient-to-r to-[var(--color-primary)] from-[#f15a22] hover:from-[#f15a22] hover:to-[var(--color-primary)]" >
 														<Image
 															src={vendor.logo}
 															alt={vendor.name}

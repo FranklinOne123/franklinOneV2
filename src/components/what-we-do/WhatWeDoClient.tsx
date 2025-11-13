@@ -255,7 +255,7 @@ const WhatWeDoClient = () => {
 								whileHover={{ scale: 1.05 }}
 								transition={{ duration: 0.2 }}
 							>
-								Southeast Asia
+								CLM
 							</motion.span>.
 						</motion.p>
 					</div>
