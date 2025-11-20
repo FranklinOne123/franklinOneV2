@@ -8,7 +8,7 @@ const vendors = [
 	// IT, Network, and Security Vendors
 	{
 		name: 'SentinelOne',
-		logo: '/images/Logo SenntinelOne.png', // You can replace with actual logo path
+		logo: '/images/Logo-SenntinelOne.png', // You can replace with actual logo path
 		description: 'SentinelOne is a leader in AI-powered cybersecurity, providing autonomous endpoint protection, detection, and response through their Singularity platform. Their advanced threat detection and automated response capabilities help organizations defend against ransomware, malware, and sophisticated cyber attacks.',
 		solutions: ['Endpoint Security', 'XDR Platform', 'AI-Powered Threat Detection', 'Automated Response'],
 		website: 'https://www.sentinelone.com',
@@ -73,7 +73,7 @@ const vendors = [
 	},
 	{
 		name: 'Gallagher',
-		logo: '/images/Logo gallagher.png', // You can replace with actual logo path
+		logo: '/images/Logo-gallagher.png', // You can replace with actual logo path
 		description: 'Gallagher Security is a global leader in perimeter protection, access control, and alarm monitoring solutions. Their integrated security management systems provide comprehensive physical security for critical infrastructure and high-security facilities.',
 		solutions: ['Perimeter Security', 'Access Control', 'Intrusion Detection', 'Command & Control'],
 		website: 'https://www.gallaghersecurity.com',
