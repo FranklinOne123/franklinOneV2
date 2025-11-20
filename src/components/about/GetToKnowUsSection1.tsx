@@ -29,10 +29,10 @@ const GetToKnowUsSection = () => {
   const contentBlock = {
     title: "Get to Know Us",
     text: [
-      "Our company was established by a team of highly experienced  professionals who have excelled in the distribution business for years, deeply understanding the core values of being a true distributor.",
-      "We have built a dedicated team to provide comprehensive  support, including solution consultation and after-sales service, ensuring that our customers receive the best possible experience. Our goal is to work closely with our resellers to deliver exceptional  products with friendly, reliable service to end clients.",
+      "Our company was established by a team of highly experienced professionals who have excelled in the distribution business for years, deeply understanding the core values of being a true distributor.",
+      "We have built a dedicated team to provide comprehensive support, including solution consultation and after-sales service, ensuring that our customers receive the best possible experience. Our goal is to work closely with our resellers to deliver exceptional products with friendly, reliable service to end clients.",
       "Committed to unquestionable business principles, we strictly conduct our transactions through resellers and never engage directly with end customers. We firmly believe in the partner ecosystem and strive to be a role model in the country and the region.",
-      "Our shareholders comprise individuals with a strong financial  background who share a unified vision— building a long-lasting organization that generates sustainable  benefits for all stakeholders."
+      "Our shareholders comprise individuals with a strong financial background who share a unified vision— building a long-lasting organization that generates sustainable benefits for all stakeholders."
     ].join('\n\n'),
     icon: (
       <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
@@ -44,7 +44,31 @@ const GetToKnowUsSection = () => {
   };
 
   return (
-    <section className="relative min-h-screen bg-slate-900 overflow-hidden">
+    <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-gray-900 to-slate-800 overflow-hidden">
+      {/* Animated Background Elements */}
+      <motion.div
+        animate={{
+          rotate: 360,
+          scale: [1, 1.2, 1],
+        }}
+        transition={{
+          rotate: { duration: 60, repeat: Infinity, ease: "linear" },
+          scale: { duration: 10, repeat: Infinity, ease: "easeInOut" }
+        }}
+        className="absolute top-1/3 right-1/4 w-96 h-96 bg-gradient-to-r from-purple-500/10 to-blue-500/10 rounded-full blur-3xl"
+      />
+      <motion.div
+        animate={{
+          rotate: -360,
+          scale: [1, 0.8, 1],
+        }}
+        transition={{
+          rotate: { duration: 50, repeat: Infinity, ease: "linear" },
+          scale: { duration: 15, repeat: Infinity, ease: "easeInOut" }
+        }}
+        className="absolute bottom-1/3 left-1/4 w-80 h-80 bg-gradient-to-r from-teal-500/10 to-indigo-500/10 rounded-full blur-3xl"
+      />
+
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
         {/* Section Header */}
         <motion.div
@@ -156,7 +180,7 @@ const GetToKnowUsSection = () => {
             {/* Shimmer Effect Overlay */}
 
             {/* Glassmorphism Card with Enhanced Styling */}
-            <div className="relative h-full bg-gradient-to-br from-purple-900/40 via-purple-800/30 to-purple-900/20 backdrop-blur-xl rounded-3xl p-12 border border-purple-500/20 hover:border-purple-400/40 transition-all duration-700 shadow-2xl hover:shadow-purple-500/25">
+            <div className="relative h-full bg-gradient-to-br from-white/10 via-purple-500/5 to-pink-500/10 backdrop-blur-xl rounded-3xl p-12 border border-gradient-to-r border-purple-500/20 hover:border-purple-400/40 transition-all duration-700 shadow-2xl hover:shadow-purple-500/25">
 
               {/* Animated Border Glow */}
               <motion.div

@@ -7,7 +7,7 @@ const HeroSection = () => {
     <section className="relative min-h-screen flex items-center bg-gradient-to-br from-black via-gray-900 to-gray-800 text-white overflow-hidden">
       {/* Animated background grid */}
       <div className="absolute inset-0 opacity-10">
-        <div 
+        <div
           className="absolute inset-0 bg-repeat"
           style={{
             backgroundImage: `
@@ -63,7 +63,7 @@ const HeroSection = () => {
             </motion.div>
 
             {/* Main Title */}
-            <motion.h1 
+            <motion.h1
               className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -87,13 +87,13 @@ const HeroSection = () => {
             </motion.div>
 
             {/* Call-to-Action Buttons */}
-            <motion.div 
+            <motion.div
               className="flex flex-col sm:flex-row gap-4 justify-center pt-6"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
             >
-              <Link 
+              <Link
                 href="#company-story"
                 className="group bg-[var(--color-primary)] hover:bg-[var(--color-primary)]/80 text-white px-8 py-4 rounded-lg font-semibold transition duration-300 shadow-2xl flex items-center justify-center relative overflow-hidden"
               >
@@ -103,8 +103,8 @@ const HeroSection = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
                 </svg>
               </Link>
-              
-              <Link 
+
+              <Link
                 href="/contact"
                 className="group bg-transparent border-2 border-white text-white hover:bg-white hover:text-gray-900 px-8 py-4 rounded-lg font-semibold transition duration-300 flex items-center justify-center"
               >
@@ -116,12 +116,12 @@ const HeroSection = () => {
             </motion.div>
 
             {/* Decorative elements */}
-             
+
           </motion.div>
         </div>
 
         {/* Scroll indicator */}
-        <motion.div 
+        <motion.div
           className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}

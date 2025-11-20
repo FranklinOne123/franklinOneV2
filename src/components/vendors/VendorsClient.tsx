@@ -8,7 +8,7 @@ const vendors = [
 	// IT, Network, and Security Vendors
 	{
 		name: 'SentinelOne',
-		logo: '/images/sentinel-original.png', // You can replace with actual logo path
+		logo: '/images/Logo SenntinelOne.png', // You can replace with actual logo path
 		description: 'SentinelOne is a leader in AI-powered cybersecurity, providing autonomous endpoint protection, detection, and response through their Singularity platform. Their advanced threat detection and automated response capabilities help organizations defend against ransomware, malware, and sophisticated cyber attacks.',
 		solutions: ['Endpoint Security', 'XDR Platform', 'AI-Powered Threat Detection', 'Automated Response'],
 		website: 'https://www.sentinelone.com',
@@ -16,7 +16,7 @@ const vendors = [
 	},
 	{
 		name: 'Netskope',
-		logo: '/images/netskope-original.png', // You can replace with actual logo path
+		logo: '/images/net.png', // You can replace with actual logo path
 		description: 'Netskope is a SASE leader delivering secure access service edge solutions. Their cloud-native platform provides comprehensive security for users, applications, and data across cloud, web, and private applications, enabling secure digital transformation.',
 		solutions: ['SASE', 'Zero Trust Network Access', 'Cloud Security', 'Secure Web Gateway'],
 		website: 'https://www.netskope.com',
@@ -24,7 +24,7 @@ const vendors = [
 	},
 	{
 		name: 'Qualys',
-		logo: '/images/qualys.svg', // You can replace with actual logo path 
+		logo: '/images/image_2025-11-19_21-01-10.png', // You can replace with actual logo path 
 		description: 'Qualys is a leading provider of cloud-based IT, security, and compliance solutions. Their Enterprise TruRisk Platform helps organizations measure, manage, and reduce cyber risk through vulnerability management, asset discovery, and automated remediation.',
 		solutions: ['Vulnerability Management', 'Asset Discovery', 'Compliance Management', 'Cloud Security'],
 		website: 'https://www.qualys.com',
@@ -32,7 +32,7 @@ const vendors = [
 	},
 	{
 		name: 'Varonis',
-		logo: '/images/varonis-original.png', // You can replace with actual logo path
+		logo: '/images/image_2025-11-19_21-02-12.png', // You can replace with actual logo path
 		description: 'Varonis is the #1 Data Security Platform that automatically finds critical data, remediates exposure, and stops threats in the cloud and on-premises. Their platform provides comprehensive data discovery, classification, and protection capabilities.',
 		solutions: ['Data Security', 'Data Discovery & Classification', 'Insider Threat Detection', 'Data Access Governance'],
 		website: 'https://www.varonis.com',
@@ -73,20 +73,20 @@ const vendors = [
 	},
 	{
 		name: 'Gallagher',
-		logo: '/images/gall.png', // You can replace with actual logo path
+		logo: '/images/Logo gallagher.png', // You can replace with actual logo path
 		description: 'Gallagher Security is a global leader in perimeter protection, access control, and alarm monitoring solutions. Their integrated security management systems provide comprehensive physical security for critical infrastructure and high-security facilities.',
 		solutions: ['Perimeter Security', 'Access Control', 'Intrusion Detection', 'Command & Control'],
 		website: 'https://www.gallaghersecurity.com',
 		category: 'Physical Security'
-	} ,
-		{
+	},
+	{
 		name: 'Vaxtor',
-		logo: '/images/logo-vaxtor-blue.svg', // You can replace with actual logo path
+		logo: '/images/image_2025-11-19_20-57-47.png', // You can replace with actual logo path
 		description: 'Gallagher Security is a global leader in perimeter protection, access control, and alarm monitoring solutions. Their integrated security management systems provide comprehensive physical security for critical infrastructure and high-security facilities.',
 		solutions: ['Perimeter Security', 'Access Control', 'Intrusion Detection', 'Command & Control'],
 		website: 'https://www.gallaghersecurity.com',
 		category: 'Physical Security'
-	} 
+	}
 ];
 
 const VendorsClient = () => {
@@ -110,7 +110,7 @@ const VendorsClient = () => {
 		// Listen for changes
 		const mobileQuery = window.matchMedia('(max-width: 768px)');
 		const motionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
-		
+
 		mobileQuery.addEventListener('change', checkMobile);
 		motionQuery.addEventListener('change', checkReducedMotion);
 
@@ -140,55 +140,55 @@ const VendorsClient = () => {
 			<section className="relative min-h-[85vh] flex items-center justify-center bg-[#0a0e1a] text-white overflow-hidden">
 				{/* Dark cyber background with overlay */}
 				<div className="absolute inset-0 z-0">
-					<motion.div 
+					<motion.div
 						className="absolute inset-0 bg-gradient-to-br from-[rgba(10,14,26,0.95)] via-[rgba(22,33,62,0.85)] to-[rgba(116,63,119,0.9)] z-10"
 						initial={{ opacity: 0 }}
 						animate={{ opacity: 1 }}
 						transition={{ duration: 1.5, ease: "easeOut" }}
 					/>
-					<motion.div 
+					<motion.div
 						className="absolute inset-0 bg-[url('/cyber.png')] bg-cover bg-center z-0"
 						style={{ opacity: 0.3 }}
-						animate={!isMobile && !prefersReducedMotion ? { 
+						animate={!isMobile && !prefersReducedMotion ? {
 							scale: [1, 1.05, 1],
 							opacity: [0.3, 0.4, 0.3]
 						} : {}}
-						transition={!isMobile && !prefersReducedMotion ? { 
-							duration: 15, 
-							repeat: Infinity, 
-							ease: "easeInOut" 
+						transition={!isMobile && !prefersReducedMotion ? {
+							duration: 15,
+							repeat: Infinity,
+							ease: "easeInOut"
 						} : {}}
 					/>
 				</div>
-				
+
 				{/* Animated network grid - Mobile optimized */}
 				{!isMobile && !prefersReducedMotion && (
-					<motion.div 
+					<motion.div
 						className="absolute inset-0 bg-[url('/network-bg.svg')] z-10"
 						style={{ opacity: 0.15 }}
-						animate={{ 
+						animate={{
 							backgroundPosition: ['0px 0px', '100px 100px'],
 							opacity: [0.1, 0.2, 0.1]
 						}}
-						transition={{ 
-							duration: 25, 
-							repeat: Infinity, 
-							ease: "linear" 
+						transition={{
+							duration: 25,
+							repeat: Infinity,
+							ease: "linear"
 						}}
 					/>
 				)}
-				
+
 				{/* Animated dots - Mobile optimized */}
 				{!isMobile && !prefersReducedMotion && (
-					<motion.div 
+					<motion.div
 						className="absolute inset-0 bg-[url('/dot-pattern.svg')] bg-repeat z-10"
-						animate={{ 
-							backgroundPosition: ['0px 0px', '60px 60px', '0px 0px'] 
+						animate={{
+							backgroundPosition: ['0px 0px', '60px 60px', '0px 0px']
 						}}
-						transition={{ 
-							duration: 30, 
-							repeat: Infinity, 
-							ease: "easeInOut" 
+						transition={{
+							duration: 30,
+							repeat: Infinity,
+							ease: "easeInOut"
 						}}
 						style={{ opacity: 0.12 }}
 					/>
@@ -268,8 +268,8 @@ const VendorsClient = () => {
 						className="relative inline-flex items-center px-8 py-4 mb-10 z-30"
 						initial={{ opacity: 0, y: 30, scale: 0.8 }}
 						animate={{ opacity: 1, y: 0, scale: 1 }}
-						transition={{ 
-							duration: 0.8, 
+						transition={{
+							duration: 0.8,
 							delay: 0.2,
 							type: "spring",
 							stiffness: 100
@@ -277,7 +277,7 @@ const VendorsClient = () => {
 					>
 						{/* Glowing background */}
 						<div className="absolute inset-0 bg-gradient-to-r from-[var(--color-primary)]/20 via-[var(--color-primary)]/30 to-[var(--color-primary)]/20 backdrop-blur-md rounded-full border border-[var(--color-primary)]/40 shadow-lg z-0"></div>
-						
+
 						{/* Animated border glow - Mobile optimized */}
 						<motion.div
 							className="absolute inset-0 rounded-full border-2 border-[var(--color-primary)]/50 z-0"
@@ -294,11 +294,11 @@ const VendorsClient = () => {
 								ease: "easeInOut"
 							} : {}}
 						/>
-						
+
 						{/* Content */}
 						<div className="relative flex items-center z-10">
 							{/* Animated pulse dot - Mobile optimized */}
-							<motion.div 
+							<motion.div
 								className="w-3 h-3 bg-[var(--color-primary)] rounded-full mr-4"
 								animate={!isMobile && !prefersReducedMotion ? {
 									scale: [1, 1.3, 1],
@@ -310,7 +310,7 @@ const VendorsClient = () => {
 									ease: "easeInOut"
 								} : {}}
 							/>
-							
+
 							{/* Shield icon - Mobile optimized */}
 							<motion.div
 								animate={!isMobile && !prefersReducedMotion ? { rotate: [0, 5, -5, 0] } : {}}
@@ -325,9 +325,9 @@ const VendorsClient = () => {
 									<path fillRule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
 								</svg>
 							</motion.div>
-							
+
 							{/* Text with gradient effect - Mobile optimized */}
-							<motion.span 
+							<motion.span
 								className="text-white text-sm font-semibold tracking-wide bg-gradient-to-r from-white via-gray-100 to-white bg-clip-text text-transparent"
 								animate={!isMobile && !prefersReducedMotion ? {
 									backgroundPosition: ['0% 50%', '100% 50%', '0% 50%']
@@ -347,18 +347,18 @@ const VendorsClient = () => {
 					</motion.div>
 
 					{/* Enhanced title with improved animations */}
-					<motion.h1 
+					<motion.h1
 						className="text-5xl md:text-6xl lg:text-7xl font-bold mb-8 leading-tight"
 						initial={{ opacity: 0, y: 40 }}
 						animate={{ opacity: 1, y: 0 }}
-						transition={{ 
-							duration: 1, 
+						transition={{
+							duration: 1,
 							delay: 0.4,
 							type: "spring",
 							stiffness: 80
 						}}
 					>
-						<motion.span 
+						<motion.span
 							className="bg-gradient-to-r from-white via-[var(--color-primary)] to-white bg-clip-text text-transparent"
 							animate={!isMobile && !prefersReducedMotion ? {
 								backgroundPosition: ['0% 50%', '100% 50%', '0% 50%']
@@ -375,7 +375,7 @@ const VendorsClient = () => {
 							Our Technology
 						</motion.span>
 						<br />
-						<motion.span 
+						<motion.span
 							className="text-white"
 							initial={{ opacity: 0 }}
 							animate={{ opacity: 1 }}
@@ -384,20 +384,20 @@ const VendorsClient = () => {
 							Vendors
 						</motion.span>
 					</motion.h1>
-					
+
 					{/* Enhanced decorative element - Mobile optimized */}
-					<motion.div 
+					<motion.div
 						className="flex items-center justify-center mb-10"
 						initial={{ opacity: 0, scale: 0 }}
 						animate={{ opacity: 1, scale: 1 }}
-						transition={{ 
-							duration: 1, 
+						transition={{
+							duration: 1,
 							delay: 0.6,
 							type: "spring",
 							stiffness: 120
 						}}
 					>
-						<motion.div 
+						<motion.div
 							className="w-32 h-1 bg-gradient-to-r from-transparent via-[var(--color-primary)] to-transparent rounded-full"
 							animate={!isMobile && !prefersReducedMotion ? {
 								scaleX: [1, 1.1, 1],
@@ -409,7 +409,7 @@ const VendorsClient = () => {
 								ease: "easeInOut"
 							} : {}}
 						/>
-						<motion.div 
+						<motion.div
 							className="w-10 h-10 bg-gradient-to-r from-[var(--color-primary)]/20 to-[#f15a22]/20 rounded-full flex items-center justify-center mx-6 border border-[var(--color-primary)]/30"
 							animate={!isMobile && !prefersReducedMotion ? {
 								rotate: 360,
@@ -422,7 +422,7 @@ const VendorsClient = () => {
 						>
 							<div className="w-4 h-4 bg-gradient-to-r from-[var(--color-primary)] to-[#f15a22] rounded-full"></div>
 						</motion.div>
-						<motion.div 
+						<motion.div
 							className="w-32 h-1 bg-gradient-to-r from-transparent via-[#f15a22] to-transparent rounded-full"
 							animate={!isMobile && !prefersReducedMotion ? {
 								scaleX: [1, 1.1, 1],
@@ -436,15 +436,15 @@ const VendorsClient = () => {
 							} : {}}
 						/>
 					</motion.div>
-					
+
 					{/* Enhanced description */}
-					<motion.p 
+					<motion.p
 						className="text-xl md:text-2xl max-w-4xl mx-auto text-gray-300 leading-relaxed mb-12"
 						initial={{ opacity: 0, y: 20 }}
 						animate={{ opacity: 1, y: 0 }}
 						transition={{ duration: 0.8, delay: 0.8 }}
 					>
-						We partner with <motion.span 
+						We partner with <motion.span
 							className="text-[var(--color-primary)] font-semibold"
 							animate={!isMobile && !prefersReducedMotion ? {
 								textShadow: [
@@ -464,7 +464,7 @@ const VendorsClient = () => {
 					</motion.p>
 
 					{/* Enhanced Security stats */}
-					<motion.div 
+					<motion.div
 						className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto"
 						initial={{ opacity: 0, y: 30 }}
 						animate={{ opacity: 1, y: 0 }}
@@ -481,13 +481,13 @@ const VendorsClient = () => {
 								className="text-center group"
 								initial={{ opacity: 0, scale: 0.8, y: 20 }}
 								animate={{ opacity: 1, scale: 1, y: 0 }}
-								transition={{ 
-									duration: 0.6, 
+								transition={{
+									duration: 0.6,
 									delay: 1.2 + stat.delay,
 									type: "spring",
 									stiffness: 100
 								}}
-								whileHover={{ 
+								whileHover={{
 									scale: 1.05,
 									transition: { duration: 0.2 }
 								}}
@@ -499,15 +499,15 @@ const VendorsClient = () => {
 										background: `radial-gradient(circle, ${stat.color}15 0%, transparent 70%)`
 									}}
 								/>
-								
+
 								{/* Number with counter animation */}
-								<motion.div 
+								<motion.div
 									className="text-4xl md:text-5xl font-bold mb-2 relative"
 									style={{ color: stat.color }}
 									initial={{ scale: 0 }}
 									animate={{ scale: 1 }}
-									transition={{ 
-										duration: 0.5, 
+									transition={{
+										duration: 0.5,
 										delay: 1.4 + stat.delay,
 										type: "spring",
 										stiffness: 150
@@ -531,9 +531,9 @@ const VendorsClient = () => {
 										{stat.number}
 									</motion.span>
 								</motion.div>
-								
+
 								{/* Label */}
-								<motion.div 
+								<motion.div
 									className="text-sm md:text-base text-gray-400 font-medium tracking-wide"
 									initial={{ opacity: 0 }}
 									animate={{ opacity: 1 }}
@@ -551,7 +551,7 @@ const VendorsClient = () => {
 			<section className="py-20 bg-gradient-to-b from-gray-900 via-black to-gray-900 relative overflow-hidden">
 				{/* Background patterns */}
 				<div className="absolute inset-0 opacity-5">
-					<div 
+					<div
 						className="absolute inset-0 bg-repeat"
 						style={{
 							backgroundImage: `
@@ -591,7 +591,7 @@ const VendorsClient = () => {
 
 				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 					{/* Section header */}
-					<motion.div 
+					<motion.div
 						className="text-center mb-16"
 						initial={{ opacity: 0, y: 20 }}
 						whileInView={{ opacity: 1, y: 0 }}
@@ -608,7 +608,7 @@ const VendorsClient = () => {
 							Leading in cybersecurity and physical security space.
 						</p>
 					</motion.div>
-{Object.entries(
+					{Object.entries(
 						vendors.reduce((acc, vendor) => {
 							if (!acc[vendor.category]) {
 								acc[vendor.category] = [];
@@ -636,7 +636,7 @@ const VendorsClient = () => {
 							</div>
 
 							{/* Vendors grid for this category */}
-							<motion.div 
+							<motion.div
 								className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6"
 								variants={containerVariants}
 								initial="hidden"
@@ -644,37 +644,37 @@ const VendorsClient = () => {
 								viewport={{ once: true }}
 							>
 								{categoryVendors.map((vendor) => (
-									<motion.div 
+									<motion.div
 										key={vendor.name}
 										className="group  overflow-hidden   border-[#c18a41]/0  transition-all duration-500 shadow-xl hover:sha2dow-2xl flex flex-col relative aspect-square"
 										variants={itemVariants}
-										whileHover={{ 
+										whileHover={{
 											scale: 1.05,
 											transition: { duration: 0.3 }
 										}}
 									>
 										{/* Enhanced corner accents with golden color */}
-										<motion.div 
+										<motion.div
 											className="absolute top-0 left-0 w-4 h-4 border-l-2 border-t-2 border-[#c18a41] opacity-50"
 											whileHover={{ opacity: 0.9, scale: 1.2 }}
 											transition={{ duration: 0.2 }}
 										></motion.div>
-										<motion.div 
+										<motion.div
 											className="absolute bottom-0 right-0 w-4 h-4 border-r-2 border-b-2 border-[#c18a41] opacity-50"
 											whileHover={{ opacity: 0.9, scale: 1.2 }}
 											transition={{ duration: 0.2 }}
 										></motion.div>
-										
+
 										{/* Animated background glow with golden color */}
 										<div className="absolute inset-0 bg-gradient-to-r from-[#c18a41]/10 to-[#c18a41]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-xl pointer-events-none"></div>
-										
+
 										{/* Vendor logo section */}
 										<div className="p-4 bg-gradient-to-br from-gray-700/30 to-gray-800/50 flex items-center justify-center flex-grow relative">
 											{vendor.logo ? (
 												<div className="relative group/logo">
 													{/* Glowing background effect */}
 													<div className="absolute inset-0 bg-gradient-to-r from-[#c18a41]/20 to-[#c18a41]/10 rounded-lg opacity-0 group-hover/logo:opacity-100 transition-opacity duration-300 blur-sm"></div>
-													
+
 													{/* Logo container with enhanced styling */}
 													<div className="relative bg-white/5   rounded-lg p-3 border border-white/10 group-hover/logo:border-[#c18a41]/50 transition-all duration-300 bg-gradient-to-r to-[var(--color-primary)] from-[#f15a22] hover:from-[#f15a22] hover:to-[var(--color-primary)]" >
 														<Image
@@ -685,11 +685,11 @@ const VendorsClient = () => {
 															style={{ objectFit: 'contain', height: '57px' }}
 															className="transition-all duration-500 max-w-full drop-shadow-lg group-hover/logo:scale-110 group-hover/logo:drop-shadow-2xl group-hover/logo:brightness-110 group-hover/logo:filter group-hover/logo:sepia group-hover/logo:brightness-110 group-hover/logo:saturate-150"
 														/>
-														
+
 														{/* Hover glow effect with golden color */}
 														<div className="absolute inset-0 bg-gradient-to-r from-[#c18a41]/30 to-[#c18a41]/15 rounded-lg opacity-0 group-hover/logo:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
 													</div>
-													
+
 													{/* Animated corner accents with golden color */}
 													<div className="absolute -top-1 -left-1 w-3 h-3 border-l-2 border-t-2 border-[#c18a41] opacity-0 group-hover/logo:opacity-80 transition-opacity duration-300"></div>
 													<div className="absolute -bottom-1 -right-1 w-3 h-3 border-r-2 border-b-2 border-[#c18a41] opacity-0 group-hover/logo:opacity-80 transition-opacity duration-300"></div>
@@ -698,21 +698,21 @@ const VendorsClient = () => {
 												<div className="text-lg font-bold text-white/80 text-center">{vendor.name}</div>
 											)}
 										</div>
-										
+
 										{/* Vendor name with enhanced styling */}
 										<div className="p-3 text-center bg-gradient-to-r from-gray-800/30 to-gray-900/50 relative overflow-hidden">
 											{/* Animated background stripe with golden color */}
-											<motion.div 
+											<motion.div
 												className="absolute inset-0 bg-gradient-to-r from-[#c18a41]/20 to-[#c18a41]/10"
 												initial={{ x: '-100%' }}
 												whileHover={{ x: '100%' }}
 												transition={{ duration: 0.6, ease: "easeInOut" }}
 											/>
-											
+
 											<h3 className="text-sm font-semibold text-white group-hover:text-[#c18a41] transition-colors duration-300 line-clamp-2 relative z-10">
 												{vendor.name}
 											</h3>
-											
+
 											{/* Subtle glow effect with golden color */}
 											<div className="absolute inset-0 bg-gradient-to-r from-[#c18a41]/10 to-[#c18a41]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
 										</div>
@@ -728,7 +728,7 @@ const VendorsClient = () => {
 			<section className="py-20 bg-gradient-to-b from-black via-[var(--color-primary)]/10 to-black relative overflow-hidden">
 				{/* Enhanced background patterns */}
 				<div className="absolute inset-0 opacity-10">
-					<div 
+					<div
 						className="absolute inset-0 bg-repeat"
 						style={{
 							backgroundImage: `
@@ -779,7 +779,7 @@ const VendorsClient = () => {
 
 				<div style={{ display: 'none' }} className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 					<div className="text-center mb-16">
-						<motion.h2 
+						<motion.h2
 							className="text-3xl md:text-4xl font-bold text-white mb-4"
 							initial={{ opacity: 0, y: 20 }}
 							whileInView={{ opacity: 1, y: 0 }}
@@ -790,14 +790,14 @@ const VendorsClient = () => {
 								OUR PARTNERSHIP APPROACH
 							</span>
 						</motion.h2>
-						<motion.div 
+						<motion.div
 							className="w-24 h-1 bg-[var(--color-primary)] mx-auto mb-8"
 							initial={{ opacity: 0, width: 0 }}
 							whileInView={{ opacity: 1, width: 96 }}
 							viewport={{ once: true }}
 							transition={{ duration: 0.5, delay: 0.2 }}
 						></motion.div>
-						<motion.p 
+						<motion.p
 							className="text-xl text-gray-300 max-w-3xl mx-auto"
 							initial={{ opacity: 0 }}
 							whileInView={{ opacity: 1 }}
@@ -819,7 +819,7 @@ const VendorsClient = () => {
 							{/* Corner accents */}
 							<div className="absolute top-0 left-0 w-8 h-8 border-l-2 border-t-2 border-[var(--color-primary)] opacity-40"></div>
 							<div className="absolute bottom-0 right-0 w-8 h-8 border-r-2 border-b-2 border-[var(--color-primary)] opacity-40"></div>
-							
+
 							<div className="w-16 h-16 bg-[var(--color-primary)]/20 text-[var(--color-primary)] rounded-full flex items-center justify-center mx-auto mb-6 relative">
 								<svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 									<path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
@@ -830,11 +830,11 @@ const VendorsClient = () => {
 							<p className="text-gray-300 leading-relaxed">
 								Our team undergoes rigorous <span className="text-[var(--color-primary)] font-semibold">certification and training programs</span> with our vendor partners to maintain deep technical expertise in their solutions.
 							</p>
-							
+
 							{/* Hover effect */}
 							<div className="absolute inset-0 bg-gradient-to-r from-[var(--color-primary)]/5 to-[#f15a22]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl pointer-events-none"></div>
 						</motion.div>
-						
+
 						<motion.div
 							initial={{ opacity: 0, y: 30 }}
 							whileInView={{ opacity: 1, y: 0 }}
@@ -845,7 +845,7 @@ const VendorsClient = () => {
 							{/* Corner accents */}
 							<div className="absolute top-0 left-0 w-8 h-8 border-l-2 border-t-2 border-[#f15a22] opacity-40"></div>
 							<div className="absolute bottom-0 right-0 w-8 h-8 border-r-2 border-b-2 border-[#f15a22] opacity-40"></div>
-							
+
 							<div className="w-16 h-16 bg-[#f15a22]/20 text-[#f15a22] rounded-full flex items-center justify-center mx-auto mb-6 relative">
 								<svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 									<path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
@@ -856,11 +856,11 @@ const VendorsClient = () => {
 							<p className="text-gray-300 leading-relaxed">
 								We foster deep strategic partnerships with our vendors, ensuring <span className="text-[#f15a22] font-semibold">early access to new technologies</span> and priority support for our clients.
 							</p>
-							
+
 							{/* Hover effect */}
 							<div className="absolute inset-0 bg-gradient-to-r from-[#f15a22]/5 to-[var(--color-primary)]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl pointer-events-none"></div>
 						</motion.div>
-						
+
 						<motion.div
 							initial={{ opacity: 0, y: 30 }}
 							whileInView={{ opacity: 1, y: 0 }}
@@ -871,7 +871,7 @@ const VendorsClient = () => {
 							{/* Corner accents */}
 							<div className="absolute top-0 left-0 w-8 h-8 border-l-2 border-t-2 border-[var(--color-primary)] opacity-40"></div>
 							<div className="absolute bottom-0 right-0 w-8 h-8 border-r-2 border-b-2 border-[var(--color-primary)] opacity-40"></div>
-							
+
 							<div className="w-16 h-16 bg-[var(--color-primary)]/20 text-[var(--color-primary)] rounded-full flex items-center justify-center mx-auto mb-6 relative">
 								<svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 									<path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
@@ -882,7 +882,7 @@ const VendorsClient = () => {
 							<p className="text-gray-300 leading-relaxed">
 								While we maintain strong partnerships, we remain <span className="text-[var(--color-primary)] font-semibold">vendor-agnostic</span>, always recommending the best solution for each client&apos;s unique requirements.
 							</p>
-							
+
 							{/* Hover effect */}
 							<div className="absolute inset-0 bg-gradient-to-r from-[var(--color-primary)]/5 to-[#f15a22]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl pointer-events-none"></div>
 						</motion.div>
@@ -894,7 +894,7 @@ const VendorsClient = () => {
 			<section className="py-20 bg-gradient-to-br from-[var(--color-primary)] via-purple-900 to-black relative overflow-hidden">
 				{/* Cyber security pattern */}
 				<div className="absolute inset-0 opacity-10">
-					<div 
+					<div
 						className="absolute inset-0 bg-repeat"
 						style={{
 							backgroundImage: `
@@ -971,7 +971,7 @@ const VendorsClient = () => {
 							<span className="text-white text-sm font-medium">READY TO SECURE YOUR FUTURE?</span>
 						</motion.div>
 
-						<motion.h2 
+						<motion.h2
 							className="text-4xl md:text-5xl font-bold text-white mb-6"
 							initial={{ opacity: 0, y: 20 }}
 							whileInView={{ opacity: 1, y: 0 }}
@@ -984,8 +984,8 @@ const VendorsClient = () => {
 							<br />
 							<span className="text-white">technology solutions?</span>
 						</motion.h2>
-						
-						<motion.p 
+
+						<motion.p
 							className="text-xl text-white/90 mb-12 max-w-4xl mx-auto leading-relaxed"
 							initial={{ opacity: 0 }}
 							whileInView={{ opacity: 1 }}
@@ -994,7 +994,7 @@ const VendorsClient = () => {
 						>
 							Contact our team to discover how our <span className="text-[#f15a22] font-semibold">vendor partnerships</span> and cutting-edge solutions can help you address your security and networking challenges with confidence.
 						</motion.p>
-						
+
 						<motion.div
 							initial={{ opacity: 0, y: 20 }}
 							whileInView={{ opacity: 1, y: 0 }}
@@ -1002,8 +1002,8 @@ const VendorsClient = () => {
 							transition={{ duration: 0.5, delay: 0.5 }}
 							className="flex flex-col sm:flex-row justify-center gap-6"
 						>
-							<Link 
-								href="/contact-us" 
+							<Link
+								href="/contact-us"
 								className="group bg-white text-[var(--color-primary)] hover:bg-gray-100 font-bold py-4 px-8 rounded-lg text-lg transition-all duration-300 ease-in-out transform hover:-translate-y-1 shadow-2xl flex items-center justify-center relative overflow-hidden"
 							>
 								<div className="absolute inset-0 bg-gradient-to-r from-white to-gray-50 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
@@ -1012,8 +1012,8 @@ const VendorsClient = () => {
 								</svg>
 								<span className="relative z-10">Schedule a Consultation</span>
 							</Link>
-							<Link 
-								href="/solutions" 
+							<Link
+								href="/solutions"
 								className="group bg-transparent border-2 border-white text-white hover:bg-white hover:text-[var(--color-primary)] font-bold py-4 px-8 rounded-lg text-lg transition-all duration-300 ease-in-out flex items-center justify-center"
 							>
 								<svg className="w-5 h-5 mr-2 group-hover:text-[var(--color-primary)] transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
