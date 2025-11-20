@@ -205,7 +205,7 @@ const GetToKnowUsSection = () => {
                       viewport={{ once: true }}
                       transition={{ delay: idx * 0.2 + 0.4 }}
                     >
-                      "
+                      &quot;
                     </motion.div>
 
                     {/* Paragraph with Enhanced Styling */}
