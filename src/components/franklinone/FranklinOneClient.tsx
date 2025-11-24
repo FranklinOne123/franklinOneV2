@@ -44,7 +44,7 @@ const FranklinOneClient = () => {
                 className="rounded-lg"
               />
             </motion.div>
-            
+
             <motion.div
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -53,7 +53,7 @@ const FranklinOneClient = () => {
             >
               <h2 className="text-3xl font-bold text-gray-900 mb-6">What Sets Us Apart</h2>
               <div className="w-16 h-1 bg-[var(--color-primary)] mb-8"></div>
-              
+
               <div className="space-y-6">
                 <div className="flex">
                   <div className="flex-shrink-0">
@@ -70,7 +70,7 @@ const FranklinOneClient = () => {
                     </p>
                   </div>
                 </div>
-                
+
                 <div className="flex">
                   <div className="flex-shrink-0">
                     <div className="flex items-center justify-center h-12 w-12 rounded-md bg-[var(--color-primary)]/10text-[var(--color-primary)]">
@@ -86,7 +86,7 @@ const FranklinOneClient = () => {
                     </p>
                   </div>
                 </div>
-                
+
                 <div className="flex">
                   <div className="flex-shrink-0">
                     <div className="flex items-center justify-center h-12 w-12 rounded-md bg-[var(--color-primary)]/10 text-[#f15a22]">
@@ -102,7 +102,7 @@ const FranklinOneClient = () => {
                     </p>
                   </div>
                 </div>
-                
+
                 <div className="flex">
                   <div className="flex-shrink-0">
                     <div className="flex items-center justify-center h-12 w-12 rounded-md bg-[var(--color-primary)]/10 text-[#f15a22]">
@@ -128,7 +128,7 @@ const FranklinOneClient = () => {
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <motion.h2 
+            <motion.h2
               className="text-3xl md:text-4xl font-bold text-gray-900 mb-4"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -137,14 +137,14 @@ const FranklinOneClient = () => {
             >
               OUR APPROACH
             </motion.h2>
-            <motion.div 
+            <motion.div
               className="w-24 h-1 bg-[var(--color-primary)] mx-auto mb-8"
               initial={{ opacity: 0, width: 0 }}
               whileInView={{ opacity: 1, width: 96 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.2 }}
             ></motion.div>
-            <motion.p 
+            <motion.p
               className="text-xl text-gray-600 max-w-3xl mx-auto"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
@@ -173,7 +173,7 @@ const FranklinOneClient = () => {
                 We start by thoroughly understanding your current environment, challenges, and objectives to identify the right solutions.
               </p>
             </motion.div>
-            
+
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -191,7 +191,7 @@ const FranklinOneClient = () => {
                 Our certified engineers design tailored solutions leveraging our portfolio of best-of-breed technologies.
               </p>
             </motion.div>
-            
+
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -206,7 +206,7 @@ const FranklinOneClient = () => {
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-4">Implement</h3>
               <p className="text-gray-600">
-                We provide professionalimplementation, integration, and ongoing support to ensure your solutions deliver long-term value.
+                We provide professional implementation, integration, and ongoing support to ensure your solutions deliver long-term value.
               </p>
             </motion.div>
           </div>
@@ -216,7 +216,7 @@ const FranklinOneClient = () => {
       {/* CTA Section */}
       <section className="py-16 bg-[var(--color-primary)] text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.h2 
+          <motion.h2
             className="text-3xl font-bold mb-6"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -225,7 +225,7 @@ const FranklinOneClient = () => {
           >
             Ready to work with FranklinOne?
           </motion.h2>
-          <motion.p 
+          <motion.p
             className="text-xl text-gray-100 opacity-90 mb-8 max-w-3xl mx-auto"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}

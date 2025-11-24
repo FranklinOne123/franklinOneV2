@@ -6,7 +6,7 @@ const CompanyBackgroundSection = () => {
     <section className="py-20 bg-gradient-to-b from-gray-800 via-gray-900 to-black relative overflow-hidden">
       {/* Cyber grid pattern background */}
       <div className="absolute inset-0 opacity-5">
-        <div 
+        <div
           className="absolute inset-0 bg-repeat"
           style={{
             backgroundImage: `
@@ -83,21 +83,21 @@ const CompanyBackgroundSection = () => {
                 {/* Corner accents */}
                 <div className="absolute top-0 left-0 w-8 h-8 border-l-2 border-t-2 border-[var(--color-primary)] opacity-40"></div>
                 <div className="absolute bottom-0 right-0 w-8 h-8 border-r-2 border-b-2 border-[var(--color-primary)] opacity-40"></div>
-                
+
                 <div className="relative h-80 rounded-xl overflow-hidden bg-gradient-to-br from-[var(--color-primary)]/20 to-gray-800/50">
                   {/* Placeholder for company image */}
                   <div className="absolute inset-0 flex items-center justify-center">
                     <div className="text-center">
                       <div className="w-20 h-20 mx-auto mb-4 bg-[var(--color-primary)]/30 rounded-full flex items-center justify-center">
                         <svg className="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 20 20">
-                          <path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd"/>
+                          <path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd" />
                         </svg>
                       </div>
-                      <p className="text-white text-sm">Our professionalTeam</p>
+                      <p className="text-white text-sm">Our Professional Team</p>
                       <p className="text-gray-400 text-xs mt-1">Excellence in Cybersecurity Distribution</p>
                     </div>
                   </div>
-                  
+
                   {/* You can replace this with an actual image */}
                   {/* <Image
                     src="/images/about/team-photo.jpg"
@@ -120,7 +120,7 @@ const CompanyBackgroundSection = () => {
               <p className="text-lg text-white leading-relaxed">
                 Our company was established by a team of highly experienced professionals who have excelled in the distribution business for years, deeply understanding the core values of being a true distributor.
               </p>
-              
+
               <p className="text-lg text-white leading-relaxed">
                 We have built a dedicated team to provide comprehensive support, including solution consultation and after-sales service, ensuring that our customers receive the best possible experience.
               </p>
@@ -148,7 +148,7 @@ const CompanyBackgroundSection = () => {
             {/* Corner accents */}
             <div className="absolute top-0 left-0 w-12 h-12 border-l-2 border-t-2 border-[var(--color-primary)] opacity-40"></div>
             <div className="absolute bottom-0 right-0 w-12 h-12 border-r-2 border-b-2 border-[var(--color-primary)] opacity-40"></div>
-            
+
             {/* Security shield icon */}
             <div className="absolute top-4 right-4 w-8 h-8 text-[var(--color-primary)] opacity-20">
               <svg fill="currentColor" viewBox="0 0 20 20">
@@ -160,7 +160,7 @@ const CompanyBackgroundSection = () => {
               <p className="text-lg text-white leading-relaxed">
                 Committed to unquestionable business principles, we strictly conduct our transactions through resellers and never engage directly with end customers. We firmly believe in the partner ecosystem and strive to be a role model in the country and the region.
               </p>
-              
+
               <p className="text-lg text-white leading-relaxed">
                 Our shareholders comprise individuals with a strong financial background who share a unified vision— building a long-lasting organization that generates sustainable benefits for all stakeholders.
               </p>

@@ -2,13 +2,13 @@
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { 
-  CertifiedIcon, 
-  ArchitectureIcon, 
-  ImplementationIcon, 
-  SupportIcon, 
-  TrainingIcon, 
-  GrowthIcon 
+import {
+  CertifiedIcon,
+  ArchitectureIcon,
+  ImplementationIcon,
+  SupportIcon,
+  TrainingIcon,
+  GrowthIcon
 } from '@/components/icons';
 
 // Feature animation variants
@@ -29,7 +29,7 @@ const services = [
   {
     icon: CertifiedIcon,
     title: "Certified Engineers",
-    description: "Our team of certified engineers ensures professionalimplementation of security solutions"
+    description: "Our team of certified engineers ensures professional implementation of security solutions"
   },
   {
     icon: ArchitectureIcon,
@@ -49,7 +49,7 @@ const services = [
   {
     icon: TrainingIcon,
     title: "Certification and Customized Technical Training",
-    description: "professionalcertification courses and customized training programs"
+    description: "Professional certification courses and customized training programs"
   },
   {
     icon: GrowthIcon,
@@ -65,15 +65,15 @@ const WhyFranklinoneSection = () => {
       <div className="absolute inset-0 opacity-10 z-0">
         <div className="absolute inset-0 bg-[url('/network-bg.svg')] bg-repeat"></div>
       </div>
-      
+
       {/* Wave background pattern */}
       <div className="absolute inset-0 opacity-30 z-0">
         <div className="absolute inset-0 bg-[url('/wave-bg.svg')] bg-repeat-x bg-bottom"></div>
       </div>
-      
+
       {/* Add subtle radial gradient */}
       <div className="absolute inset-0 opacity-15 z-0 bg-radial-gradient"></div>
-      
+
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div
           className="text-center mb-16"

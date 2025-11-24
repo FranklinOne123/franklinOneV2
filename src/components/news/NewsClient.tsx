@@ -89,7 +89,7 @@ const allNewsItems = [
   {
     id: 'franklinone-education-initiative',
     date: "28 Mar 2024",
-    title: "FranklinOne Launches Education Initiative for Cybersecurity professionals",
+    title: "FranklinOne Launches Education Initiative for Cybersecurity Professionals",
     excerpt: "The new program aims to address the skills gap in the cybersecurity industry through comprehensive training and certification...",
     category: "Education",
     featured: false,
@@ -109,8 +109,8 @@ const NewsClient = () => {
   useEffect(() => {
     const filtered = allNewsItems.filter(item => {
       const matchesCategory = activeCategory === "All" || item.category === activeCategory;
-      const matchesSearch = item.title.toLowerCase().includes(searchTerm.toLowerCase()) || 
-                           item.excerpt.toLowerCase().includes(searchTerm.toLowerCase());
+      const matchesSearch = item.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        item.excerpt.toLowerCase().includes(searchTerm.toLowerCase());
       return matchesCategory && matchesSearch;
     });
     setFilteredNews(filtered);
@@ -126,7 +126,7 @@ const NewsClient = () => {
       }
     }
   };
-  
+
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0 }
@@ -148,28 +148,27 @@ const NewsClient = () => {
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
                 />
-                <svg 
-                  xmlns="http://www.w3.org/2000/svg" 
-                  className="h-5 w-5 absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400" 
-                  fill="none" 
-                  viewBox="0 0 24 24" 
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-5 w-5 absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400"
+                  fill="none"
+                  viewBox="0 0 24 24"
                   stroke="currentColor"
                 >
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                 </svg>
               </div>
             </div>
-            
+
             <div className="flex flex-wrap gap-2">
               {categories.map((category) => (
                 <button
                   key={category}
                   onClick={() => setActiveCategory(category)}
-                  className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
-                    activeCategory === category
+                  className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${activeCategory === category
                       ? 'bg-[var(--color-primary)] text-white'
                       : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-                  }`}
+                    }`}
                 >
                   {category}
                 </button>
@@ -177,20 +176,20 @@ const NewsClient = () => {
             </div>
           </div>
         </div>
-        
+
         {/* Featured news - only shown if we have featured news in the filtered results */}
         {filteredNews.some(item => item.featured) && (
           <div className="mb-16">
             <h2 className="text-3xl font-bold mb-8 text-gray-800 relative inline-block">
               Featured News
-              <motion.div 
+              <motion.div
                 className="absolute -bottom-2 left-0 h-1 bg-[var(--color-primary)]"
                 initial={{ width: 0 }}
                 animate={{ width: '100%' }}
                 transition={{ duration: 0.8 }}
               />
             </h2>
-            
+
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
               {filteredNews
                 .filter(item => item.featured)
@@ -217,7 +216,7 @@ const NewsClient = () => {
                         <Link href={`/news/${item.id}`}>{item.title}</Link>
                       </h3>
                       <p className="text-gray-600 line-clamp-3 mb-4">{item.excerpt}</p>
-                      <Link 
+                      <Link
                         href={`/news/${item.id}`}
                         className="inline-flex items-centertext-[var(--color-primary)] hover:text-[#653767] font-medium transition-colors"
                       >
@@ -232,19 +231,19 @@ const NewsClient = () => {
             </div>
           </div>
         )}
-        
+
         {/* All news */}
         <div>
           <h2 className="text-3xl font-bold mb-8 text-gray-800 relative inline-block">
             {activeCategory === "All" ? "All News" : `${activeCategory} News`}
-            <motion.div 
+            <motion.div
               className="absolute -bottom-2 left-0 h-1 bg-[var(--color-primary)]"
               initial={{ width: 0 }}
               animate={{ width: '100%' }}
               transition={{ duration: 0.8 }}
             />
           </h2>
-          
+
           {filteredNews.length === 0 ? (
             <div className="text-center py-12">
               <svg className="mx-auto h-12 w-12 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
@@ -253,8 +252,8 @@ const NewsClient = () => {
               <h3 className="mt-2 text-xl font-medium text-gray-900">No news found</h3>
               <p className="mt-1 text-gray-500">Try changing your search or filter to find what you&#39;re looking for.</p>
               <div className="mt-6">
-                <button 
-                  onClick={() => {setActiveCategory("All"); setSearchTerm("");}} 
+                <button
+                  onClick={() => { setActiveCategory("All"); setSearchTerm(""); }}
                   className="inline-flex items-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-[var(--color-primary)] hover:bg-[#652d68] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#743f77]"
                 >
                   Clear filters
@@ -262,7 +261,7 @@ const NewsClient = () => {
               </div>
             </div>
           ) : (
-            <motion.div 
+            <motion.div
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
               variants={containerVariants}
               initial="hidden"
@@ -285,7 +284,7 @@ const NewsClient = () => {
                       <Link href={`/news/${item.id}`}>{item.title}</Link>
                     </h3>
                     <p className="text-gray-600 mb-4 flex-grow">{item.excerpt}</p>
-                    <Link 
+                    <Link
                       href={`/news/${item.id}`}
                       className="inline-flex items-center text-[#f15a22] hover:text-[#e04d15] font-medium transition-colors"
                     >
@@ -299,7 +298,7 @@ const NewsClient = () => {
               ))}
             </motion.div>
           )}
-          
+
           {filteredNews.length > 0 && (
             <div className="mt-12 flex justify-center">
               <button className="bg-white border border-gray-300 text-gray-700 px-6 py-3 rounded-md font-medium hover:bg-gray-50 transition-colors flex items-center">

@@ -39,8 +39,8 @@ const services = [
 	},
 	{
 		id: 'expert-services',
-		title: 'professionalServices & Support',
-		description: 'We deliver professionalimplementation, configuration, and technical support to ensure long-term success.',
+		title: 'Professional Services & Support',
+		description: 'We deliver professional implementation, configuration, and technical support to ensure long-term success.',
 		icon: (
 			<svg className="w-10 h-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 				<path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
@@ -48,7 +48,7 @@ const services = [
 			</svg>
 		),
 		capabilities: [
-			'professionalImplementation',
+			'Professional Implementation',
 			'System Configuration',
 			'Technical Support',
 			'Maintenance Services',
@@ -95,12 +95,12 @@ const WhatWeDoClient = () => {
 						<div className="relative flex items-center">
 							<div className="w-3 h-3 bg-[var(--color-primary)] rounded-full mr-4" />
 							<span className="text-sm font-semibold text-gray-200 tracking-wider uppercase">
-								CYBERSECURITY professionals
+								CYBERSECURITY PROFESSIONALS
 							</span>
 						</div>
 					</motion.div>
 
-					<motion.h1 
+					<motion.h1
 						className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8"
 						initial={{ opacity: 0, y: 30 }}
 						animate={{ opacity: 1, y: 0 }}
@@ -151,7 +151,7 @@ const WhatWeDoClient = () => {
 							viewport={{ once: true }}
 							transition={{ duration: 0.8, type: "spring", stiffness: 100 }}
 						>
-							<motion.div 
+							<motion.div
 								className="absolute inset-0 bg-gradient-to-r from-[var(--color-primary)]/30 via-[#f15a22]/20 to-[var(--color-primary)]/30 backdrop-blur-md rounded-full border border-[var(--color-primary)]/50 shadow-2xl"
 								animate={{
 									boxShadow: [
@@ -167,7 +167,7 @@ const WhatWeDoClient = () => {
 								}}
 							/>
 							<div className="relative flex items-center">
-								<motion.div 
+								<motion.div
 									className="w-4 h-4 bg-gradient-to-r from-[var(--color-primary)] to-[#f15a22] rounded-full mr-4"
 									animate={{
 										scale: [1, 1.3, 1],
@@ -186,14 +186,14 @@ const WhatWeDoClient = () => {
 						</motion.div>
 
 						{/* Enhanced title */}
-						<motion.h2 
+						<motion.h2
 							className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8"
 							initial={{ opacity: 0, y: 30 }}
 							whileInView={{ opacity: 1, y: 0 }}
 							viewport={{ once: true }}
 							transition={{ duration: 0.8, delay: 0.2 }}
 						>
-							<motion.span 
+							<motion.span
 								className="bg-gradient-to-r from-white via-[var(--color-primary)] to-[#f15a22] bg-clip-text text-transparent"
 								animate={{
 									backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"]
@@ -212,7 +212,7 @@ const WhatWeDoClient = () => {
 						</motion.h2>
 
 						{/* Enhanced divider */}
-						<motion.div 
+						<motion.div
 							className="relative mb-10"
 							initial={{ opacity: 0, scaleX: 0 }}
 							whileInView={{ opacity: 1, scaleX: 1 }}
@@ -234,7 +234,7 @@ const WhatWeDoClient = () => {
 						</motion.div>
 
 						{/* Enhanced description */}
-						<motion.p 
+						<motion.p
 							className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed"
 							initial={{ opacity: 0, y: 20 }}
 							whileInView={{ opacity: 1, y: 0 }}
@@ -242,20 +242,20 @@ const WhatWeDoClient = () => {
 							transition={{ duration: 0.8, delay: 0.6 }}
 						>
 							We provide{" "}
-							<motion.span 
+							<motion.span
 								className="text-[var(--color-primary)] font-semibold"
 								whileHover={{ scale: 1.05 }}
 								transition={{ duration: 0.2 }}
 							>
 								comprehensive support
 							</motion.span>{" "}
-							through professionalconsulting, proven validation, professionalimplementation, and regional presence across{" "}
-							<motion.span 
+							through professional consulting, proven validation, professional implementation, and regional presence across{" "}
+							<motion.span
 								className="text-[#f15a22] font-semibold"
 								whileHover={{ scale: 1.05 }}
 								transition={{ duration: 0.2 }}
 							>
-								CLM
+								CLM (Cambodia, Laos, Myanmar)
 							</motion.span>.
 						</motion.p>
 					</div>
@@ -267,14 +267,14 @@ const WhatWeDoClient = () => {
 								initial={{ opacity: 0, y: 50, scale: 0.9 }}
 								whileInView={{ opacity: 1, y: 0, scale: 1 }}
 								viewport={{ once: true }}
-								transition={{ 
-									duration: 0.8, 
+								transition={{
+									duration: 0.8,
 									delay: index * 0.2,
 									type: "spring",
 									stiffness: 100,
 									damping: 10
 								}}
-								whileHover={{ 
+								whileHover={{
 									scale: 1.05,
 									rotateY: 5,
 									z: 50
@@ -301,7 +301,7 @@ const WhatWeDoClient = () => {
 
 								{/* Main card */}
 								<div className="relative bg-gradient-to-br from-[rgba(10,14,26,0.95)] via-[rgba(22,33,62,0.90)] to-[rgba(10,14,26,0.95)] rounded-3xl border border-[var(--color-primary)]/30 backdrop-blur-lg overflow-hidden group-hover:border-[var(--color-primary)]/60 transition-all duration-500">
-									
+
 									{/* Animated corner accents */}
 									<motion.div
 										className="absolute top-0 left-0 w-20 h-20 border-t-4 border-l-4 border-[var(--color-primary)] rounded-tl-3xl opacity-60"
@@ -357,11 +357,11 @@ const WhatWeDoClient = () => {
 										{/* Enhanced icon container */}
 										<motion.div
 											className="w-24 h-24 bg-gradient-to-br from-[var(--color-primary)] to-[#f15a22] text-white rounded-2xl flex items-center justify-center mb-8 border-2 border-white/20 shadow-2xl"
-											whileHover={{ 
+											whileHover={{
 												rotate: 360,
 												scale: 1.1
 											}}
-											transition={{ 
+											transition={{
 												duration: 0.8,
 												type: "spring",
 												stiffness: 200
@@ -385,7 +385,7 @@ const WhatWeDoClient = () => {
 										</motion.div>
 
 										{/* Enhanced title */}
-										<motion.h3 
+										<motion.h3
 											className="text-2xl md:text-3xl font-bold mb-6 text-white group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-[var(--color-primary)] group-hover:to-[#f15a22] group-hover:bg-clip-text transition-all duration-500"
 											whileHover={{ scale: 1.05 }}
 										>
@@ -393,7 +393,7 @@ const WhatWeDoClient = () => {
 										</motion.h3>
 
 										{/* Enhanced description */}
-										<motion.p 
+										<motion.p
 											className="text-gray-300 text-lg leading-relaxed mb-8 group-hover:text-gray-100 transition-colors duration-300"
 											initial={{ opacity: 0.8 }}
 											whileHover={{ opacity: 1 }}
@@ -439,7 +439,7 @@ const WhatWeDoClient = () => {
 						</div>
 					</motion.div>
 
-					<motion.h2 
+					<motion.h2
 						className="text-3xl md:text-5xl font-bold mb-6"
 						initial={{ opacity: 0, y: 20 }}
 						whileInView={{ opacity: 1, y: 0 }}
