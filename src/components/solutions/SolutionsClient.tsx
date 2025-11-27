@@ -266,14 +266,7 @@ const SolutionsClient = () => {
 								</div>
 							</div>
 							<div className="relative">
-								<div className="absolute top-0 right-0 w-32 h-24 opacity-20">
-									<Image
-										src="/images/endpoint-security.jpg"
-										alt="Endpoint Security"
-										fill
-										className="object-cover rounded-tr-xl"
-									/>
-								</div>
+
 								<div className="p-6">
 									<div className="grid grid-cols-1 gap-3">
 										{detailedSolutions.endpointSecurity.map((solution, index) => (
@@ -319,14 +312,7 @@ const SolutionsClient = () => {
 								</div>
 							</div>
 							<div className="relative">
-								<div className="absolute top-0 right-0 w-32 h-24 opacity-20">
-									<Image
-										src="/images/network-security.jpg"
-										alt="Network Security"
-										fill
-										className="object-cover rounded-tr-xl"
-									/>
-								</div>
+
 								<div className="p-6">
 									<div className="grid grid-cols-1 gap-3">
 										{detailedSolutions.networkSecurity.map((solution, index) => (
@@ -372,14 +358,7 @@ const SolutionsClient = () => {
 								</div>
 							</div>
 							<div className="relative">
-								<div className="absolute top-0 right-0 w-32 h-24 opacity-20">
-									<Image
-										src="/images/data-security.jpg"
-										alt="Data Security"
-										fill
-										className="object-cover rounded-tr-xl"
-									/>
-								</div>
+
 								<div className="p-6">
 									<div className="grid grid-cols-1 gap-3">
 										{detailedSolutions.dataSecurity.map((solution, index) => (
@@ -425,14 +404,7 @@ const SolutionsClient = () => {
 								</div>
 							</div>
 							<div className="relative">
-								<div className="absolute top-0 right-0 w-32 h-24 opacity-20">
-									<Image
-										src="/images/vulnerability-management.jpg"
-										alt="Vulnerability Management"
-										fill
-										className="object-cover rounded-tr-xl"
-									/>
-								</div>
+
 								<div className="p-6">
 									<div className="grid grid-cols-1 gap-3">
 										{detailedSolutions.vulnerabilityManagement.map((solution, index) => (
@@ -478,14 +450,7 @@ const SolutionsClient = () => {
 								</div>
 							</div>
 							<div className="relative">
-								<div className="absolute top-0 right-0 w-32 h-24 opacity-20">
-									<Image
-										src="/images/networking-solutions.jpg"
-										alt="Networking Solutions"
-										fill
-										className="object-cover rounded-tr-xl"
-									/>
-								</div>
+
 								<div className="p-6">
 									<div className="grid grid-cols-1 gap-3">
 										{detailedSolutions.networkingSolutions.map((solution, index) => (
@@ -531,14 +496,7 @@ const SolutionsClient = () => {
 								</div>
 							</div>
 							<div className="relative">
-								<div className="absolute top-0 right-0 w-32 h-24 opacity-20">
-									<Image
-										src="/images/it-operations.jpg"
-										alt="IT Operations"
-										fill
-										className="object-cover rounded-tr-xl"
-									/>
-								</div>
+
 								<div className="p-6">
 									<div className="grid grid-cols-1 gap-3">
 										{detailedSolutions.itOperations.map((solution, index) => (
@@ -584,14 +542,7 @@ const SolutionsClient = () => {
 								</div>
 							</div>
 							<div className="relative">
-								<div className="absolute top-0 right-0 w-32 h-24 opacity-20">
-									<Image
-										src="/images/physical-security.jpg"
-										alt="Physical Security"
-										fill
-										className="object-cover rounded-tr-xl"
-									/>
-								</div>
+
 								<div className="p-6">
 									<div className="grid grid-cols-1 gap-3">
 										{detailedSolutions.physicalSecurity.map((solution, index) => (
