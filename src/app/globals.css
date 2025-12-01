@@ -1,6 +1,11 @@
 @import "tailwindcss";
 
+@theme {
+  --breakpoint-nav: 956px;
+}
+
 @layer base {
+
   /* Apply Poppins as the default font using CSS variable */
   html {
     font-family: var(--font-poppins), system-ui, sans-serif;
@@ -28,7 +33,8 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-poppins), system-ui, sans-serif;;
+  font-family: var(--font-poppins), system-ui, sans-serif;
+  ;
 }
 
 /* Custom utility classes */
