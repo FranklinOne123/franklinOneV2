@@ -29,7 +29,7 @@ const VisionMissionSection = () => {
   };
 
   return (
-    <section className="relative min-h-screen bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 overflow-hidden py-20">
+    <section  id="company-story"  className="relative min-h-screen bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 overflow-hidden py-20">
       {/* Tech pattern background */}
       <div className="absolute inset-0 opacity-5">
         <motion.div 
@@ -129,6 +129,7 @@ const VisionMissionSection = () => {
               }}
               style={{ backgroundSize: "200% 200%" }}
             >
+              
               Our Vision & Mission
             </motion.span>
           </motion.h2>
@@ -144,7 +145,7 @@ const VisionMissionSection = () => {
         </motion.div>
 
         {/* Main Content - Enhanced Layout */}
-        <div className="space-y-20">
+        <div className="space-y-20" >
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Vision Section */}
             <motion.div
