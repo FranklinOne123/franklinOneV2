@@ -9,52 +9,52 @@ const ContactUsClient = () => {
       <section className="relative min-h-[85vh] flex items-center justify-center bg-[#0a0e1a] text-white overflow-hidden">
         {/* Dark cyber background with overlay */}
         <div className="absolute inset-0 z-0">
-          <motion.div 
+          <motion.div
             className="absolute inset-0 bg-gradient-to-br from-[rgba(10,14,26,0.95)] via-[rgba(22,33,62,0.85)] to-[rgba(116,63,119,0.9)] z-10"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1.5, ease: "easeOut" }}
           />
-          <motion.div 
+          <motion.div
             className="absolute inset-0 bg-[url('/cyber.png')] bg-cover bg-center z-0"
             style={{ opacity: 0.3 }}
-            animate={{ 
+            animate={{
               scale: [1, 1.05, 1],
               opacity: [0.3, 0.4, 0.3]
             }}
-            transition={{ 
-              duration: 15, 
-              repeat: Infinity, 
-              ease: "easeInOut" 
+            transition={{
+              duration: 15,
+              repeat: Infinity,
+              ease: "easeInOut"
             }}
           />
         </div>
-        
+
         {/* Animated network grid */}
-        <motion.div 
+        <motion.div
           className="absolute inset-0 bg-[url('/network-bg.svg')] z-10"
           style={{ opacity: 0.15 }}
-          animate={{ 
+          animate={{
             backgroundPosition: ['0px 0px', '100px 100px'],
             opacity: [0.1, 0.2, 0.1]
           }}
-          transition={{ 
-            duration: 25, 
-            repeat: Infinity, 
-            ease: "linear" 
+          transition={{
+            duration: 25,
+            repeat: Infinity,
+            ease: "linear"
           }}
         />
-        
+
         {/* Animated dots */}
-        <motion.div 
+        <motion.div
           className="absolute inset-0 bg-[url('/dot-pattern.svg')] bg-repeat z-10"
-          animate={{ 
-            backgroundPosition: ['0px 0px', '60px 60px', '0px 0px'] 
+          animate={{
+            backgroundPosition: ['0px 0px', '60px 60px', '0px 0px']
           }}
-          transition={{ 
-            duration: 30, 
-            repeat: Infinity, 
-            ease: "easeInOut" 
+          transition={{
+            duration: 30,
+            repeat: Infinity,
+            ease: "easeInOut"
           }}
           style={{ opacity: 0.12 }}
         />
@@ -95,8 +95,8 @@ const ContactUsClient = () => {
             className="relative inline-flex items-center px-8 py-4 mb-10"
             initial={{ opacity: 0, y: 30, scale: 0.8 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
-            transition={{ 
-              duration: 0.8, 
+            transition={{
+              duration: 0.8,
               delay: 0.2,
               type: "spring",
               stiffness: 100
@@ -104,7 +104,7 @@ const ContactUsClient = () => {
           >
             {/* Glowing background */}
             <div className="absolute inset-0 bg-gradient-to-r from-[var(--color-primary)]/20 via-[var(--color-primary)]/30 to-[var(--color-primary)]/20 backdrop-blur-md rounded-full border border-[var(--color-primary)]/40 shadow-lg"></div>
-            
+
             {/* Animated border glow */}
             <motion.div
               className="absolute inset-0 rounded-full border-2 border-[var(--color-primary)]/50"
@@ -121,10 +121,10 @@ const ContactUsClient = () => {
                 ease: "easeInOut"
               }}
             />
-            
+
             {/* Content */}
             <div className="relative flex items-center">
-              <motion.div 
+              <motion.div
                 className="w-3 h-3 bg-[var(--color-primary)] rounded-full mr-4"
                 animate={{
                   scale: [1, 1.3, 1],
@@ -143,7 +143,7 @@ const ContactUsClient = () => {
           </motion.div>
 
           {/* Enhanced title with gradient text */}
-          <motion.h1 
+          <motion.h1
             className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -161,14 +161,14 @@ const ContactUsClient = () => {
             transition={{ duration: 0.8, delay: 0.6 }}
             className="mb-12"
           >
-            <motion.div 
+            <motion.div
               className="w-32 h-1 bg-gradient-to-r from-[var(--color-primary)] to-[#f15a22] mx-auto mb-8"
               initial={{ width: 0, opacity: 0 }}
               animate={{ width: 128, opacity: 1 }}
               transition={{ duration: 1, delay: 0.8 }}
             />
             <p className="text-xl md:text-2xl max-w-4xl mx-auto text-gray-300 leading-relaxed">
-We&apos;re here to help with your security and networking needs. Reach out to our team for qualified and reliable consultation and advanced cybersecurity solutions.            </p>
+              We&apos;re here to help with your security and networking needs. Reach out to our team for qualified and reliable consultation and advanced cybersecurity solutions.            </p>
           </motion.div>
 
           {/* Enhanced scroll indicator */}
@@ -195,20 +195,20 @@ We&apos;re here to help with your security and networking needs. Reach out to ou
       <section className="relative py-20 bg-gradient-to-b from-[#0a0e1a] via-[#161b2e] to-[#0a0e1a] text-white overflow-hidden">
         {/* Advanced cyber background */}
         <div className="absolute inset-0 z-0">
-          <motion.div 
+          <motion.div
             className="absolute inset-0 bg-[url('/cyber-grid.svg')] bg-center z-0"
             style={{ opacity: 0.1 }}
-            animate={{ 
+            animate={{
               backgroundPosition: ['0px 0px', '50px 50px'],
               opacity: [0.05, 0.15, 0.05]
             }}
-            transition={{ 
-              duration: 20, 
-              repeat: Infinity, 
-              ease: "easeInOut" 
+            transition={{
+              duration: 20,
+              repeat: Infinity,
+              ease: "easeInOut"
             }}
           />
-          
+
           {/* Floating security nodes */}
           {[...Array(8)].map((_, i) => (
             <motion.div
@@ -236,175 +236,10 @@ We&apos;re here to help with your security and networking needs. Reach out to ou
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <div className="grid grid-cols-1 lg:grid-cols-1 gap-12">
             {/* Enhanced Contact Form */}
-            <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="relative"
-            >
-              {/* Enhanced form container */}
-              <div className="relative bg-gradient-to-br from-[rgba(116,63,119,0.1)] via-[rgba(22,33,62,0.15)] to-[rgba(241,90,34,0.1)] rounded-2xl border border-[var(--color-primary)]/20 backdrop-blur-sm p-8 shadow-2xl">
-                {/* Corner accents */}
-                <div className="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-[var(--color-primary)]/50 rounded-tl-2xl"></div>
-                <div className="absolute bottom-0 right-0 w-8 h-8 border-b-2 border-r-2 border-[#f15a22]/50 rounded-br-2xl"></div>
-                
-                <motion.h2 
-                  className="text-2xl md:text-3xl font-bold mb-6"
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5 }}
-                >
-                  <span className="bg-gradient-to-r from-white via-gray-200 to-[var(--color-primary)] bg-clip-text text-transparent">
-                    Send Us a Secure Message
-                  </span>
-                </motion.h2>
-                
-                <form className="space-y-6">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
-                      <label htmlFor="firstName" className="block text-sm font-medium text-gray-300 mb-2">
-                        First Name*
-                      </label>
-                      <input
-                        type="text"
-                        id="firstName"
-                        name="firstName"
-                        required
-                        className="w-full px-4 py-3 bg-[rgba(22,33,62,0.3)] border border-[var(--color-primary)]/30 rounded-xl text-white placeholder-gray-400 focus:ring-2 focus:ring-[var(--color-primary)] focus:border-[var(--color-primary)] transition-all duration-300 backdrop-blur-sm"
-                        placeholder="Enter your first name"
-                      />
-                    </div>
-                    <div>
-                      <label htmlFor="lastName" className="block text-sm font-medium text-gray-300 mb-2">
-                        Last Name*
-                      </label>
-                      <input
-                        type="text"
-                        id="lastName"
-                        name="lastName"
-                        required
-                        className="w-full px-4 py-3 bg-[rgba(22,33,62,0.3)] border border-[var(--color-primary)]/30 rounded-xl text-white placeholder-gray-400 focus:ring-2 focus:ring-[var(--color-primary)] focus:border-[var(--color-primary)] transition-all duration-300 backdrop-blur-sm"
-                        placeholder="Enter your last name"
-                      />
-                    </div>
-                  </div>
-                  
-                  <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
-                      Email Address*
-                    </label>
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      required
-                      className="w-full px-4 py-3 bg-[rgba(22,33,62,0.3)] border border-[var(--color-primary)]/30 rounded-xl text-white placeholder-gray-400 focus:ring-2 focus:ring-[var(--color-primary)] focus:border-[var(--color-primary)] transition-all duration-300 backdrop-blur-sm"
-                      placeholder="your.email@company.com"
-                    />
-                  </div>
-                  
-                  <div>
-                    <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">
-                      Company Name*
-                    </label>
-                    <input
-                      type="text"
-                      id="company"
-                      name="company"
-                      required
-                      className="w-full px-4 py-3 bg-[rgba(22,33,62,0.3)] border border-[var(--color-primary)]/30 rounded-xl text-white placeholder-gray-400 focus:ring-2 focus:ring-[var(--color-primary)] focus:border-[var(--color-primary)] transition-all duration-300 backdrop-blur-sm"
-                      placeholder="Your company name"
-                    />
-                  </div>
-                  
-                  <div>
-                    <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2">
-                      Phone Number
-                    </label>
-                    <input
-                      type="tel"
-                      id="phone"
-                      name="phone"
-                      className="w-full px-4 py-3 bg-[rgba(22,33,62,0.3)] border border-[var(--color-primary)]/30 rounded-xl text-white placeholder-gray-400 focus:ring-2 focus:ring-[var(--color-primary)] focus:border-[var(--color-primary)] transition-all duration-300 backdrop-blur-sm"
-                      placeholder="+1 (555) 123-4567"
-                    />
-                  </div>
-                  
-                  <div>
-                    <label htmlFor="subject" className="block text-sm font-medium text-gray-300 mb-2">
-                      Subject*
-                    </label>
-                    <input
-                      type="text"
-                      id="subject"
-                      name="subject"
-                      required
-                      className="w-full px-4 py-3 bg-[rgba(22,33,62,0.3)] border border-[var(--color-primary)]/30 rounded-xl text-white placeholder-gray-400 focus:ring-2 focus:ring-[var(--color-primary)] focus:border-[var(--color-primary)] transition-all duration-300 backdrop-blur-sm"
-                      placeholder="Security consultation request"
-                    />
-                  </div>
-                  
-                  <div>
-                    <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
-                      Message*
-                    </label>
-                    <textarea
-                      id="message"
-                      name="message"
-                      rows={5}
-                      required
-                      className="w-full px-4 py-3 bg-[rgba(22,33,62,0.3)] border border-[var(--color-primary)]/30 rounded-xl text-white placeholder-gray-400 focus:ring-2 focus:ring-[var(--color-primary)] focus:border-[var(--color-primary)] transition-all duration-300 backdrop-blur-sm resize-none"
-                      placeholder="Tell us about your security and networking requirements..."
-                    ></textarea>
-                  </div>
-                  
-                  <div className="flex items-start">
-                    <input
-                      id="privacy"
-                      name="privacy"
-                      type="checkbox"
-                      required
-                      className="h-4 w-4 mt-1 text-[var(--color-primary)] bg-[rgba(22,33,62,0.3)] border-[var(--color-primary)]/30 rounded focus:ring-[var(--color-primary)] focus:ring-2"
-                    />
-                    <label htmlFor="privacy" className="ml-3 block text-sm text-gray-300">
-                      I agree to the{' '}
-                      <Link href="/privacy-policy" className="text-[var(--color-primary)] hover:text-[#f15a22] transition-colors duration-300 underline">
-                        Privacy Policy
-                      </Link>
-                      {' '}and consent to having my data processed securely.
-                    </label>
-                  </div>
-                  
-                  <div>
-                    <motion.button
-                      type="submit"
-                      whileHover={{ scale: 1.02, y: -2 }}
-                      whileTap={{ scale: 0.98 }}
-                      className="relative w-full group"
-                    >
-                      {/* Enhanced button background */}
-                      <div className="absolute inset-0 bg-gradient-to-r from-[var(--color-primary)] to-[#f15a22] rounded-xl blur opacity-75 group-hover:opacity-100 transition duration-300"></div>
-                      <div className="relative bg-gradient-to-r from-[var(--color-primary)] to-[#f15a22] hover:from-[#f15a22] hover:to-[var(--color-primary)] text-white py-4 px-6 rounded-xl font-bold text-lg transition-all duration-300 ease-in-out flex items-center justify-center space-x-3">
-                        <span>Send Secure Message</span>
-                        <motion.div
-                          animate={{ x: [0, 5, 0] }}
-                          transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
-                        >
-                          <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
-                          </svg>
-                        </motion.div>
-                      </div>
-                    </motion.button>
-                  </div>
-                </form>
-              </div>
-            </motion.div>
-            
+
+
             {/* Enhanced Contact Information */}
             <motion.div
               initial={{ opacity: 0, x: 50 }}
@@ -414,7 +249,7 @@ We&apos;re here to help with your security and networking needs. Reach out to ou
               className="flex flex-col justify-between"
             >
               <div>
-                <motion.h2 
+                <motion.h2
                   className="text-2xl md:text-3xl font-bold mb-6"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -425,7 +260,7 @@ We&apos;re here to help with your security and networking needs. Reach out to ou
                     Contact Information
                   </span>
                 </motion.h2>
-                <motion.div 
+                <motion.div
                   className="w-24 h-1 bg-gradient-to-r from-[var(--color-primary)] to-[#f15a22] mb-8"
                   initial={{ opacity: 0, width: 0 }}
                   whileInView={{ opacity: 1, width: 96 }}
@@ -433,11 +268,11 @@ We&apos;re here to help with your security and networking needs. Reach out to ou
                   transition={{ duration: 0.5, delay: 0.2 }}
                 />
                 <p className="text-gray-300 mb-8 leading-relaxed">
-If you have any questions or would like to discuss your security and networking needs, our team is here to help. You can reach us through the following secure channels:                </p>
-                
-                <div className="space-y-8">
+                  If you have any questions or would like to discuss your security and networking needs, our team is here to help. You can reach us through the following secure channels:                </p>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                   {/* General Inquiry */}
-                  <motion.div 
+                  <motion.div
                     className="flex items-start group"
                     initial={{ opacity: 0, x: -20 }}
                     whileInView={{ opacity: 1, x: 0 }}
@@ -445,7 +280,7 @@ If you have any questions or would like to discuss your security and networking 
                     transition={{ duration: 0.5, delay: 0.3 }}
                   >
                     <div className="flex-shrink-0">
-                      <motion.div 
+                      <motion.div
                         className="flex items-center justify-center h-14 w-14 rounded-xl bg-gradient-to-br from-[var(--color-primary)]/20 to-[#f15a22]/20 text-[var(--color-primary)] border border-[var(--color-primary)]/30 group-hover:border-[var(--color-primary)]/50 transition-all duration-300"
                         whileHover={{ scale: 1.1, rotate: 5 }}
                       >
@@ -461,9 +296,9 @@ If you have any questions or would like to discuss your security and networking 
                       <p className="mt-1 text-sm text-gray-400">For general questions and information</p>
                     </div>
                   </motion.div>
-                  
+
                   {/* Sales Inquiry */}
-                  <motion.div 
+                  <motion.div
                     className="flex items-start group"
                     initial={{ opacity: 0, x: -20 }}
                     whileInView={{ opacity: 1, x: 0 }}
@@ -471,7 +306,7 @@ If you have any questions or would like to discuss your security and networking 
                     transition={{ duration: 0.5, delay: 0.4 }}
                   >
                     <div className="flex-shrink-0">
-                      <motion.div 
+                      <motion.div
                         className="flex items-center justify-center h-14 w-14 rounded-xl bg-gradient-to-br from-[var(--color-primary)]/20 to-[#f15a22]/20 text-[#f15a22] border border-[#f15a22]/30 group-hover:border-[#f15a22]/50 transition-all duration-300"
                         whileHover={{ scale: 1.1, rotate: 5 }}
                       >
@@ -489,7 +324,7 @@ If you have any questions or would like to discuss your security and networking 
                   </motion.div>
 
                   {/* Technical Support */}
-                  <motion.div 
+                  <motion.div
                     className="flex items-start group"
                     initial={{ opacity: 0, x: -20 }}
                     whileInView={{ opacity: 1, x: 0 }}
@@ -497,7 +332,7 @@ If you have any questions or would like to discuss your security and networking 
                     transition={{ duration: 0.5, delay: 0.5 }}
                   >
                     <div className="flex-shrink-0">
-                      <motion.div 
+                      <motion.div
                         className="flex items-center justify-center h-14 w-14 rounded-xl bg-gradient-to-br from-[var(--color-primary)]/20 to-[#f15a22]/20 text-[var(--color-primary)] border border-[var(--color-primary)]/30 group-hover:border-[var(--color-primary)]/50 transition-all duration-300"
                         whileHover={{ scale: 1.1, rotate: 5 }}
                       >
@@ -514,8 +349,8 @@ If you have any questions or would like to discuss your security and networking 
                       <p className="mt-1 text-sm text-gray-400">For technical assistance and support</p>
                     </div>
                   </motion.div>
-                  
-                  <motion.div 
+
+                  <motion.div
                     className="flex items-start group"
                     initial={{ opacity: 0, x: -20 }}
                     whileInView={{ opacity: 1, x: 0 }}
@@ -523,7 +358,7 @@ If you have any questions or would like to discuss your security and networking 
                     transition={{ duration: 0.5, delay: 0.5 }}
                   >
                     <div className="flex-shrink-0">
-                      <motion.div 
+                      <motion.div
                         className="flex items-center justify-center h-14 w-14 rounded-xl bg-gradient-to-br from-[var(--color-primary)]/20 to-[#f15a22]/20 text-[var(--color-primary)] border border-[var(--color-primary)]/30 group-hover:border-[var(--color-primary)]/50 transition-all duration-300"
                         whileHover={{ scale: 1.1, rotate: 5 }}
                       >
@@ -543,8 +378,8 @@ If you have any questions or would like to discuss your security and networking 
                   </motion.div>
                 </div>
               </div>
-              
-               
+
+
             </motion.div>
           </div>
         </div>
@@ -554,20 +389,20 @@ If you have any questions or would like to discuss your security and networking 
       <section className="relative py-20 bg-gradient-to-b from-[#0a0e1a] via-[#161b2e] to-[#0a0e1a] text-white overflow-hidden">
         {/* Cyber background patterns */}
         <div className="absolute inset-0 z-0">
-          <motion.div 
+          <motion.div
             className="absolute inset-0 bg-[url('/cyber-grid.svg')] bg-center"
             style={{ opacity: 0.08 }}
-            animate={{ 
+            animate={{
               backgroundPosition: ['0px 0px', '100px 100px'],
               opacity: [0.05, 0.12, 0.05]
             }}
-            transition={{ 
-              duration: 25, 
-              repeat: Infinity, 
-              ease: "easeInOut" 
+            transition={{
+              duration: 25,
+              repeat: Infinity,
+              ease: "easeInOut"
             }}
           />
-          
+
           {/* Floating security nodes for map section */}
           {[...Array(6)].map((_, i) => (
             <motion.div
@@ -603,7 +438,7 @@ If you have any questions or would like to discuss your security and networking 
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <motion.h2 
+            <motion.h2
               className="text-3xl md:text-4xl font-bold mb-6"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -611,10 +446,10 @@ If you have any questions or would like to discuss your security and networking 
               transition={{ duration: 0.5 }}
             >
               <span className="bg-gradient-to-r from-white via-gray-200 to-[var(--color-primary)] bg-clip-text text-transparent">
-Find Us Physically              
-</span>
+                Find Us Physically
+              </span>
             </motion.h2>
-            <motion.div 
+            <motion.div
               className="w-32 h-1 bg-gradient-to-r from-[var(--color-primary)] to-[#f15a22] mx-auto mb-6"
               initial={{ opacity: 0, width: 0 }}
               whileInView={{ opacity: 1, width: 128 }}
@@ -622,7 +457,7 @@ Find Us Physically
               transition={{ duration: 0.5, delay: 0.2 }}
             />
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-Visit our office in-person for consultations and cybersecurity solutions demonstrations.
+              Visit our office in-person for consultations and cybersecurity solutions demonstrations.
             </p>
           </motion.div>
 
@@ -641,7 +476,7 @@ Visit our office in-person for consultations and cybersecurity solutions demonst
               <div className="absolute top-0 right-0 w-12 h-12 border-t-2 border-r-2 border-[#f15a22]/50 rounded-tr-2xl"></div>
               <div className="absolute bottom-0 left-0 w-12 h-12 border-b-2 border-l-2 border-[#f15a22]/50 rounded-bl-2xl"></div>
               <div className="absolute bottom-0 right-0 w-12 h-12 border-b-2 border-r-2 border-[var(--color-primary)]/50 rounded-br-2xl"></div>
-              
+
               {/* Glowing border effect */}
               <motion.div
                 className="absolute inset-0 rounded-2xl border border-[var(--color-primary)]/30"
@@ -660,7 +495,7 @@ Visit our office in-person for consultations and cybersecurity solutions demonst
               />
 
               {/* Map with enhanced styling */}
-               
+
 
               {/* Enhanced location details */}
               <motion.div
@@ -671,7 +506,7 @@ Visit our office in-person for consultations and cybersecurity solutions demonst
                 transition={{ duration: 0.5, delay: 0.5 }}
               >
                 <div className="text-center group">
-                  <motion.div 
+                  <motion.div
                     className="w-12 h-12 bg-gradient-to-br from-[var(--color-primary)]/20 to-[#f15a22]/20 rounded-xl flex items-center justify-center mx-auto mb-3 border border-[var(--color-primary)]/30 group-hover:border-[var(--color-primary)]/50 transition-all duration-300"
                     whileHover={{ scale: 1.1, rotate: 5 }}
                   >
@@ -683,9 +518,9 @@ Visit our office in-person for consultations and cybersecurity solutions demonst
                   <h3 className="font-semibold text-white group-hover:text-[var(--color-primary)] transition-colors duration-300">Address</h3>
                   <p className="text-sm text-gray-300 mt-1">No. 37, Street 2011, Sen Sok<br />Phnom Penh, Cambodia</p>
                 </div>
-                
+
                 <div className="text-center group">
-                  <motion.div 
+                  <motion.div
                     className="w-12 h-12 bg-gradient-to-br from-[var(--color-primary)]/20 to-[#f15a22]/20 rounded-xl flex items-center justify-center mx-auto mb-3 border border-[#f15a22]/30 group-hover:border-[#f15a22]/50 transition-all duration-300"
                     whileHover={{ scale: 1.1, rotate: 5 }}
                   >
@@ -696,9 +531,9 @@ Visit our office in-person for consultations and cybersecurity solutions demonst
                   <h3 className="font-semibold text-white group-hover:text-[#f15a22] transition-colors duration-300">Office Hours</h3>
                   <p className="text-sm text-gray-300 mt-1">Monday – Friday: 8am – 5:30pm<br />Saturday: 8am – 12pm</p>
                 </div>
-                
+
                 <div className="text-center group">
-                  <motion.div 
+                  <motion.div
                     className="w-12 h-12 bg-gradient-to-br from-[var(--color-primary)]/20 to-[#f15a22]/20 rounded-xl flex items-center justify-center mx-auto mb-3 border border-[var(--color-primary)]/30 group-hover:border-[var(--color-primary)]/50 transition-all duration-300"
                     whileHover={{ scale: 1.1, rotate: 5 }}
                   >
