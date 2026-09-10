@@ -1,0 +1,17 @@
+# This file describes a Fastly Compute package. To learn more visit:
+# https://developer.fastly.com/reference/fastly-toml/
+
+authors = [ "thy.thern@franklinone.com" ]
+description = "Fastly Compute static site"
+language = "javascript"
+manifest_version = 3
+name = "franklinOneDemoSite"
+service_id = "0eHqEgv0O9biDsL0rDA4E7"
+
+[scripts]
+build = "npm run build"
+
+[local_server.kv_stores]
+franklinassets = { file = "./static-publisher/kvstore.json", format = "json" }
+
+[setup.kv_stores.franklinassets]
