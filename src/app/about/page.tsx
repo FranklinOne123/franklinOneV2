@@ -1,7 +1,7 @@
 import HeroSection from '@/components/about/HeroSection';
 import VisionMissionSection from '@/components/about/VisionMissionSection';
 import GetToKnowUsSection from '@/components/about/GetToKnowUsSection';
-import TeamMembers from '@/components/about/TeamMembers';
+//import TeamMembers from '@/components/about/TeamMembers';
 import OurCustomersSection from '@/components/about/OurCustomers';
 
 export const metadata = {

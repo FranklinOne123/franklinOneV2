@@ -59,7 +59,7 @@ const vendors: Vendor[] = [
     },
     {
         name: 'Gurucul',
-        logo: '/images/gurucul-logo.svg', 
+        logo: '/images/gurucul-logo.png', 
         description: 'Gurucul is a leading provider of AI-powered cybersecurity solutions. Their platform helps organizations detect and respond to threats in real-time...',
         solutions: ['Threat Detection', 'Behavioral Analytics', 'Incident Response', 'Compliance Management'],
         website: 'https://www.gurucul.com',
@@ -67,7 +67,7 @@ const vendors: Vendor[] = [
     },
     {
         name: 'Promon',
-        logo: '/images/promon-logotype-blue.svg', // You can replace with actual logo path
+        logo: '/images/promon-logotype-blue.png', // You can replace with actual logo path
         description: '60+ Years of Innovation in Intelligent Edge Devices.',
         solutions: ['Perimeter Security', 'Access Control', 'Intrusion Detection', 'Command & Control'],
         website: 'https://promon.io',
@@ -75,7 +75,7 @@ const vendors: Vendor[] = [
     },
     {
         name: 'BeyondTrust',
-        logo: '/images/beyondtrust.svg', // You can replace with actual logo path
+        logo: '/images/beyondtrust.png', // You can replace with actual logo path
         description: 'BeyondTrust is a global leader in privileged access management (PAM) and vulnerability management solutions. Their platform helps organizations secure and manage privileged accounts, credentials, and access across on-premises, cloud, and hybrid environments...',
         solutions: ['Perimeter Security', 'Access Control', 'Intrusion Detection', 'Command & Control'],
         website: 'https://www.beyondtrust.com',
@@ -83,7 +83,7 @@ const vendors: Vendor[] = [
     },
     {
         name: 'Fastly',
-        logo: '/images/fastly.svg', // You can replace with actual logo path
+        logo: '/images/fastly.png', // You can replace with actual logo path
         description: 'Fastly is a global leader in edge cloud services. Their platform helps organizations deliver faster, more secure, and more reliable web experiences...',
         solutions: ['Edge Cloud', 'Content Delivery', 'Security', 'Performance'],
         website: 'https://www.fastly.com',
@@ -114,14 +114,14 @@ const vendors: Vendor[] = [
         website: 'https://www.vaxtor.com/',
         category: 'Physical Security'
     },
-    {
-        name: 'i-PRO',
-        logo: '/images/i-pro-logo.svg', // You can replace with actual logo path
-        description: '60+ Years of Innovation in Intelligent Edge Devices.',
-        solutions: ['Perimeter Security', 'Access Control', 'Intrusion Detection', 'Command & Control'],
-        website: 'https://i-pro.com/',
-        category: 'Physical Security'
-    }
+    // {
+    //     name: 'i-PRO',
+    //     logo: '/images/i-pro-logo.svg', // You can replace with actual logo path
+    //     description: '60+ Years of Innovation in Intelligent Edge Devices.',
+    //     solutions: ['Perimeter Security', 'Access Control', 'Intrusion Detection', 'Command & Control'],
+    //     website: 'https://i-pro.com/',
+    //     category: 'Physical Security'
+    // }
 ];
 
 export const VendorSlider: React.FC = () => {

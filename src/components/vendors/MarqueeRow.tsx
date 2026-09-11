@@ -209,7 +209,7 @@ const MarqueeRow: React.FC<MarqueeRowProps> = ({
                     alt={`${vendor.name} Corporate Identity`}
                     fill
                     sizes="(max-width: 768px) 100vw, 150px"
-                    className="object-contain filter brightness-100"
+                    className="cover filter brightness-100"
                     draggable={false}
                   />
                 </div>
