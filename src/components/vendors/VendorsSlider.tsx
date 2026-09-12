@@ -19,7 +19,7 @@ const vendors: Vendor[] = [
     // IT, Network, and Security Vendors
     {
         name: 'SentinelOne',
-        logo: '/images/Logo-SenntinelOne.png', 
+        logo: '/images/source_fix/Logo-SenntinelOne.png', 
         description: 'SentinelOne is a leader in AI-powered cybersecurity, providing autonomous endpoint protection, detection, and response through their Singularity platform...',
         solutions: ['Endpoint Security', 'XDR Platform', 'AI-Powered Threat Detection', 'Automated Response'],
         website: 'https://www.sentinelone.com',
@@ -27,7 +27,7 @@ const vendors: Vendor[] = [
     },
     {
         name: 'Netskope',
-        logo: '/images/net.png', 
+        logo: '/images/source_fix/net.png', 
         description: 'Netskope is a SASE leader delivering secure access service edge solutions. Their cloud-native platform provides comprehensive security...',
         solutions: ['SASE', 'Zero Trust Network Access', 'Cloud Security', 'Secure Web Gateway'],
         website: 'https://www.netskope.com',
@@ -35,7 +35,7 @@ const vendors: Vendor[] = [
     },
     {
         name: 'Qualys',
-        logo: '/images/image_2025-11-19_21-01-10.png',
+        logo: '/images/source_fix/gptQualys.png',
         description: 'Qualys is a leading provider of cloud-based IT, security, and compliance solutions. Their Enterprise TruRisk Platform helps organizations measure, manage, and reduce cyber risk...',
         solutions: ['Vulnerability Management', 'Asset Discovery', 'Compliance Management', 'Cloud Security'],
         website: 'https://www.qualys.com',
@@ -43,7 +43,7 @@ const vendors: Vendor[] = [
     },
     {
         name: 'Varonis',
-        logo: '/images/image_2025-11-19_21-02-12.png', 
+        logo: '/images/source_fix/varonis.png', 
         description: 'Varonis is the #1 Data Security Platform that automatically finds critical data, remediates exposure, and stops threats in the cloud and on-premises...',
         solutions: ['Data Security', 'Data Discovery & Classification', 'Insider Threat Detection', 'Data Access Governance'],
         website: 'https://www.varonis.com',
@@ -59,7 +59,7 @@ const vendors: Vendor[] = [
     },
     {
         name: 'Gurucul',
-        logo: '/images/gurucul-logo.png', 
+        logo: '/images/source_fix/gurucul-logo.png', 
         description: 'Gurucul is a leading provider of AI-powered cybersecurity solutions. Their platform helps organizations detect and respond to threats in real-time...',
         solutions: ['Threat Detection', 'Behavioral Analytics', 'Incident Response', 'Compliance Management'],
         website: 'https://www.gurucul.com',
@@ -67,7 +67,7 @@ const vendors: Vendor[] = [
     },
     {
         name: 'Promon',
-        logo: '/images/promon-logotype-blue.png', // You can replace with actual logo path
+        logo: '/images/source_fix/promon-logotype-blue.png', // You can replace with actual logo path
         description: '60+ Years of Innovation in Intelligent Edge Devices.',
         solutions: ['Perimeter Security', 'Access Control', 'Intrusion Detection', 'Command & Control'],
         website: 'https://promon.io',
@@ -75,7 +75,7 @@ const vendors: Vendor[] = [
     },
     {
         name: 'BeyondTrust',
-        logo: '/images/beyondtrust.png', // You can replace with actual logo path
+        logo: '/images/source_fix/beyondtrust.png', // You can replace with actual logo path
         description: 'BeyondTrust is a global leader in privileged access management (PAM) and vulnerability management solutions. Their platform helps organizations secure and manage privileged accounts, credentials, and access across on-premises, cloud, and hybrid environments...',
         solutions: ['Perimeter Security', 'Access Control', 'Intrusion Detection', 'Command & Control'],
         website: 'https://www.beyondtrust.com',
@@ -83,7 +83,7 @@ const vendors: Vendor[] = [
     },
     {
         name: 'Fastly',
-        logo: '/images/fastly.png', // You can replace with actual logo path
+        logo: '/images/source_fix/fastly.png', // You can replace with actual logo path
         description: 'Fastly is a global leader in edge cloud services. Their platform helps organizations deliver faster, more secure, and more reliable web experiences...',
         solutions: ['Edge Cloud', 'Content Delivery', 'Security', 'Performance'],
         website: 'https://www.fastly.com',
