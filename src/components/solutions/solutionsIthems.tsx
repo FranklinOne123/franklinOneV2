@@ -117,6 +117,11 @@ const securitySections: SecuritySection[] = [
           discription: "",
         },
         {
+          id: "Runtime Application Self-Protection (RASP) - Web Shielding",
+          title: "Runtime Application Self-Protection (RASP) - Web Shielding",
+          discription: "",
+        },
+        {
           id: "Mobile Code Protection",
           title: "Mobile Code Protection",
           discription: "",

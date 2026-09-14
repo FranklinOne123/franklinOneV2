@@ -2,8 +2,8 @@
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import securitySections  from './solutionsIthems'
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination, Navigation } from 'swiper/modules';
+import { SwiperSlide } from 'swiper/react';
+// import {  Pagination, Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
@@ -379,31 +379,10 @@ const SolutionsClient = () => {
 						<div className="w-full h-1 bg-gradient-to-r from-transparent via-[#9a5d9d]/20 to-transparent rounded-full" style={{ opacity: 0.93979 }}></div>
 						<div className="w-full py-4">
 							{/* 1. Custom Left Navigation Button */}
-							<button className="prev-btn absolute left-0 top-1/2 -translate-y-1/2 z-10 w-10 h-10 flex items-center justify-center bg-white/10 hover:bg-white/20 text-white rounded-full border border-white/20 transition-all disabled:opacity-30 disabled:cursor-not-allowed">
+							{/* <button className="prev-btn absolute left-0 top-1/2 -translate-y-1/2 z-10 w-10 h-10 flex items-center justify-center bg-white/10 hover:bg-white/20 text-white rounded-full border border-white/20 transition-all disabled:opacity-30 disabled:cursor-not-allowed">
 								<ChevronLeftIcon className="w-6 h-6" />
-							</button>
-							<Swiper
-								modules={[Pagination, Navigation]}
-								spaceBetween={24}
-								slidesPerView={1}
-
-								// Link Swiper to our custom elements via CSS classes
-								navigation={{
-								prevEl: '.prev-btn',
-								nextEl: '.next-btn',
-								}}
-								pagination={{
-									el: '.custom-dots',
-									clickable: true,
-									bulletClass: 'custom-bullet',
-									bulletActiveClass: 'custom-bullet-active',
-								}}
-								breakpoints={{
-								768: { slidesPerView: 2 },
-								1024: { slidesPerView: 3 },
-								}}
-								className="pb-12 security-swiper"
-							>
+							</button> */}
+							<div className="grid grid-cols-1 gap-2 md:grid-cols-2 lg:grid-cols-3">
 								{[...securitySections]
 								.sort((a, b) => a.title.charAt(0).localeCompare(b.title.charAt(0)))
 								.map((section: SecuritySection, cardIndex: number) => {
@@ -490,14 +469,11 @@ const SolutionsClient = () => {
 									   );
 								   }
 								})}
-							</Swiper>
-							{/* 3. Custom Right Navigation Button */}
-							<button className="next-btn absolute right-0 top-1/2 -translate-y-1/2 z-10 w-10 h-10 flex items-center justify-center bg-white/10 hover:bg-white/20 text-white rounded-full border border-white/20 transition-all disabled:opacity-30 disabled:cursor-not-allowed">
+							</div>
+							{/* <button className="next-btn absolute right-0 top-1/2 -translate-y-1/2 z-10 w-10 h-10 flex items-center justify-center bg-white/10 hover:bg-white/20 text-white rounded-full border border-white/20 transition-all disabled:opacity-30 disabled:cursor-not-allowed">
 								<ChevronRightIcon className="w-6 h-6" />
 							</button>
-
-							{/* 4. Clean Custom Pagination Dots (Placed directly below the slider) */}
-							<div className="custom-dots flex justify-center items-center gap-2 mt-6 w-full" />
+							<div className="custom-dots flex justify-center items-center gap-2 mt-6 w-full" /> */}
 						</div>
 					</div>
 					<div className="mb-6 max-w-7xl mx-auto">
@@ -604,31 +580,10 @@ const SolutionsClient = () => {
 							<div className="w-full h-1 bg-gradient-to-r from-transparent via-[#9a5d9d]/20 to-transparent rounded-full" style={{ opacity: 0.93979 }}></div>
 							<div className="relative w-full py-4">
 							{/* 1. Custom Left Navigation Button */}
-							<button className="prev-btn-pysical absolute left-0 top-1/2 -translate-y-1/2 z-10 w-10 h-10 flex items-center justify-center bg-white/10 hover:bg-white/20 text-white rounded-full border border-white/20 transition-all disabled:opacity-30 disabled:cursor-not-allowed">
+							{/* <button className="prev-btn-pysical absolute left-0 top-1/2 -translate-y-1/2 z-10 w-10 h-10 flex items-center justify-center bg-white/10 hover:bg-white/20 text-white rounded-full border border-white/20 transition-all disabled:opacity-30 disabled:cursor-not-allowed">
 								<ChevronLeftIcon className="w-6 h-6" />
-							</button>
-							<Swiper
-								modules={[Pagination, Navigation]}
-								spaceBetween={24}
-								slidesPerView={1}
-
-								// Link Swiper to our custom elements via CSS classes
-								navigation={{
-								prevEl: '.prev-btn-pysical',
-								nextEl: '.next-btn-pysical',
-								}}
-								pagination={{
-									el: '.custom-dots-pysical',
-									clickable: true,
-									bulletClass: 'custom-bullet-pysical',
-									bulletActiveClass: 'custom-bullet-active-pysical',
-								}}
-								breakpoints={{
-								768: { slidesPerView: 2 },
-								1024: { slidesPerView: 3 },
-								}}
-								className="pb-12 security-swiper"
-							>
+							</button> */}
+							<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2">
 								{[...securitySections]
 								.sort((a, b) => a.title.charAt(0).localeCompare(b.title.charAt(0)))
 								.map((section: SecuritySection, cardIndex: number) => {
@@ -715,14 +670,14 @@ const SolutionsClient = () => {
 									   );
 								   }
 								})}
-							</Swiper>
+							</div>
 							{/* 3. Custom Right Navigation Button */}
-							<button className="next-btn-pysical absolute right-0 top-1/2 -translate-y-1/2 z-10 w-10 h-10 flex items-center justify-center bg-white/10 hover:bg-white/20 text-white rounded-full border border-white/20 transition-all disabled:opacity-30 disabled:cursor-not-allowed">
+							{/* <button className="next-btn-pysical absolute right-0 top-1/2 -translate-y-1/2 z-10 w-10 h-10 flex items-center justify-center bg-white/10 hover:bg-white/20 text-white rounded-full border border-white/20 transition-all disabled:opacity-30 disabled:cursor-not-allowed">
 								<ChevronRightIcon className="w-6 h-6" />
 							</button>
 
-							{/* 4. Clean Custom Pagination Dots (Placed directly below the slider) */}
-							<div className="custom-dots-pysical flex justify-center items-center gap-2 mt-6 w-full" />
+
+							<div className="custom-dots-pysical flex justify-center items-center gap-2 mt-6 w-full" /> */}
 						</div>
 					</div>
 				</div>

@@ -23,7 +23,7 @@ export default function AboutPage() {
       {/* 6. Get to Know Us - Our Background & Principles */}
       <GetToKnowUsSection />
       {/* 7. Our Customers - Who We Serve */}
-      <OurCustomersSection />
+      {/* <OurCustomersSection /> */}
       {/* 5. Team Members - Our Leadership */}
       {/* <TeamMembers /> */}
       {/* 5. Company Story - Our Journey */}
