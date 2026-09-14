@@ -7,7 +7,7 @@ import { SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/16/solid';
+// import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/16/solid';
 // const detailedSolutions = {
 // 	endpointSecurity: [
 // 		'Endpoint Protection (EDR/XDR)',
