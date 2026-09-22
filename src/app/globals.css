@@ -1,0 +1,71 @@
+@import "tailwindcss";
+
+@theme {
+  --breakpoint-nav: 956px;
+}
+
+@layer base {
+
+  /* Apply Poppins as the default font using CSS variable */
+  html {
+    font-family: var(--font-poppins), system-ui, sans-serif;
+  }
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --color-primary: #743f77;
+  --color-primary-light: #9a5d9d;
+  --color-primary-dark: #653767;
+  --color-secondary: #f15a22;
+  --color-secondary-light: #f37a4d;
+  --color-secondary-dark: #d3491b;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-poppins), system-ui, sans-serif;
+  ;
+}
+
+/* Custom utility classes */
+.bg-radial-gradient {
+  background: radial-gradient(circle at center, rgba(241, 90, 34, 0.05) 0%, rgba(116, 63, 119, 0.05) 50%, rgba(255, 255, 255, 0) 70%);
+}
+/* Custom Bullet Styles */
+.custom-bullet {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.4); /* subtle white/gray for unselected dots */
+  display: inline-block;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Selected Active Dot styling matching your design theme */
+.custom-bullet-active {
+  background-color: #f15a22; /* Match your active blue slide color */
+  width: 24px; /* Optional stretch pill effect, or keep 8px for standard circle */
+  border-radius: 4px;
+  box-shadow: 0px 0px 30px #f15a22;
+}
+
+.swiper-wrapper {
+  display: flex !important;
+}
+
+.swiper-slide {
+  height: auto !important; /* Overrides default static layouts */
+  display: flex !important;
+  flex-direction: column;
+}
