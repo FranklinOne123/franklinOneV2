@@ -1,10 +1,9 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-    output: 'export', // <--- Add this exact line
     trailingSlash: true,
     images: {
-       unoptimized: true, // <--- Add this too (NextJS static exports don't support the built-in image optimizer)
+       unoptimized: true,
     },
     //defualt code 
   //  images: {
