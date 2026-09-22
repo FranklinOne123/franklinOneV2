@@ -1,4 +1,11 @@
-name = "franklinone"
-compatibility_date = "2024-06-24"
-pages_build_output_dir = ".vercel/output/static"
-compatibility_flags = ["nodejs_compat"] 
+name = "franklinone-code"
+main = ".open-next/worker.js"
+compatibility_date = "2026-09-22"
+compatibility_flags = ["nodejs_compat"]
+
+[assets]
+directory = ".open-next/assets"
+binding = "ASSETS"
+
+[observability]
+enabled = true
