@@ -1,4 +1,4 @@
-name = "franklinone-code"
+name = "franklinonev2"
 main = ".open-next/worker.js"
 compatibility_date = "2026-09-22"
 compatibility_flags = ["nodejs_compat"]
