@@ -14,7 +14,6 @@
   },
   "dependencies": {
     "@heroicons/react": "^2.2.0",
-    "@opennextjs/cloudflare": "^1.20.6",
     "framer-motion": "^12.9.7",
     "lottie-react": "^2.4.1",
     "next": "^15.5.25",
@@ -28,6 +27,7 @@
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
+    "@opennextjs/cloudflare": "^1.20.6",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
