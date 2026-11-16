@@ -15,8 +15,8 @@ const ContactUsClient = () => {
             transition={{ duration: 1.5, ease: "easeOut" }}
           />
           <motion.div
-            className="absolute inset-0 bg-[url('/cyber.png')] bg-cover bg-center z-0"
-            style={{ opacity: 0.3 }}
+            className="absolute inset-0 bg-cover bg-center z-0"
+            style={{ backgroundImage: "url('/cyber.png')", opacity: 0.3 }}
             animate={{
               scale: [1, 1.05, 1],
               opacity: [0.3, 0.4, 0.3]
@@ -31,8 +31,8 @@ const ContactUsClient = () => {
 
         {/* Animated network grid */}
         <motion.div
-          className="absolute inset-0 bg-[url('/network-bg.svg')] z-10"
-          style={{ opacity: 0.15 }}
+          className="absolute inset-0 z-10"
+          style={{ backgroundImage: "url('/network-bg.svg')", opacity: 0.15 }}
           animate={{
             backgroundPosition: ['0px 0px', '100px 100px'],
             opacity: [0.1, 0.2, 0.1]
@@ -46,7 +46,11 @@ const ContactUsClient = () => {
 
         {/* Animated dots */}
         <motion.div
-          className="absolute inset-0 bg-[url('/dot-pattern.svg')] bg-repeat z-10"
+          className="absolute inset-0 bg-repeat z-10"
+          style={{
+            backgroundImage: "url('/dot-pattern.svg')",
+            opacity: 0.12
+          }}
           animate={{
             backgroundPosition: ['0px 0px', '60px 60px', '0px 0px']
           }}
@@ -55,7 +59,6 @@ const ContactUsClient = () => {
             repeat: Infinity,
             ease: "easeInOut"
           }}
-          style={{ opacity: 0.12 }}
         />
 
         {/* Enhanced floating security elements */}
@@ -195,8 +198,8 @@ const ContactUsClient = () => {
         {/* Advanced cyber background */}
         <div className="absolute inset-0 z-0">
           <motion.div
-            className="absolute inset-0 bg-[url('/cyber-grid.svg')] bg-center z-0"
-            style={{ opacity: 0.1 }}
+            className="absolute inset-0 bg-center z-0"
+            style={{ backgroundImage: "url('/cyber-grid.svg')", opacity: 0.1 }}
             animate={{
               backgroundPosition: ['0px 0px', '50px 50px'],
               opacity: [0.05, 0.15, 0.05]
@@ -291,7 +294,7 @@ const ContactUsClient = () => {
                     <div className="ml-6">
                       <h3 className="text-xl font-medium text-white group-hover:text-[var(--color-primary)] transition-colors duration-300">General Inquiry</h3>
                       <p className="mt-1 text-gray-300">Tel: (855) 89 308 840</p>
-                      <p className="mt-1 text-gray-300">Email: info@franklinone.com</p>
+                      <p className="mt-1 text-gray-300">Email: consultation@franklinone.com</p>
                       <p className="mt-1 text-sm text-gray-400">For general questions and information</p>
                     </div>
                   </motion.div>
@@ -317,7 +320,7 @@ const ContactUsClient = () => {
                     <div className="ml-6">
                       <h3 className="text-xl font-medium text-white group-hover:text-[#f15a22] transition-colors duration-300">Sales Inquiry</h3>
                       <p className="mt-1 text-gray-300">Tel: (855) 89 308 840</p>
-                      <p className="mt-1 text-gray-300">Email: sales@franklinone.com</p>
+                      <p className="mt-1 text-gray-300">Email: products@franklinone.com</p>
                       <p className="mt-1 text-sm text-gray-400">For sales and business inquiries</p>
                     </div>
                   </motion.div>
@@ -389,8 +392,8 @@ const ContactUsClient = () => {
         {/* Cyber background patterns */}
         <div className="absolute inset-0 z-0">
           <motion.div
-            className="absolute inset-0 bg-[url('/cyber-grid.svg')] bg-center"
-            style={{ opacity: 0.08 }}
+            className="absolute inset-0 bg-center"
+            style={{ backgroundImage: "url('/cyber-grid.svg')", opacity: 0.08 }}
             animate={{
               backgroundPosition: ['0px 0px', '100px 100px'],
               opacity: [0.05, 0.12, 0.05]

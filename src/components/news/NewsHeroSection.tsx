@@ -114,8 +114,8 @@ const NewsHeroSection = () => {
         
         {/* Wave pattern with parallax scroll */}
         <motion.div 
-          className="absolute w-full h-full bg-[url('/wave-bg.svg')] bg-repeat-x bg-bottom opacity-15"
-          style={{ y: bgYPos }}
+          className="absolute w-full h-full bg-repeat-x bg-bottom opacity-15"
+          style={{ y: bgYPos, backgroundImage: "url('/wave-bg.svg')" }}
         />
       </div>
       

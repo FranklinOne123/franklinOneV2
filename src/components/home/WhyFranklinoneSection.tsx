@@ -63,12 +63,18 @@ const WhyFranklinoneSection = () => {
     <section className="py-16 relative overflow-hidden bg-gradient-to-br from-gray-50 via-white to-white">
       {/* Background network pattern */}
       <div className="absolute inset-0 opacity-10 z-0">
-        <div className="absolute inset-0 bg-[url('/network-bg.svg')] bg-repeat"></div>
+        <div
+          className="absolute inset-0 bg-repeat"
+          style={{ backgroundImage: "url('/network-bg.svg')" }}
+        ></div>
       </div>
 
       {/* Wave background pattern */}
       <div className="absolute inset-0 opacity-30 z-0">
-        <div className="absolute inset-0 bg-[url('/wave-bg.svg')] bg-repeat-x bg-bottom"></div>
+        <div
+          className="absolute inset-0 bg-repeat-x bg-bottom"
+          style={{ backgroundImage: "url('/wave-bg.svg')" }}
+        ></div>
       </div>
 
       {/* Add subtle radial gradient */}

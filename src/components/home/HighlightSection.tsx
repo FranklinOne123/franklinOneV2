@@ -39,7 +39,10 @@ const HighlightSection = () => {
       
       {/* Wave background pattern */}
       <div className="absolute inset-0 opacity-30 z-0">
-        <div className="absolute inset-0 bg-[url('/wave-bg.svg')] bg-repeat-x bg-bottom"></div>
+        <div
+          className="absolute inset-0 bg-repeat-x bg-bottom"
+          style={{ backgroundImage: "url('/wave-bg.svg')" }}
+        ></div>
       </div>
       
       {/* Decorative elements */}

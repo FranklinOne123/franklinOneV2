@@ -168,8 +168,8 @@ const RedesingVender = () => {
                         transition={{ duration: 1.5, ease: "easeOut" }}
                     />
                     <motion.div
-                        className="absolute inset-0 bg-[url('/cyber.png')] bg-cover bg-center z-0"
-                        style={{ opacity: 0.3 }}
+                        className="absolute inset-0 bg-cover bg-center z-0"
+                        style={{ backgroundImage: "url('/cyber.png')", opacity: 0.3 }}
                         animate={!isMobile && !prefersReducedMotion ? {
                             scale: [1, 1.05, 1],
                             opacity: [0.3, 0.4, 0.3]
@@ -185,8 +185,8 @@ const RedesingVender = () => {
                 {/* Animated network grid - Mobile optimized */}
                 {!isMobile && !prefersReducedMotion && (
                     <motion.div
-                        className="absolute inset-0 bg-[url('/network-bg.svg')] z-10"
-                        style={{ opacity: 0.15 }}
+                        className="absolute inset-0 z-10"
+                        style={{ backgroundImage: "url('/network-bg.svg')", opacity: 0.15 }}
                         animate={{
                             backgroundPosition: ['0px 0px', '100px 100px'],
                             opacity: [0.1, 0.2, 0.1]
@@ -202,7 +202,11 @@ const RedesingVender = () => {
                 {/* Animated dots - Mobile optimized */}
                 {!isMobile && !prefersReducedMotion && (
                     <motion.div
-                        className="absolute inset-0 bg-[url('/dot-pattern.svg')] bg-repeat z-10"
+                        className="absolute inset-0 bg-repeat z-10"
+                        style={{
+                            backgroundImage: "url('/dot-pattern.svg')",
+                            opacity: 0.12
+                        }}
                         animate={{
                             backgroundPosition: ['0px 0px', '60px 60px', '0px 0px']
                         }}
@@ -211,7 +215,6 @@ const RedesingVender = () => {
                             repeat: Infinity,
                             ease: "easeInOut"
                         }}
-                        style={{ opacity: 0.12 }}
                     />
                 )}
 

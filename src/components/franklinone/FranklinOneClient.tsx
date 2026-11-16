@@ -8,7 +8,10 @@ const FranklinOneClient = () => {
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative py-24 bg-gradient-to-r from-[#743f77] to-[#653767] text-white">
-        <div className="absolute inset-0 bg-[url('/bg-pattern.svg')] opacity-20"></div>
+        <div
+        className="absolute inset-0 opacity-20"
+        style={{ backgroundImage: "url('/bg-pattern.svg')" }}
+      ></div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

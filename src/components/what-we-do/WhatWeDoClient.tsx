@@ -81,7 +81,10 @@ const WhatWeDoClient = () => {
 			<section className="relative min-h-[85vh] flex items-center justify-center bg-[#0a0e1a] text-white overflow-hidden">
 				<div className="absolute inset-0 z-0">
 					<div className="absolute inset-0 bg-gradient-to-br from-[rgba(10,14,26,0.95)] via-[rgba(22,33,62,0.85)] to-[rgba(116,63,119,0.9)] z-10" />
-					<div className="absolute inset-0 bg-[url('/cyber.png')] bg-cover bg-center z-0 opacity-30" />
+					<div
+						className="absolute inset-0 bg-cover bg-center z-0 opacity-30"
+						style={{ backgroundImage: "url('/cyber.png')" }}
+					/>
 				</div>
 
 				<div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

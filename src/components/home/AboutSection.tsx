@@ -21,12 +21,18 @@ const AboutSection = () => {
       <section className="py-16 relative overflow-hidden bg-gradient-to-br from-gray-50 via-white to-white">
         {/* Background network pattern */}
         <div className="absolute inset-0 opacity-15 z-0">
-          <div className="absolute inset-0 bg-[url('/network-bg.svg')] bg-repeat"></div>
+          <div
+            className="absolute inset-0 bg-repeat"
+            style={{ backgroundImage: "url('/network-bg.svg')" }}
+          />
         </div>
         
         {/* Dot pattern background */}
         <div className="absolute inset-0 opacity-40 z-0">
-          <div className="absolute inset-0 bg-[url('/dot-pattern.svg')] bg-repeat"></div>
+          <div
+            className="absolute inset-0 bg-repeat"
+            style={{ backgroundImage: "url('/dot-pattern.svg')" }}
+          />
         </div>
         
         {/* Subtle decorative elements */}

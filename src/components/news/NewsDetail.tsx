@@ -237,7 +237,7 @@ export default function NewsDetail({ id }: { id: string }) {
             {/* Featured image */}
             <div className="w-full h-72 bg-gray-200 relative overflow-hidden">
               <div className="absolute inset-0 bg-gradient-to-r from-[#743f77]/30 to-[#f15a22]/30 mix-blend-multiply z-10"></div>
-              <div className="absolute inset-0 bg-[url('/news-banner.jpg')] bg-cover bg-center"></div>
+              <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('/news-banner.jpg')" }}></div>
             </div>
             
             <div className="p-6 md:p-10">

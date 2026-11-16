@@ -210,28 +210,34 @@ const HeroSection = () => {
               >
                 {/* Security badge */}
                 <motion.div
-                  className="inline-flex items-center px-4 py-2 bg-[var(--color-primary)]/20 backdrop-blur-sm rounded-full border border-[var(--color-primary)]/30 mb-8"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.7, delay: 0.1 }}
+                  className="relative inline-flex items-center px-8 py-4 mb-10"
+                  initial={{ opacity: 0, y: 30, scale: 0.95 }}
+                  animate={{ opacity: 1, y: 0, scale: 1 }}
+                  transition={{ duration: 0.8, delay: 0.1, type: 'spring', stiffness: 100 }}
                 >
-                  <div className="w-2 h-2 bg-[var(--color-primary)] rounded-full mr-3 animate-pulse"></div>
-                  <span className="text-white text-sm font-medium">CYBERSECURITY PROFESSIONALS</span>
+                  <div className="absolute inset-0 bg-gradient-to-r from-[var(--color-primary)]/20 via-[var(--color-primary)]/30 to-[var(--color-primary)]/20 backdrop-blur-md rounded-full border border-[var(--color-primary)]/40 shadow-lg"></div>
+                  <div className="relative flex items-center">
+                    <div className="w-3 h-3 bg-[var(--color-primary)] rounded-full mr-4 animate-pulse"></div>
+                    <span className="text-sm font-semibold text-gray-200 tracking-wider uppercase">CYBERSECURITY PROFESSIONALS</span>
+                  </div>
                 </motion.div>
 
                 <motion.h1
-                  className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight"
-                  initial={{ opacity: 0, y: 30 }}
+                  className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight tracking-tight"
+                  initial={{ opacity: 0, y: 30, originX: 0 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.7, delay: 0.2 }}
+                  transition={{ duration: 0.8, delay: 0.2, ease: 'easeOut' }}
+                  style={{ transformOrigin: 'left center' }}
                 >
-                  <span className="bg-gradient-to-r from-white to-[var(--color-primary)] bg-clip-text text-transparent">
+                  <span className="bg-gradient-to-r from-white via-gray-200 to-[var(--color-primary)] bg-clip-text text-transparent drop-shadow-[0_0_24px_rgba(116,63,119,0.35)]">
                     {slide.title}
                   </span>
                 </motion.h1>
 
+                <div className="w-24 h-1 bg-[var(--color-primary)] mx-auto mb-8 rounded-full shadow-lg shadow-[var(--color-primary)]/30"></div>
+
                 <motion.p
-                  className="text-lg sm:text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto px-4 mb-8 leading-relaxed"
+                  className="text-lg sm:text-xl md:text-2xl text-gray-200 max-w-4xl mx-auto px-4 mb-8 leading-relaxed"
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.7, delay: 0.4 }}

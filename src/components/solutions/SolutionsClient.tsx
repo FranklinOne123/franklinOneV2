@@ -96,15 +96,16 @@ const SolutionsClient = () => {
 				{/* Dark cyber background with overlay */}
 				<div className="absolute inset-0 z-0">
 					<div className="absolute inset-0 bg-gradient-to-b from-[rgba(52, 2, 55, 0.9)] via-[#743f77] to-[#0A0E1A] z-10"></div>
-					<div className="absolute inset-0 bg-[url('/cyber.png')] bg-cover bg-center z-0 opacity-40"></div>
+					<div className="absolute inset-0 bg-cover bg-center z-0 opacity-40" style={{ backgroundImage: "url('/cyber.png')" }}></div>
 				</div>
 
 				{/* Animated network grid */}
-				<div className="absolute inset-0 bg-[url('/network-bg.svg')] opacity-20 z-10"></div>
+				<div className="absolute inset-0 opacity-20 z-10" style={{ backgroundImage: "url('/network-bg.svg')" }}></div>
 
 				{/* Animated dots */}
 				<motion.div
-					className="absolute inset-0 bg-[url('/dot-pattern.svg')] bg-repeat z-10"
+					className="absolute inset-0 bg-repeat z-10"
+					style={{ backgroundImage: "url('/dot-pattern.svg')" }}
 					animate={{
 						backgroundPosition: ["0px 0px", "100px 100px"]
 					}}
@@ -319,7 +320,7 @@ const SolutionsClient = () => {
 					/>
 					))}
 				</div>
-				<div className="absolute inset-0 bg-[url('/dot-pattern.svg')] opacity-[0.02]"></div>
+				<div className="absolute inset-0 opacity-[0.02]" style={{ backgroundImage: "url('/dot-pattern.svg')" }}></div>
 				<div
 					className="
 						rounded-3xl
@@ -729,8 +730,8 @@ const SolutionsClient = () => {
 					/>
 					))}
 				</div>
-				<div className="absolute inset-0 bg-[url('/network-bg.svg')] opacity-10"></div>
-				<div className="absolute inset-0 bg-[url('/dot-pattern.svg')] opacity-5"></div>
+				<div className="absolute inset-0 opacity-10" style={{ backgroundImage: "url('/network-bg.svg')" }}></div>
+				<div className="absolute inset-0 opacity-5" style={{ backgroundImage: "url('/dot-pattern.svg')" }}></div>
 
 				{/* Shield animation background */}
 				<div className="absolute inset-0">
