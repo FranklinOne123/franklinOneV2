@@ -66,26 +66,36 @@ const CTASection = () => {
         <div className="text-center">
           {/* Security badge */}
           <motion.div
-            className="inline-flex items-center px-6 py-3 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 mb-8"
+            className="inline-flex items-center px-6 py-3 bg-[var(--color-primary)]/20 backdrop-blur-sm rounded-full border border-[var(--color-primary)]/30 mb-8 shadow-xl"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            <div className="w-2 h-2 bg-white rounded-full mr-3 animate-pulse"></div>
-            <span className="text-white text-sm font-medium">SECURE YOUR FUTURE</span>
+            <div className="w-2 h-2 bg-[var(--color-primary)] rounded-full mr-3 animate-pulse"></div>
+            <span className="text-white text-sm font-medium tracking-wider">SECURE YOUR FUTURE</span>
           </motion.div>
 
-          <motion.h2 
-            className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight"
+          <motion.h2
+            className="text-4xl md:text-6xl font-bold mb-6 leading-tight"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
           >
-            <span className="bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+            <motion.span
+              className="bg-gradient-to-r from-white via-[var(--color-primary)] to-[#f15a22] bg-clip-text text-transparent"
+              initial={{ backgroundPosition: '0% 50%' }}
+              animate={{ backgroundPosition: '100% 50%' }}
+              transition={{
+                duration: 3,
+                repeat: Infinity,
+                repeatType: 'reverse'
+              }}
+              style={{ backgroundSize: '200% 200%' }}
+            >
               Partner Success.
-            </span>
+            </motion.span>
             <br />
             <span className="text-white">
               The foundation of everything we do.

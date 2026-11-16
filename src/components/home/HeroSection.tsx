@@ -229,9 +229,19 @@ const HeroSection = () => {
                   transition={{ duration: 0.8, delay: 0.2, ease: 'easeOut' }}
                   style={{ transformOrigin: 'left center' }}
                 >
-                  <span className="bg-gradient-to-r from-white via-gray-200 to-[var(--color-primary)] bg-clip-text text-transparent drop-shadow-[0_0_24px_rgba(116,63,119,0.35)]">
+                  <motion.span
+                    className="bg-gradient-to-r from-white via-[var(--color-primary)] to-[#f15a22] bg-clip-text text-transparent"
+                    initial={{ backgroundPosition: '0% 50%' }}
+                    animate={{ backgroundPosition: '100% 50%' }}
+                    transition={{
+                      duration: 3,
+                      repeat: Infinity,
+                      repeatType: 'reverse'
+                    }}
+                    style={{ backgroundSize: '200% 200%' }}
+                  >
                     {slide.title}
-                  </span>
+                  </motion.span>
                 </motion.h1>
 
                 <div className="w-24 h-1 bg-[var(--color-primary)] mx-auto mb-8 rounded-full shadow-lg shadow-[var(--color-primary)]/30"></div>
@@ -251,15 +261,15 @@ const HeroSection = () => {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: 0.6 }}
                 >
-                  <Link
+                  <motion.a
+                    className="bg-gradient-to-r from-[var(--color-primary)] to-[#f15a22] text-white font-bold py-4 px-8 rounded-lg text-lg transition-all duration-300 ease-in-out flex items-center justify-center relative overflow-hidden"
                     href="/solutions"
-                    className="group bg-[var(--color-primary)] hover:bg-[var(--color-primary-dark)] text-white font-bold py-4 px-8 rounded-lg text-lg transition duration-300 ease-in-out transform hover:-translate-y-1 shadow-2xl flex items-center"
                   >
                     <span>Explore Solutions</span>
                     <svg className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                     </svg>
-                  </Link>
+                  </motion.a>
                   <Link
                     href="/contact-us"
                     className="border-2 border-white text-white hover:bg-white hover:text-[var(--color-primary)] font-bold py-4 px-8 rounded-lg text-lg transition duration-300 backdrop-blur-sm"
